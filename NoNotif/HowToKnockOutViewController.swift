@@ -1,0 +1,228 @@
+//
+//  HowToKnockOutViewController.swift
+//  NoNotif
+//
+//  Created by John Grönlund on 21/01/2017.
+//  Copyright © 2017 John Groenlund. All rights reserved.
+//
+
+import UIKit
+
+class HowToKnockOutViewController: UIViewController, GameEngineDelegate
+{
+    let engine = GameEngine.shared
+    
+    @IBOutlet weak var knockOutTargetButton: UIButton!
+    @IBOutlet weak var knockOutLabel: UILabel!
+    @IBOutlet var punches: [UIButton]!
+    
+    @IBAction func didTapRestart(_ sender: UIBarButtonItem)
+    {
+        navigationController?.popToRootViewController(animated: true)
+//        performs
+    }
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        engine.delegate = self
+//        engine.knockOutTarget = 1
+//        knockOutTargetButton.titleLabel?.text = String(engine.knockOutTarget)
+        knockOutTargetButton.setTitle(String(engine.knockOutTarget), for: .normal)
+        
+        navigationItem.hidesBackButton = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        // FIXME: Load Program
+        let op = engine.tiles[engine.knockOutTarget - 1].operation
+//        knockOutLabel.text = op
+//        engine.program = op.characters
+        engine.internalProgram = op
+//        engine.entryStack.items = Array(op.characters)
+//        engine.
+    }
+    
+//    func hasPunchBeenSelected(_ number : Int) -> Bool
+//    {
+//        return punches[number].selected
+//    }
+    
+    @IBAction func didTapPunch(_ sender: UIButton)
+    {
+//        let punchValue = Int(sender.titleLabel!.text!)
+        
+//        let punchNumber = 1
+        
+//        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
+
+        if !sender.isSelected
+        {
+//            let previous = knockOutLabel.text!
+//            let new      = previous + punchValue
+//            let punchValue = Character(sender.titleLabel!.text!)
+            
+            let punch = Punch(
+                num        : sender.tag,
+                punchValue : Int(sender.currentTitle!)!,
+                selected   : sender.isSelected
+            )
+            
+            engine.sendPunchValueToScreen(punch: punch)
+//            engine.sendPunchValueToScreen(punchValue: punchValue)
+//            engine.sendPunchValueToScreen(punchValue: punchValue)
+        }
+        
+        sender.isSelected = !sender.isSelected
+        
+//        punches[number].selected
+//        if hasPunchBeenSelected(number - 1) == false
+//        {
+        
+//        }
+        
+//        engine.sendPunchToScreen(<#T##number: Int##Int#>, <#T##value: Int##Int#>)
+//        sendPunchToScreen(punchNumber, punchValue)
+//        printButtonStatusUpdate()
+    }
+
+    @IBAction func didTapOperation(_ sender: UIButton)
+    {
+//        print("\naddTapped")
+        let labelText = sender.currentTitle!
+        let operation = labelText == "x^y" ? "^" : labelText
+//        let opChar    = Character(operation)
+        
+        engine.sendOperationToScreen(operation: operation)
+    }
+    
+    @IBAction func didTapKnockOut(_ sender: UIButton)
+    {
+//        print(#function)
+//        print("\nknockOut tapped")
+        
+        engine.knockOut()
+        
+//        attempt += 1
+//        print("You have tried \(attempt) times to knock out \(knockOutTarget).")
+//        
+//        var stringToEvaluate = ""
+//        
+//        stringToEvaluate = convertStringForEvaluation(labelText)
+//        
+//        if stringToEvaluate != ""
+//        {
+//            if evaluateString(stringToEvaluate) == knockOutTarget
+//            {
+//                //                labelGroup.setBackgroundColor(UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
+//                delegate?.setColorForLabelGroup(color: UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
+//                
+//                //blinking
+//                sendTargetBackDefeated(knockOutTarget: knockOutTarget)//send to knock out board page
+//            }
+//        }
+        
+        //executes what's in the label
+        //compares the result of the label to the knock out button
+        //if true, flash pale green twice a record data to coredata class attributes
+    }
+
+    @IBAction func didTapDelete(_ sender: UIButton)
+    {
+//        print(#function)
+//        print("\ndelete tapped()")
+        //let temporaryString = labelText
+        //var temporaryArray = convertStringToArray(temporaryString)
+        
+        engine.delete()
+        
+//        if labelText.isEmpty { return }
+        
+        //        else
+        //        {
+        
+//        let counter = labelText.characters.index(before: labelText.endIndex)
+        
+        // let count = temporaryArray.count
+        
+//        let char = Int(String(labelText[counter]))
+        
+//        labelText.remove(at: labelText.characters.index(before: labelText.endIndex))
+        
+//        for x in 1...4
+//        {
+//            if char == punches[x-1].punchValue
+//            {
+//                punches[x-1].selected = false
+//                //                changeButtonColor(x)
+//                delegate?.changeButtonColor(buttonNum: x)
+//                print("Changing punch #\(x)")
+//                //                    howToKnockOutLabel.setText(labelText)
+//                delegate?.printToLabel(text: labelText)
+//            }
+//            else
+//            {
+//                //                    howToKnockOutLabel.setText(labelText)
+//                delegate?.printToLabel(text: labelText)
+//            }
+//        }
+        //        }
+    }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+    
+    // MARK: GameEngineDelegate
+    
+    func printToLabel(text: String)
+    {
+        knockOutLabel.text = "=" + engine.displayableProgram // text
+        
+//        for i in 0...3 {
+//            punches[i].isSelected      = engine.punches[i].selected
+//            punches[i].alpha           = engine.punches[i].selected ? 0.3 : 1.0
+//            punches[i].backgroundColor = engine.punches[i].selected ? UIColor.lightGray.cgColor : UIColor.darkGray.cgColor
+            
+//            punches[i].setTitle(<#T##title: String?##String?#>, for: <#T##UIControlState#>) = engine.punches[i].selected
+//            punches[i].isSelected = engine.punches[i].selected
+//        }
+    }
+    
+    func didUpdatePunch(punch: Punch)
+    {
+        if let matchedPunch = punches.first(where: { $0.tag == punch.num })
+        {
+            matchedPunch.isSelected = !matchedPunch.isSelected
+//            matchedPunch.isEnabled  = !matchedPunch.isSelected
+            matchedPunch.layer.backgroundColor = matchedPunch.isSelected ? UIColor.lightGray.cgColor : UIColor.darkGray.cgColor
+            
+//            matchedPunch.isHidden = punch.selected
+//            matchedPunch.isSelected = punch.selected
+//            matchedPunch.isSelected = punch.selected
+//            matchedPunch.isEnabled  = punch.selected
+        }
+    }
+    
+    func setColorForLabelGroup(color: UIColor)
+    {
+        view.backgroundColor = color // FIXME: knock out target button or display background
+    }
+    
+    
+    func sendTargetBackDefeated()
+    {
+        _ = navigationController?.popViewController(animated: true)
+    }
+}

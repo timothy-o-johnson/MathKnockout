@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52202EDE1E33F0490065E59A /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EDD1E33F0490065E59A /* BoardViewController.swift */; };
+		52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */; };
+		52202EE31E33FCE60065E59A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE21E33FCE60065E59A /* GameEngine.swift */; };
+		526024131DFADFEA005379C4 /* SplashScreenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024121DFADFEA005379C4 /* SplashScreenInterfaceController.swift */; };
+		526024151DFADFFC005379C4 /* BoardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024141DFADFFC005379C4 /* BoardInterfaceController.swift */; };
+		526024171DFAE003005379C4 /* ChooseFourInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */; };
+		526024191DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */; };
+		528B52C11E34AA1200B870DA /* MathParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5210F9BF1E0446590029442F /* MathParser.framework */; };
+		52B40EE11DFACED2005016C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE01DFACED2005016C3 /* AppDelegate.swift */; };
+		52B40EE31DFACED2005016C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE21DFACED2005016C3 /* ViewController.swift */; };
+		52B40EE61DFACED2005016C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE41DFACED2005016C3 /* Main.storyboard */; };
+		52B40EE81DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE71DFACED2005016C3 /* Assets.xcassets */; };
+		52B40EEB1DFACED2005016C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE91DFACED2005016C3 /* LaunchScreen.storyboard */; };
+		52B40EF61DFACED2005016C3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EF41DFACED2005016C3 /* Interface.storyboard */; };
+		52B40EF81DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EF71DFACED2005016C3 /* Assets.xcassets */; };
+		52B40EFF1DFACED2005016C3 /* NoNotif WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52B40F041DFACED2005016C3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40F031DFACED2005016C3 /* InterfaceController.swift */; };
+		52B40F061DFACED2005016C3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */; };
+		52B40F081DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40F071DFACED2005016C3 /* Assets.xcassets */; };
+		52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5210F9BE1E0446590029442F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 559B3EF91B74063600000108;
+			remoteInfo = MathParser;
+		};
+		5210F9C01E0446590029442F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 559B3F021B74063600000108;
+			remoteInfo = MathParserTests;
+		};
+		5210F9C41E04475A0029442F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 559B3EF81B74063600000108;
+			remoteInfo = MathParser;
+		};
+		52B40F001DFACED2005016C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B40ED51DFACED2005016C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B40EFD1DFACED2005016C3;
+			remoteInfo = "NoNotif WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52B40F0F1DFACED2005016C3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52B40EFF1DFACED2005016C3 /* NoNotif WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B40F131DFACED2005016C3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5210F9B91E0446580029442F /* DDMathParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DDMathParser.xcodeproj; path = DDMathParser/DDMathParser.xcodeproj; sourceTree = "<group>"; };
+		52202EDD1E33F0490065E59A /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutViewController.swift; sourceTree = "<group>"; };
+		52202EE21E33FCE60065E59A /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		526024121DFADFEA005379C4 /* SplashScreenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenInterfaceController.swift; sourceTree = "<group>"; };
+		526024141DFADFFC005379C4 /* BoardInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardInterfaceController.swift; sourceTree = "<group>"; };
+		526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFourInterfaceController.swift; sourceTree = "<group>"; };
+		526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutInterfaceController.swift; sourceTree = "<group>"; };
+		52B40EDD1DFACED2005016C3 /* NoNotif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNotif.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B40EE01DFACED2005016C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52B40EE21DFACED2005016C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B40EE51DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52B40EE71DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52B40EEA1DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52B40EEC1DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoNotif WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B40EF51DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		52B40EF71DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52B40EF91DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NoNotif WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B40F031DFACED2005016C3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		52B40F071DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52B40F091DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EAA2EA1E3C25EF00233D2E /* NoNotif.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoNotif.entitlements; sourceTree = "<group>"; };
+		52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFourViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52B40EDA1DFACED2005016C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528B52C11E34AA1200B870DA /* MathParser.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B40EFB1DFACED2005016C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5210F9BA1E0446580029442F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5210F9BF1E0446590029442F /* MathParser.framework */,
+				5210F9C11E0446590029442F /* MathParserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52B40ED41DFACED2005016C3 = {
+			isa = PBXGroup;
+			children = (
+				5210F9B91E0446580029442F /* DDMathParser.xcodeproj */,
+				52B40EDF1DFACED2005016C3 /* NoNotif */,
+				52B40EF31DFACED2005016C3 /* NoNotif WatchKit App */,
+				52B40F021DFACED2005016C3 /* NoNotif WatchKit Extension */,
+				52B40EDE1DFACED2005016C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52B40EDE1DFACED2005016C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B40EDD1DFACED2005016C3 /* NoNotif.app */,
+				52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */,
+				52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52B40EDF1DFACED2005016C3 /* NoNotif */ = {
+			isa = PBXGroup;
+			children = (
+				52EAA2EA1E3C25EF00233D2E /* NoNotif.entitlements */,
+				52B40EE01DFACED2005016C3 /* AppDelegate.swift */,
+				52B40EE21DFACED2005016C3 /* ViewController.swift */,
+				52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */,
+				52202EDD1E33F0490065E59A /* BoardViewController.swift */,
+				52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */,
+				52202EE21E33FCE60065E59A /* GameEngine.swift */,
+				52B40EE41DFACED2005016C3 /* Main.storyboard */,
+				52B40EE71DFACED2005016C3 /* Assets.xcassets */,
+				52B40EE91DFACED2005016C3 /* LaunchScreen.storyboard */,
+				52B40EEC1DFACED2005016C3 /* Info.plist */,
+			);
+			path = NoNotif;
+			sourceTree = "<group>";
+		};
+		52B40EF31DFACED2005016C3 /* NoNotif WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				52B40EF41DFACED2005016C3 /* Interface.storyboard */,
+				52B40EF71DFACED2005016C3 /* Assets.xcassets */,
+				52B40EF91DFACED2005016C3 /* Info.plist */,
+			);
+			path = "NoNotif WatchKit App";
+			sourceTree = "<group>";
+		};
+		52B40F021DFACED2005016C3 /* NoNotif WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				526024121DFADFEA005379C4 /* SplashScreenInterfaceController.swift */,
+				526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */,
+				526024141DFADFFC005379C4 /* BoardInterfaceController.swift */,
+				526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */,
+				52B40F031DFACED2005016C3 /* InterfaceController.swift */,
+				52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */,
+				52B40F071DFACED2005016C3 /* Assets.xcassets */,
+				52B40F091DFACED2005016C3 /* Info.plist */,
+			);
+			path = "NoNotif WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52B40EDC1DFACED2005016C3 /* NoNotif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B40F141DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif" */;
+			buildPhases = (
+				52B40ED91DFACED2005016C3 /* Sources */,
+				52B40EDA1DFACED2005016C3 /* Frameworks */,
+				52B40EDB1DFACED2005016C3 /* Resources */,
+				52B40F131DFACED2005016C3 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoNotif;
+			productName = NoNotif;
+			productReference = 52B40EDD1DFACED2005016C3 /* NoNotif.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52B40EEE1DFACED2005016C3 /* NoNotif WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B40F101DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit App" */;
+			buildPhases = (
+				52B40EED1DFACED2005016C3 /* Resources */,
+				52B40F0F1DFACED2005016C3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B40F011DFACED2005016C3 /* PBXTargetDependency */,
+			);
+			name = "NoNotif WatchKit App";
+			productName = "NoNotif WatchKit App";
+			productReference = 52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B40F0C1DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit Extension" */;
+			buildPhases = (
+				52B40EFA1DFACED2005016C3 /* Sources */,
+				52B40EFB1DFACED2005016C3 /* Frameworks */,
+				52B40EFC1DFACED2005016C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5210F9C51E04475A0029442F /* PBXTargetDependency */,
+			);
+			name = "NoNotif WatchKit Extension";
+			productName = "NoNotif WatchKit Extension";
+			productReference = 52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52B40ED51DFACED2005016C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "John Groenlund";
+				TargetAttributes = {
+					52B40EDC1DFACED2005016C3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = L77Z4VF5RZ;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					52B40EEE1DFACED2005016C3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = L77Z4VF5RZ;
+						ProvisioningStyle = Automatic;
+					};
+					52B40EFD1DFACED2005016C3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = L77Z4VF5RZ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 52B40ED81DFACED2005016C3 /* Build configuration list for PBXProject "NoNotif" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52B40ED41DFACED2005016C3;
+			productRefGroup = 52B40EDE1DFACED2005016C3 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5210F9BA1E0446580029442F /* Products */;
+					ProjectRef = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				52B40EDC1DFACED2005016C3 /* NoNotif */,
+				52B40EEE1DFACED2005016C3 /* NoNotif WatchKit App */,
+				52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5210F9BF1E0446590029442F /* MathParser.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MathParser.framework;
+			remoteRef = 5210F9BE1E0446590029442F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5210F9C11E0446590029442F /* MathParserTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MathParserTests.xctest;
+			remoteRef = 5210F9C01E0446590029442F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52B40EDB1DFACED2005016C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B40EEB1DFACED2005016C3 /* LaunchScreen.storyboard in Resources */,
+				52B40EE81DFACED2005016C3 /* Assets.xcassets in Resources */,
+				52B40EE61DFACED2005016C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B40EED1DFACED2005016C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B40EF81DFACED2005016C3 /* Assets.xcassets in Resources */,
+				52B40EF61DFACED2005016C3 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B40EFC1DFACED2005016C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B40F081DFACED2005016C3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52B40ED91DFACED2005016C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */,
+				52202EE31E33FCE60065E59A /* GameEngine.swift in Sources */,
+				52B40EE31DFACED2005016C3 /* ViewController.swift in Sources */,
+				52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */,
+				52B40EE11DFACED2005016C3 /* AppDelegate.swift in Sources */,
+				52202EDE1E33F0490065E59A /* BoardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B40EFA1DFACED2005016C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B40F061DFACED2005016C3 /* ExtensionDelegate.swift in Sources */,
+				526024171DFAE003005379C4 /* ChooseFourInterfaceController.swift in Sources */,
+				52B40F041DFACED2005016C3 /* InterfaceController.swift in Sources */,
+				526024191DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift in Sources */,
+				526024151DFADFFC005379C4 /* BoardInterfaceController.swift in Sources */,
+				526024131DFADFEA005379C4 /* SplashScreenInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5210F9C51E04475A0029442F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MathParser;
+			targetProxy = 5210F9C41E04475A0029442F /* PBXContainerItemProxy */;
+		};
+		52B40F011DFACED2005016C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */;
+			targetProxy = 52B40F001DFACED2005016C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52B40EE41DFACED2005016C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B40EE51DFACED2005016C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52B40EE91DFACED2005016C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B40EEA1DFACED2005016C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		52B40EF41DFACED2005016C3 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B40EF51DFACED2005016C3 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52B40F0A1DFACED2005016C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52B40F0B1DFACED2005016C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52B40F0D1DFACED2005016C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		52B40F0E1DFACED2005016C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		52B40F111DFACED2005016C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				IBSC_MODULE = NoNotif_WatchKit_Extension;
+				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		52B40F121DFACED2005016C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				IBSC_MODULE = NoNotif_WatchKit_Extension;
+				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		52B40F151DFACED2005016C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				INFOPLIST_FILE = NoNotif/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52B40F161DFACED2005016C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				INFOPLIST_FILE = NoNotif/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B40ED81DFACED2005016C3 /* Build configuration list for PBXProject "NoNotif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B40F0A1DFACED2005016C3 /* Debug */,
+				52B40F0B1DFACED2005016C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B40F0C1DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B40F0D1DFACED2005016C3 /* Debug */,
+				52B40F0E1DFACED2005016C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B40F101DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B40F111DFACED2005016C3 /* Debug */,
+				52B40F121DFACED2005016C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B40F141DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B40F151DFACED2005016C3 /* Debug */,
+				52B40F161DFACED2005016C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52B40ED51DFACED2005016C3 /* Project object */;
+}
