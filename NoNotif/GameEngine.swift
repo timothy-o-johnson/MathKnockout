@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MathParser
+//import MathParser
 
 import UIKit.UIColor
 //import WatchKit.UIColor
@@ -360,15 +360,26 @@ class GameEngine //: NSObject
 //        {
         var resultingInt : Int? //""
         
-        do
+        let mathExpression = NSExpression(format: stringToEvaluate)
+        
+        if let mathValue = mathExpression.expressionValue(with: nil, context: nil) as? Int
         {
-            let resultDouble = try stringToEvaluate.evaluate()
-            resultingInt = Int(resultDouble)
+            print(String(mathValue) + "=" + stringToEvaluate)
+            resultingInt = mathValue
         }
-        catch
-        {
-            print("could not evaluate \(stringToEvaluate)")
-        }
+//        else
+//        {
+//            do
+//            {
+//                let resultDouble = try stringToEvaluate.evaluate()
+//                resultingInt = Int(resultDouble)
+//            }
+//            catch
+//            {
+//                print("could not evaluate \(stringToEvaluate)")
+//            }
+//        }
+
         
         guard resultingInt != nil else { return }
         
@@ -863,8 +874,7 @@ class GameEngine //: NSObject
             
         }
     }
-    */
-    
+ 
     func evaluateString(_ aString : String) -> Int
     {
         var returnvalue : Double = 0.0 //Double?
@@ -892,6 +902,7 @@ class GameEngine //: NSObject
          return -404
          }*/
     }
+    */
     
     func sendTargetBackDefeated()
     {

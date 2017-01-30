@@ -14,7 +14,6 @@
 		526024151DFADFFC005379C4 /* BoardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024141DFADFFC005379C4 /* BoardInterfaceController.swift */; };
 		526024171DFAE003005379C4 /* ChooseFourInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */; };
 		526024191DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */; };
-		528B52C11E34AA1200B870DA /* MathParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5210F9BF1E0446590029442F /* MathParser.framework */; };
 		52B40EE11DFACED2005016C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE01DFACED2005016C3 /* AppDelegate.swift */; };
 		52B40EE31DFACED2005016C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE21DFACED2005016C3 /* ViewController.swift */; };
 		52B40EE61DFACED2005016C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE41DFACED2005016C3 /* Main.storyboard */; };
@@ -30,27 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5210F9BE1E0446590029442F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 559B3EF91B74063600000108;
-			remoteInfo = MathParser;
-		};
-		5210F9C01E0446590029442F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 559B3F021B74063600000108;
-			remoteInfo = MathParserTests;
-		};
-		5210F9C41E04475A0029442F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 559B3EF81B74063600000108;
-			remoteInfo = MathParser;
-		};
 		52B40F001DFACED2005016C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52B40ED51DFACED2005016C3 /* Project object */;
@@ -85,7 +63,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5210F9B91E0446580029442F /* DDMathParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DDMathParser.xcodeproj; path = DDMathParser/DDMathParser.xcodeproj; sourceTree = "<group>"; };
 		52202EDD1E33F0490065E59A /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutViewController.swift; sourceTree = "<group>"; };
 		52202EE21E33FCE60065E59A /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
@@ -118,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528B52C11E34AA1200B870DA /* MathParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,19 +108,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5210F9BA1E0446580029442F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5210F9BF1E0446590029442F /* MathParser.framework */,
-				5210F9C11E0446590029442F /* MathParserTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		52B40ED41DFACED2005016C3 = {
 			isa = PBXGroup;
 			children = (
-				5210F9B91E0446580029442F /* DDMathParser.xcodeproj */,
 				52B40EDF1DFACED2005016C3 /* NoNotif */,
 				52B40EF31DFACED2005016C3 /* NoNotif WatchKit App */,
 				52B40F021DFACED2005016C3 /* NoNotif WatchKit Extension */,
@@ -254,7 +220,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5210F9C51E04475A0029442F /* PBXTargetDependency */,
 			);
 			name = "NoNotif WatchKit Extension";
 			productName = "NoNotif WatchKit Extension";
@@ -304,12 +269,6 @@
 			mainGroup = 52B40ED41DFACED2005016C3;
 			productRefGroup = 52B40EDE1DFACED2005016C3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5210F9BA1E0446580029442F /* Products */;
-					ProjectRef = 5210F9B91E0446580029442F /* DDMathParser.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				52B40EDC1DFACED2005016C3 /* NoNotif */,
@@ -318,23 +277,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5210F9BF1E0446590029442F /* MathParser.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MathParser.framework;
-			remoteRef = 5210F9BE1E0446590029442F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5210F9C11E0446590029442F /* MathParserTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = MathParserTests.xctest;
-			remoteRef = 5210F9C01E0446590029442F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		52B40EDB1DFACED2005016C3 /* Resources */ = {
@@ -396,11 +338,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5210F9C51E04475A0029442F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MathParser;
-			targetProxy = 5210F9C41E04475A0029442F /* PBXContainerItemProxy */;
-		};
 		52B40F011DFACED2005016C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */;
