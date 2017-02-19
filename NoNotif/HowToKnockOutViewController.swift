@@ -88,8 +88,6 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //            engine.sendPunchValueToScreen(punchValue: punchValue)
         }
         
-        sender.isSelected = !sender.isSelected
-        
 //        punches[number].selected
 //        if hasPunchBeenSelected(number - 1) == false
 //        {

@@ -433,7 +433,7 @@ class GameEngine //: NSObject
                 matchingPunch.selected = false
                 delegate?.printToLabel(text: displayableProgram)
 //                delegate?.printToLabel(text: entryStack.description)
-                //            delegate?.didUpdatePunch(punch: matchingPunch)
+                delegate?.didUpdatePunch(punch: matchingPunch)
             }
         }
 //        internalProgram.removeLast()
@@ -808,6 +808,7 @@ class GameEngine //: NSObject
         delegate?.printToLabel(text: displayableProgram)
 //        delegate?.didUpdatePunch(punch: modifiedPunch)
 //            delegate?.didUpdatePunch(punch: matchingPunch)
+        delegate?.didUpdatePunch(punch: punch)
 //        }
         
 //        }
