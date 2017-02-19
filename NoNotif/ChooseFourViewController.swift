@@ -8,30 +8,12 @@
 
 import UIKit
 
-class HighlightedButton : UIButton
-{
-    override var isSelected: Bool {
-        didSet {
-            
-        }
-    }
-}
 
 class ChooseFourViewController: UIViewController
 {
     @IBOutlet var numberButtons: [UIButton]!
     
     let engine = GameEngine.shared
-    
-//    @IBOutlet var numberOne   : UIButton!
-//    @IBOutlet var numberTwo   : UIButton!
-//    @IBOutlet var numberThree : UIButton!
-//    @IBOutlet var numberFour  : UIButton!
-//    @IBOutlet var numberFive  : UIButton!
-//    @IBOutlet var numberSix   : UIButton!
-//    @IBOutlet var numberSeven : UIButton!
-//    @IBOutlet var numberEight : UIButton!
-//    @IBOutlet var numberNine  : UIButton!
     
     @IBOutlet var nextButton  : UIButton! //when FourSelected = true enable
     
