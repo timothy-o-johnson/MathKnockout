@@ -18,8 +18,8 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     
     @IBAction func didTapRestart(_ sender: UIBarButtonItem)
     {
+        engine.resetGame()
         navigationController?.popToRootViewController(animated: true)
-//        performs
     }
     
     override func viewDidLoad()

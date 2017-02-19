@@ -1007,16 +1007,31 @@ class GameEngine //: NSObject
         
         return fourthString
     }
-    /*
+    
     func resetGame()
     {
 //        print("\nFunction: resetGame()")
+
+//        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        
+        internalProgram.removeAll()
+        
+        tiles = (1...25).map {
+            Tile2(
+                number    : $0,
+                KOed      : false,
+                operation : [Any](),
+                attempts  : 0
+            )
+        }
+        
+//        punches.
         
         // create three dictionaries
 //        var dictKOed      = [String: String]()
 //        var dictAttempt   = [String: Int]()
 //        var dictOperation = [String: String]()
-        
+      /*
         let x = (1...25).map { num -> [String:Any] in
             [
                 "KOed"      : false,
@@ -1036,7 +1051,7 @@ class GameEngine //: NSObject
             )
         }
         
-        
+   */
         // set them to zero
 //        for x in 1...25
 //        {
@@ -1065,7 +1080,6 @@ class GameEngine //: NSObject
 //        popToRootController()
         //        pop()
     }
-    */
     
     
 //    func resetDictionaries()
