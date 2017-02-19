@@ -19,6 +19,8 @@ struct SelectedPunches
 
 class ChooseFourInterfaceController: WKInterfaceController {
     
+    let engine = GameEngine.shared
+    
     func initializeBoardTargetAndTargetInfo()
     {
         
@@ -187,6 +189,22 @@ class ChooseFourInterfaceController: WKInterfaceController {
 //            let selectedPunches = saveSelectedNumbers()
 //            self.presentController(withName: "boardController", context: selectedPunches)
 //            self.presentController(withName: "boardController", context: nil)
+            
+//            let selectedButtons = numberButtons.filter { $0.isSelected }
+            //        selectedButtons.first!.titleLabel!.text!
+            
+            let selectedButtons = numbers.filter { $0.selected }
+            
+            let selectedPunches = selectedButtons.map {
+                Punch(num: $0.num, punchValue: $0.num, selected: false)
+            }
+            
+            engine.punches = selectedPunches
+        
+            
+            let selectedPunches2 = saveSelectedNumbers()
+            let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches2]
+            WKInterfaceController.reloadRootControllers(withNames: ["boardController"], contexts: [passThruContext])
         }
     }
     

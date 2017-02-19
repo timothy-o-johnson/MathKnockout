@@ -8,20 +8,22 @@
 
 import WatchKit
 import Foundation
-import MathParser
+//import MathParser
 
 
 
-class HowToKnockOutInterfaceController: WKInterfaceController {
+class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegate {
     
-    var punches = [punch]()
+    let engine = GameEngine.shared
+    
+//    var punches = [punch]()
 
     var first  = 0 // UserDefaults.standard.object(forKey: "firstSelected") as! Int
     var second = 0 // UserDefaults.standard.object(forKey: "secondSelected") as! Int
     var third  = 0 // UserDefaults.standard.object(forKey: "thirdSelected") as! Int
     var fourth = 0 // UserDefaults.standard.object(forKey: "fourthSelected") as! Int
     
-    var knockOutTarget = 0 // UserDefaults.standard.object(forKey: "knockOutTarget") as! Int
+//    var knockOutTarget = 0 // UserDefaults.standard.object(forKey: "knockOutTarget") as! Int
     
     var labelText = ""
     var attempt = 0
@@ -43,19 +45,24 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
 //        print(context!)
         // Configure interface objects here.
         
-        let passThruContext = context as! [String : Any]
-        let selected = passThruContext["selectedPunches"] as! SelectedPunches
+        engine.delegate = self
+        
+//        let passThruContext = context as! [String : Any]
+//        let selected = passThruContext["selectedPunches"] as! SelectedPunches
         
 //        let selected = context as! SelectedPunches
         
-        first  = selected.first
-        second = selected.second
-        third  = selected.third
-        fourth = selected.fourth
+        first  = engine.punches[0].punchValue // selected.first
+        second = engine.punches[1].punchValue // selected.second
+        third  = engine.punches[2].punchValue // selected.third
+        fourth = engine.punches[3].punchValue // selected.fourth
         
-        knockOutTarget = passThruContext["knockOutTarget"] as! Int
+//        knockOutTargetButton.setTitle(String(engine.knockOutTarget), for: .normal)
         
-        punches = createPunchesList(selected.first, secondPunch: selected.second, thirdPunch: selected.third, fourthPunch: selected.fourth)
+//        knockOutTarget = engine.knockOutTarget
+//        knockOutTarget = passThruContext["knockOutTarget"] as! Int
+        
+//        punches = createPunchesList(selected.first, secondPunch: selected.second, thirdPunch: selected.third, fourthPunch: selected.fourth)
     }
     
     override func willActivate() {
@@ -66,18 +73,21 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         
 //        punches = createPunchesList(first, secondPunch: second, thirdPunch: third, fourthPunch: fourth)
         
-        print("\n\nCurrent Interface: How To Knock Out\n")
-        print("Your Knock Out Target is \(knockOutTarget).")
-        printSelectedNumbers()
-        printButtonStatusUpdate()
-        printNSUserDefaultsForKOAndAttemptAndOperation()
+//        print("\n\nCurrent Interface: How To Knock Out\n")
+//        print("Your Knock Out Target is \(engine.knockOutTarget).")
+//        printSelectedNumbers()
+//        printButtonStatusUpdate()
+//        printNSUserDefaultsForKOAndAttemptAndOperation()
         
-        self.knockOutTargetButton.setTitle("\(knockOutTarget)")
-        self.firstPunch.setTitle("\(self.first)")
-        self.secondPunch.setTitle("\(self.second)")
-        self.thirdPunch.setTitle("\(self.third)")
-        self.fourthPunch.setTitle("\(self.fourth)")
-        self.howToKnockOutLabel.setText(labelText)
+        knockOutTargetButton.setTitle(String(engine.knockOutTarget))
+        
+         firstPunch.setTitle(String(first))
+        secondPunch.setTitle(String(second))
+         thirdPunch.setTitle(String(third))
+        fourthPunch.setTitle(String(fourth))
+        
+//        self.howToKnockOutLabel.setText(labelText)
+        howToKnockOutLabel.setText(engine.displayableProgram) // needed?
     }
     
 //    override func didDeactivate() {
@@ -110,108 +120,113 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
     
     @IBOutlet var labelGroup: WKInterfaceGroup!
     
-    @IBAction func firstPunchTapped(){
-        let punchValue = first
-        let punchNumber = 1
+    @IBAction func firstPunchTapped()
+    {
+//        let punchValue = first
+//        let punchNumber = 1
         
-        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
+//        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
         
-        sendPunchToScreen(punchNumber, punchValue)
-        printButtonStatusUpdate()
+//        sendPunchToScreen(punchNumber, punchValue)
+//        printButtonStatusUpdate()
+     
+//        firstPunch
+        // FIXME: punch selection
+//        if !sender.isSelected
+//        {
+            //            let previous = knockOutLabel.text!
+            //            let new      = previous + punchValue
+            //            let punchValue = Character(sender.titleLabel!.text!)
+            
+//            let punch = Punch(
+//                num        : 1, //punchNumber, //sender.tag,
+//                punchValue : engine.punches[0].punchValue, // first, // Int(sender.currentTitle!)!,
+//                selected   : false // sender.isSelected
+//            )
+        
+        
+//        engine.sendPunchValueToScreen(punch: punch)
+            engine.sendPunchValueToScreen(punch: engine.punches[0])
+            //            engine.sendPunchValueToScreen(punchValue: punchValue)
+            //            engine.sendPunchValueToScreen(punchValue: punchValue)
+//        }
+        
+//        sender.isSelected = !sender.isSelected
         
     }
     
     @IBAction func secondPunchTapped(){
-        let punchValue = second
-        let punchNumber = 2
+//        let punchValue = second
+//        let punchNumber = 2
         
-        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
-            
-        sendPunchToScreen(punchNumber, punchValue)
-        printButtonStatusUpdate()
+//        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
+        
+//        sendPunchToScreen(punchNumber, punchValue)
+//        printButtonStatusUpdate()
+        
+//        let punch = Punch(
+//            num        : 2, //punchNumber, //sender.tag,
+//            punchValue : engine.punches[1].punchValue, //second, // Int(sender.currentTitle!)!,
+//            selected   : false // sender.isSelected
+//        )
+        
+//        engine.sendPunchValueToScreen(punch: punch)
+        engine.sendPunchValueToScreen(punch: engine.punches[1])
     }
     
     @IBAction func thirdPunchTapped(){
-        let punchValue = third
-        let punchNumber = 3
+//        let punchValue = third
+//        let punchNumber = 3
         
-        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
-            
-        sendPunchToScreen(punchNumber, punchValue)
-        printButtonStatusUpdate()
+//        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
+        
+//        sendPunchToScreen(punchNumber, punchValue)
+//        printButtonStatusUpdate()
+        
+//        let punch = Punch(
+//            num        : 3, //punchNumber, //sender.tag,
+//            punchValue : engine.punches[2].punchValue, //third, // Int(sender.currentTitle!)!,
+//            selected   : false // sender.isSelected
+//        )
+        
+//        engine.sendPunchValueToScreen(punch: punch)
+        engine.sendPunchValueToScreen(punch: engine.punches[2])
     }
     
     @IBAction func fourthPunchTapped(){
-        let punchValue = fourth
-        let punchNumber = 4
+//        let punchValue = fourth
+//        let punchNumber = 4
         
-        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
-            
-        sendPunchToScreen(punchNumber, punchValue)
-        printButtonStatusUpdate()
+//        print("\nPunch #\(punchNumber) tapped with value of \(punchValue)")
+        
+//        sendPunchToScreen(punchNumber, punchValue)
+//        printButtonStatusUpdate()
+        
+//        let punch = Punch(
+//            num        : 4, //punchNumber, //sender.tag,
+//            punchValue : engine.punches[3].punchValue, //fourth, // Int(sender.currentTitle!)!,
+//            selected   : false // sender.isSelected
+//        )
+        
+//        engine.sendPunchValueToScreen(punch: punch)
+        engine.sendPunchValueToScreen(punch: engine.punches[3])
     }
     
-    @IBAction func addTapped(){
-        print("\naddTapped")
-        
-        let operation = "+"
-        
-        sendOperationToScreen(operation)
-    }
+    @IBAction func addTapped()               { engine.sendOperationToScreen(operation: "+") }
+    @IBAction func subtractTapped()          { engine.sendOperationToScreen(operation: "-") }
+    @IBAction func multiplyTapped()          { engine.sendOperationToScreen(operation: "x") }
+    @IBAction func divideTapped()            { engine.sendOperationToScreen(operation: "/") }
+    @IBAction func openParenthesisTapped()   { engine.sendOperationToScreen(operation: "(") }
+    @IBAction func closedParenthesisTapped() { engine.sendOperationToScreen(operation: ")") }
+    @IBAction func exponentTapped()          { engine.sendOperationToScreen(operation: "^") }
     
-    @IBAction func subtractTapped(){
-        print("\nsubtractTapped")
-        
-        let operation = "-"
-        
-        sendOperationToScreen(operation)
-        
-    }
-    
-    @IBAction func multiplyTapped(){
-        print("\nmultiplyTapped")
-        
-        let operation = "x"
-        
-        sendOperationToScreen(operation)
-    }
-    
-    @IBAction func divideTapped(){
-        print("\ndivideTapped")
-        
-        let operation = "/"
-        
-        sendOperationToScreen(operation)
-    }
-    
-    @IBAction func openParenthesisTapped(){
-        print("\nopenParenthesisTapped")
-        
-        let operation = "("
-        
-        sendOperationToScreen(operation)
-    }
-    
-    @IBAction func closedParenthesisTapped(){
-        
-        print("\nclosedParenthesisTapped")
-        
-        let operation = ")"
-        
-        sendOperationToScreen(operation)
-    }
-    
-    @IBAction func exponentTapped(){
-        print("\nexponentTapped")
-        
-        let operation = "^"
-        
-        sendOperationToScreen(operation)
-    }
-    
-    @IBAction func knockOut(){
+    @IBAction func knockOut()
+    {
         print("\nknockOut tapped")
         
+        engine.knockOut()
+        
+        /*
         attempt += 1
         print("You have tried \(attempt) times to knock out \(knockOutTarget).")
         
@@ -224,7 +239,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
             if evaluateString(stringToEvaluate) == knockOutTarget{
                 labelGroup.setBackgroundColor(UIColor.init(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
                 //blinking
-                sendTargetBackDefeated()//send to knock out board page
+                sendTargetBackDefeated2()//send to knock out board page
             } else {
                 
             }
@@ -233,6 +248,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         //executes what's in the label
         //compares the result of the label to the knock out button
         //if true, flash pale green twice a record data to coredata class attributes
+        */
     }
 
     @IBAction func deleteTapped() {
@@ -240,6 +256,9 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         //let temporaryString = labelText
         //var temporaryArray = convertStringToArray(temporaryString)
         
+        engine.delete()
+        
+        /*
         if labelText == ""{
         } else {
             let counter = labelText.characters.index(before: labelText.endIndex)
@@ -261,6 +280,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
                 }
             }
         }
+        */
     }
     
     
@@ -349,13 +369,14 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         }
     }
     
+    /*
     func hasThisNumberBeenEnteredAlready(_ number : Int) -> Bool{
         let punchNumber = number
         print("\nhasThisNumberBeenEnteredAlready()")
         print((String(punches[punchNumber].selected)))
         return punches[punchNumber].selected
     }
-   
+   */
     
     func checkIfInt(_ something : Character) -> Bool{
         switch something{
@@ -423,9 +444,10 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
     
     func changeButtonColor(_ number : Int){
         let button = whichButton(number)
-        switch punches[number - 1].selected{
-        case true: button.setBackgroundColor(UIColor.lightGray)
-        case false: button.setBackgroundColor(UIColor.darkGray)
+        switch engine.punches[number - 1].selected
+        {
+            case true  : button.setBackgroundColor(.lightGray)
+            case false : button.setBackgroundColor(.darkGray)
             //default: print("Warning: button color is not changing!")
         }
     }
@@ -440,25 +462,36 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         }
     }
     
-    func changeSelectedStatus(_ number : Int) {
-        if self.punches[number - 1].selected == false{
-            self.punches[number - 1].selected = true
-        }else{
-            self.punches[number - 1].selected = false
-        }
+    func changeSelectedStatus(_ number : Int)
+    {
+        engine.punches[number - 1].selected = !engine.punches[number - 1].selected
+        
+//        if engine.punches[number - 1].selected
+//        {
+//            self.punches[number - 1].selected = false
+//        }
+        
+//        if self.punches[number - 1].selected == false
+//        {
+//            self.punches[number - 1].selected = true
+//        }
+//        else
+//        {
+//            self.punches[number - 1].selected = false
+//        }
     }
     
     func hasPunchBeenSelected(_ number : Int) -> Bool{
-        return punches[number].selected
+        return engine.punches[number].selected
     }
     
     func printButtonStatusUpdate(){
-        let count = punches.count
+        let count = engine.punches.count
         
         print("\nprintButtonStatusUpdate()")
         
         for x in 0..<count{
-            print("Punch #\(x+1), Value \(punches[x].punchValue), Selected: \(punches[x].selected)")
+            print("Punch #\(x+1), Value \(engine.punches[x].punchValue), Selected: \(engine.punches[x].selected)")
         }
     }
     
@@ -491,13 +524,14 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         var returnvalue:Double?
         
         do {
-            returnvalue = try aString.evaluate()
+//            returnvalue = try aString.evaluate() // FIXME: quick
             NSLog("\(returnvalue)")
             
-        } catch {
-            NSLog("error came")
-            returnvalue = 0
         }
+//        catch {
+//            NSLog("error came")
+//            returnvalue = 0
+//        }
         
         return Int(returnvalue!)        /*let expression = NSExpression(format:aString)
         
@@ -511,7 +545,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         }*/
     }
  
-    func sendTargetBackDefeated() {
+    func sendTargetBackDefeated2() {
         
         var copyDictKOed = UserDefaults.standard.object(forKey: "dictKOed") as! [String: String]
         var copyDictAttempt = UserDefaults.standard.object(forKey: "dictAttempt") as! [String: Int]
@@ -526,9 +560,9 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
         print("\n\nCopy of Operation dict: Before")
         print(copyDictOperation)
         
-        copyDictKOed[String(knockOutTarget)] = "yes"
-        copyDictAttempt[String(knockOutTarget)] = attempt
-        copyDictOperation[String(knockOutTarget)] = labelText
+        copyDictKOed[String(engine.knockOutTarget)] = "yes"
+        copyDictAttempt[String(engine.knockOutTarget)] = attempt
+        copyDictOperation[String(engine.knockOutTarget)] = labelText
         
         print("\n\nCopy of KOed dict: After")
         print(copyDictKOed)
@@ -634,5 +668,35 @@ class HowToKnockOutInterfaceController: WKInterfaceController {
     }
     
     
+    // MARK: GameEngineDelegate
+    
+    func printToLabel(text: String)
+    {
+//        howToKnockOutLabel.setText("=" + engine.displayableProgram)
+        howToKnockOutLabel.setText(engine.displayableProgram)
+//        knockOutLabel.text = "=" + engine.displayableProgram
+    }
+    
+    func didUpdatePunch(punch: Punch)
+    {
+//        if let matchedPunch = punches.first(where: { $0.tag == punch.num })
+//        {
+//            matchedPunch.isSelected = !matchedPunch.isSelected
+//            matchedPunch.layer.backgroundColor = matchedPunch.isSelected ? UIColor.lightGray.cgColor : UIColor.darkGray.cgColor
+//        }
+    }
+    
+    func setColorForLabelGroup(color: UIColor)
+    {
+//        view.backgroundColor = color // FIXME: knock out target button or display background
+    }
+    
+    
+    func sendTargetBackDefeated()
+    {
+//        _ = navigationController?.popViewController(animated: true)
+        
+        WKInterfaceController.reloadRootControllers(withNames: ["boardController"], contexts: [])
+    }
 
 }

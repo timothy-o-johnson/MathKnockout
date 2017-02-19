@@ -39,12 +39,21 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
         super.viewWillAppear(animated)
         
         // FIXME: Load Program
-        let op = engine.tiles[engine.knockOutTarget - 1].operation
+//        let op = engine.tiles[engine.knockOutTarget - 1].operation
 //        knockOutLabel.text = op
 //        engine.program = op.characters
-        engine.internalProgram = op
+//        engine.internalProgram = engine.tiles[engine.knockOutTarget - 1].operation
 //        engine.entryStack.items = Array(op.characters)
 //        engine.
+        knockOutLabel.text = engine.displayableProgram // needed?
+        
+        for i in 0..<punches.count {
+            punches[i].setTitle(String(engine.punches[i].punchValue), for: .normal)
+        }
+//        punches[0].setTitle(String(engine.punches[0].punchValue), for: .normal)
+//        punches[1].setTitle(String(engine.punches[1].punchValue), for: .normal)
+//        punches[2].setTitle(String(engine.punches[2].punchValue), for: .normal)
+//        punches[3].setTitle(String(engine.punches[3].punchValue), for: .normal)
     }
     
 //    func hasPunchBeenSelected(_ number : Int) -> Bool
@@ -66,13 +75,15 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //            let new      = previous + punchValue
 //            let punchValue = Character(sender.titleLabel!.text!)
             
-            let punch = Punch(
-                num        : sender.tag,
-                punchValue : Int(sender.currentTitle!)!,
-                selected   : sender.isSelected
-            )
+//            let punch = Punch(
+//                num        : sender.tag,
+//                punchValue : Int(sender.currentTitle!)!,
+//                selected   : sender.isSelected
+//            )
             
-            engine.sendPunchValueToScreen(punch: punch)
+//            engine.sendPunchValueToScreen(punch: punch)
+            engine.sendPunchValueToScreen(punch: engine.punches[sender.tag - 1])
+//            engine.sendPunchValueToScreen(punch: engine.punches[Int(sender.currentTitle!)!]) //- 1])
 //            engine.sendPunchValueToScreen(punchValue: punchValue)
 //            engine.sendPunchValueToScreen(punchValue: punchValue)
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521BB6781E3FAB7C00024273 /* NoNotif WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */; };
 		52202EDE1E33F0490065E59A /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EDD1E33F0490065E59A /* BoardViewController.swift */; };
 		52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */; };
 		52202EE31E33FCE60065E59A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE21E33FCE60065E59A /* GameEngine.swift */; };
@@ -30,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		521BB6791E3FAB9400024273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B40ED51DFACED2005016C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B40EEE1DFACED2005016C3;
+			remoteInfo = "NoNotif WatchKit App";
+		};
 		52B40F001DFACED2005016C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52B40ED51DFACED2005016C3 /* Project object */;
@@ -57,6 +65,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				521BB6781E3FAB7C00024273 /* NoNotif WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +205,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				521BB67A1E3FAB9400024273 /* PBXTargetDependency */,
 			);
 			name = NoNotif;
 			productName = NoNotif;
@@ -349,6 +359,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		521BB67A1E3FAB9400024273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B40EEE1DFACED2005016C3 /* NoNotif WatchKit App */;
+			targetProxy = 521BB6791E3FAB9400024273 /* PBXContainerItemProxy */;
+		};
 		52B40F011DFACED2005016C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */;

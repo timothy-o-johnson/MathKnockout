@@ -79,8 +79,10 @@ class Tile
 
 class BoardInterfaceController : WKInterfaceController
 {
+    let engine = GameEngine.shared
+    
     // for sending to next interface
-    var knockOutTarget = 0
+//    var knockOutTarget = 0
 //    var targetKOstatus = "no"
     
     // for output screen
@@ -105,7 +107,9 @@ class BoardInterfaceController : WKInterfaceController
 //            "targetKOstatus"  : targetKOstatus
 //        ]
         
-        passThoughContext!["knockOutTarget"] = knockOutTarget
+//        engine.knockOutTarget = knockOutTarget
+        
+//        passThoughContext!["knockOutTarget"] = knockOutTarget
 //        passThoughContext["targetKOstatus"] = targetKOstatus
         
         return passThoughContext
@@ -141,18 +145,28 @@ class BoardInterfaceController : WKInterfaceController
 //        }
         
 //        printSelectedNumbers()
-        
     }
     
     override func willActivate() {// This method is called when watch view controller is about to be visible to user
         print(#function)
         super.willActivate()
         
-        refreshBoard()
-        //printBoard(board)
-        for x in 1...25{
-            updateScreenButton(x)
+//        for (index, tile) in engine.tiles.enumerated()
+        for tile in engine.tiles
+        {
+//            let buttonKVCName = "button" + String(tile.number)
+            let button = whichButton(tile.number)
+//            let button = value(forKey: buttonKVCName) as! WKInterfaceButton
+            button.setTitle(tile.display)
+//            setValue(tile.display, forKey: buttonKVCName)
+//            button1.setTitle(<#T##title: String?##String?#>)
         }
+        
+//        refreshBoard()
+        //printBoard(board)
+//        for x in 1...25{
+//            updateScreenButton(x)
+//        }
         
         printSelectedNumbers()
     }
@@ -163,7 +177,36 @@ class BoardInterfaceController : WKInterfaceController
         super.didDeactivate()
     }
     
-
+//    @IBOutlet var button1  : WKInterfaceButton!
+//    @IBOutlet var button2  : WKInterfaceButton!
+//    @IBOutlet var button3  : WKInterfaceButton!
+//    @IBOutlet var button4  : WKInterfaceButton!
+//    @IBOutlet var button5  : WKInterfaceButton!
+//    
+//    @IBOutlet var button6  : WKInterfaceButton!
+//    @IBOutlet var button7  : WKInterfaceButton!
+//    @IBOutlet var button8  : WKInterfaceButton!
+//    @IBOutlet var button9  : WKInterfaceButton!
+//    @IBOutlet var button10 : WKInterfaceButton!
+//    
+//    @IBOutlet var button11 : WKInterfaceButton!
+//    @IBOutlet var button12 : WKInterfaceButton!
+//    @IBOutlet var button13 : WKInterfaceButton!
+//    @IBOutlet var button14 : WKInterfaceButton!
+//    @IBOutlet var button15 : WKInterfaceButton!
+//    
+//    @IBOutlet var button16 : WKInterfaceButton!
+//    @IBOutlet var button17 : WKInterfaceButton!
+//    @IBOutlet var button18 : WKInterfaceButton!
+//    @IBOutlet var button19 : WKInterfaceButton!
+//    @IBOutlet var button20 : WKInterfaceButton!
+//    
+//    @IBOutlet var button21 : WKInterfaceButton!
+//    @IBOutlet var button22 : WKInterfaceButton!
+//    @IBOutlet var button23 : WKInterfaceButton!
+//    @IBOutlet var button24 : WKInterfaceButton!
+//    @IBOutlet var button25 : WKInterfaceButton!
+    
     @IBOutlet var one: WKInterfaceButton!
     @IBOutlet var two: WKInterfaceButton!
     @IBOutlet var three: WKInterfaceButton!
@@ -196,152 +239,152 @@ class BoardInterfaceController : WKInterfaceController
     
     
     @IBAction func oneTapped() {
-        knockOutTarget = 1
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 1
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twoTapped() {
-        knockOutTarget = 2
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 2
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func threeTapped() {
-        knockOutTarget = 3
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 3
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func fourTapped() {
-        knockOutTarget = 4
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 4
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
    
     @IBAction func fiveTapped() {
-        knockOutTarget = 5
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 5
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func sixTapped() {
-        knockOutTarget = 6
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 6
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func sevenTapped() {
-        knockOutTarget = 7
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 7
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func eightTapped() {
-        knockOutTarget = 8
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 8
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func nineTapped() {
-        knockOutTarget = 9
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 9
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func tenTapped() {
-        knockOutTarget = 10
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 10
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
 
     @IBAction func elevenTapped() {
-        knockOutTarget = 11
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 11
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twelveTapped() {
-        knockOutTarget = 12
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 12
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func thirteenTapped() {
-        knockOutTarget = 13
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 13
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func fourteenTapped() {
-        knockOutTarget = 14
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 14
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func fifteenTapped() {
-        knockOutTarget = 15
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 15
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func sixteenTapped() {
-        knockOutTarget = 16
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 16
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func seventeenTapped() {
-        knockOutTarget = 17
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 17
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func eighteenTapped() {
-        knockOutTarget = 18
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 18
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func nineteenTapped() {
-        knockOutTarget = 19
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 19
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twentyTapped() {
-        knockOutTarget = 20
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 20
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twentyOneTapped() {
-        knockOutTarget = 21
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 21
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twentyTwoTapped() {
-        knockOutTarget = 22
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 22
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twentyThreeTapped() {
-        knockOutTarget = 23
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 23
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twentyFourTapped() {
-        knockOutTarget = 24
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 24
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
     
     @IBAction func twentyFiveTapped() {
-        knockOutTarget = 25
-        print("Button Tapped: \(knockOutTarget)")
+        engine.knockOutTarget = 25
+        print("Button Tapped: \(engine.knockOutTarget)")
         sendTargetToRing()
     }
 
@@ -371,9 +414,10 @@ class BoardInterfaceController : WKInterfaceController
 //        self.presentController(withName: "howToKnockOut", context: passThoughSelectedPunches)
 //        pushController(withName: "howToKnockOut", context: passThoughSelectedPunches)
         
-        passThoughContext!["knockOutTarget"] = knockOutTarget
-        
-        pushController(withName: "howToKnockOut", context: passThoughContext)
+//        engine.knockOutTarget = knockOutTarget
+//        passThoughContext!["knockOutTarget"] = knockOutTarget
+        WKInterfaceController.reloadRootControllers(withNames: ["howToKnockOut"], contexts: [])
+//        pushController(withName: "howToKnockOut", context: passThoughContext)
     }
     
 
@@ -384,7 +428,7 @@ class BoardInterfaceController : WKInterfaceController
     
         for x in 0..<boardSize
         {
-            let y = tile(x+1)
+            let y = Tile(x+1)
             temporaryBoard.append(y)
         }
     
@@ -611,12 +655,12 @@ class BoardInterfaceController : WKInterfaceController
     }
     
     
-    func updateScreenButton(_ number : Int) {
-        let tile = number - 1
-        let button = whichButton(number)
-        setTitle(button, tile)
-        
-    }
+//    func updateScreenButton(_ number : Int) {
+//        let tile = number - 1
+//        let button = whichButton(number)
+//        setTitle(button, tile)
+//        
+//    }
     
     func setTitle(_ buttonNumber : WKInterfaceButton, _ tile : Int){
         buttonNumber.setTitle(board[tile].display)

@@ -147,6 +147,7 @@ class GameEngine //: NSObject
     var knockOutTarget = UserDefaults.standard.integer(forKey: "knockOutTarget") {
         didSet {
             UserDefaults.standard.set(knockOutTarget, forKey: "knockOutTarget")
+            internalProgram = tiles[knockOutTarget - 1].operation
         }
     }
     
@@ -1000,9 +1001,10 @@ class GameEngine //: NSObject
 //        print("\n secondString: \(secondString)")
         
         let thirdString = secondString.replacingOccurrences(of: "x", with: "*")
+        let fourthString = thirdString.replacingOccurrences(of: "÷", with: "/") // for NSExpression
 //        print("\n thirdString: \(thirdString)")
         
-        return thirdString
+        return fourthString
     }
     /*
     func resetGame()
