@@ -41,6 +41,18 @@ class ChooseFourViewController: UIViewController
         
         navigationItem.hidesBackButton = true
     }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        let ps = numberButtons.filter { button in
+            engine.punches.contains { punch in
+                punch.punchValue == button.tag
+            }
+        }
+        ps.forEach(numButtonTapped)
+    }
 
     @IBAction func numButtonTapped(_ button: UIButton)
     {
