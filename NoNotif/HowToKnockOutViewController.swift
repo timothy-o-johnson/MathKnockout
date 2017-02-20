@@ -50,7 +50,8 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     {
         super.viewWillAppear(animated)
         
-        knockOutLabel.backgroundColor = .clear
+        knockOutLabel.backgroundColor = .clear // http://stackoverflow.com/a/19261362
+        knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
         
         // FIXME: Load Program
 //        let op = engine.tiles[engine.knockOutTarget - 1].operation
@@ -59,7 +60,7 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //        engine.internalProgram = engine.tiles[engine.knockOutTarget - 1].operation
 //        engine.entryStack.items = Array(op.characters)
 //        engine.
-        knockOutLabel.text = engine.displayableProgram // needed?
+        knockOutLabel.text = "=" + engine.displayableProgram // needed?
         
         // sort for ui
 //        let sortedPunches = engine.punches.sorted { $0.0.punchValue < $0.1.punchValue }
@@ -263,13 +264,14 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     {
 //        view.backgroundColor = color // FIXME: knock out target button or display background
         
-//        knockOutLabel.backgroundColor = .clear
+//        knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
+//        knockOutLabel.backgroundColor = .clear // http://stackoverflow.com/a/19261362
         
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             self.knockOutLabel.layer.backgroundColor = color.cgColor
         }) { _ in
-            UIView.animate(withDuration: 0.5) {
-                self.knockOutLabel.layer.backgroundColor = UIColor.clear.cgColor
+            UIView.animate(withDuration: 0.3) {
+                self.knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
             }
         }
     }
