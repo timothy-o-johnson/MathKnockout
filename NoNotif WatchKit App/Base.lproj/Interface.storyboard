@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!--SplashScreenController-->
         <scene sceneID="Amv-cG-00H">
             <objects>
-                <controller identifier="SplashScreenController" id="u3m-Re-Ijo" customClass="SplashScreenInterfaceController" customModule="NoNotif_WatchKit_Extension">
+                <controller identifier="SplashScreenController" id="u3m-Re-Ijo" customClass="SplashScreenInterfaceController" customModule="KO_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="left" text="Math Knock Out!!!" textAlignment="center" id="3QT-U7-fUf"/>
                         <button width="1" height="99.5" alignment="center" verticalAlignment="center" title="Let's Play!" id="T9o-Vy-BJQ">
@@ -27,7 +28,7 @@
         <!--         Punches-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="chooseNumbersController" title="         Punches" id="AgC-eL-Hgc" customClass="ChooseFourInterfaceController" customModule="NoNotif_WatchKit_Extension">
+                <controller identifier="chooseNumbersController" title="         Punches" id="AgC-eL-Hgc" customClass="ChooseFourInterfaceController" customModule="KO_WatchKit_Extension">
                     <items>
                         <label width="1" height="0.10000000000000001" alignment="left" text="Choose Four" textAlignment="center" id="9Az-sC-KHt">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -128,7 +129,7 @@
         <!--        Opponents-->
         <scene sceneID="aI4-EX-Pyh">
             <objects>
-                <controller identifier="boardController" title="        Opponents" id="3S9-sq-8Yw" customClass="BoardInterfaceController" customModule="NoNotif_WatchKit_Extension">
+                <controller identifier="boardController" title="        Opponents" id="3S9-sq-8Yw" customClass="BoardInterfaceController" customModule="KO_WatchKit_Extension">
                     <items>
                         <label width="1" height="0.10000000000000001" alignment="left" text="Which One?" textAlignment="center" baselineAdjustment="alignCenters" id="Xvk-cO-qWU">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -390,7 +391,7 @@
         <!--  Ding! Ding! Ding!        -->
         <scene sceneID="K3s-sk-53m">
             <objects>
-                <controller identifier="howToKnockOut" title="  Ding! Ding! Ding!        " id="ztj-js-jsn" customClass="HowToKnockOutInterfaceController" customModule="NoNotif_WatchKit_Extension">
+                <controller identifier="howToKnockOut" title="  Ding! Ding! Ding!        " id="ztj-js-jsn" customClass="HowToKnockOutInterfaceController" customModule="KO_WatchKit_Extension">
                     <items>
                         <group width="1" height="0.25" alignment="left" isAccessibilityElement="YES" contentMode="scaleAspectFill" initiallyAnimated="NO" animationDuration="2" id="Iun-Rb-Fay">
                             <items>
