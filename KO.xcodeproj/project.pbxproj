@@ -529,7 +529,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L77Z4VF5RZ;
-				IBSC_MODULE = NoNotif_WatchKit_Extension;
+				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -546,7 +546,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L77Z4VF5RZ;
-				IBSC_MODULE = NoNotif_WatchKit_Extension;
+				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
