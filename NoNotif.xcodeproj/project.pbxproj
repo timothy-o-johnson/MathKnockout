@@ -178,12 +178,12 @@
 		52B40F021DFACED2005016C3 /* NoNotif WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */,
 				526024121DFADFEA005379C4 /* SplashScreenInterfaceController.swift */,
 				526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */,
 				526024141DFADFFC005379C4 /* BoardInterfaceController.swift */,
 				526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */,
 				52B40F031DFACED2005016C3 /* InterfaceController.swift */,
-				52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */,
 				52B40F071DFACED2005016C3 /* Assets.xcassets */,
 				52B40F091DFACED2005016C3 /* Info.plist */,
 			);
