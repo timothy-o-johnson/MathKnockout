@@ -494,7 +494,7 @@
 		52B40F0D1DFACED2005016C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = "";
 				DEVELOPMENT_TEAM = L77Z4VF5RZ;
 				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -510,7 +510,7 @@
 		52B40F0E1DFACED2005016C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = "";
 				DEVELOPMENT_TEAM = L77Z4VF5RZ;
 				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
