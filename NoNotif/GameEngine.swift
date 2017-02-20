@@ -396,7 +396,7 @@ class GameEngine //: NSObject
 //        if evaluateString(stringToEvaluate) == knockOutTarget
         {
 //                labelGroup.setBackgroundColor(UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
-            delegate?.setColorForLabelGroup(color: UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
+//            delegate?.setColorForLabelGroup(color: UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
             
             //blinking
 //            sendTargetBackDefeated()//send to knock out board page

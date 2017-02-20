@@ -279,6 +279,22 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     
     func sendTargetBackDefeated()
     {
-        _ = navigationController?.popViewController(animated: true)
+        UIView.animate(withDuration: 0.1, animations: {
+            self.knockOutLabel.layer.backgroundColor = UIColor.green.cgColor
+        }) { _ in
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
+            }, completion: { _ in
+                _ = self.navigationController?.popViewController(animated: true)
+            })
+            
+            
+//            UIView.animate(withDuration: 0.5) {
+//                self.knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
+//            }
+        }
+        
+//        _ = navigationController?.popViewController(animated: true)
     }
 }
