@@ -21,18 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UserDefaults.standard.set(NSArray(array: ["1","2","3"]), forKey: "nsArray-Str")
 //        UserDefaults.standard.set(NSArray(array: ["1",2,"3"]), forKey: "nsArray-Mix")
         
-        engine.punches = [
-            Punch(num: 1, punchValue: 2, selected: false),
-            Punch(num: 2, punchValue: 4, selected: false),
-            Punch(num: 3, punchValue: 6, selected: false),
-            Punch(num: 4, punchValue: 8, selected: false)
-        ]
+//        engine.punches = [
+//            Punch(num: 1, punchValue: 2, selected: false),
+//            Punch(num: 2, punchValue: 4, selected: false),
+//            Punch(num: 3, punchValue: 6, selected: false),
+//            Punch(num: 4, punchValue: 8, selected: false)
+//        ]
         
-        let mainSB = UIStoryboard(name: "Main", bundle: nil)
-        let vc = mainSB.instantiateViewController(withIdentifier: "WhichOneVC")
-        let navCon = UINavigationController(rootViewController: vc)
+//        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = mainSB.instantiateViewController(withIdentifier: "ChooseFourVC")
+//        let vc = mainSB.instantiateViewController(withIdentifier: "WhichOneVC")
+//        let navCon = UINavigationController(rootViewController: vc)
         
-        window?.rootViewController = navCon
+//        window?.rootViewController = navCon
         
         return true
     }
