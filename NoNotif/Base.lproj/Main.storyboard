@@ -143,10 +143,10 @@
                                 </subviews>
                             </stackView>
                             <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-St-1Pu">
-                                <rect key="frame" x="16" y="360" width="288" height="100"/>
+                                <rect key="frame" x="16" y="388" width="288" height="72"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="h7m-38-7cI"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="h7m-38-7cI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Next">
@@ -162,6 +162,7 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ygr-St-1Pu" secondAttribute="bottom" constant="20" id="N69-Gn-DxV"/>
                             <constraint firstItem="MOa-6G-2gt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ctZ-Gz-pdT"/>
+                            <constraint firstItem="ygr-St-1Pu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MOa-6G-2gt" secondAttribute="bottom" constant="20" id="gDr-kR-9gb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MOa-6G-2gt" secondAttribute="trailing" id="mFB-A4-ELW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ygr-St-1Pu" secondAttribute="trailing" id="oef-Xe-E5Y"/>
                             <constraint firstAttribute="leadingMargin" secondItem="MOa-6G-2gt" secondAttribute="leading" id="pTo-iJ-oY6"/>
@@ -184,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+            <point key="canvasLocation" x="971.25" y="36.25"/>
         </scene>
         <!--Opponents-->
         <scene sceneID="XlI-C2-YlD">
@@ -742,10 +743,10 @@
                                 </subviews>
                             </stackView>
                             <button tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOM-RG-odQ">
-                                <rect key="frame" x="16" y="360" width="288" height="100"/>
+                                <rect key="frame" x="16" y="388" width="288" height="72"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="nuf-eT-nWh"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="100" id="nuf-eT-nWh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Knock Out">
@@ -767,6 +768,7 @@
                             <constraint firstItem="Evi-Qf-Kcu" firstAttribute="centerY" secondItem="WVx-b2-1mu" secondAttribute="centerY" id="fuN-kZ-L1H"/>
                             <constraint firstItem="Evi-Qf-Kcu" firstAttribute="leading" secondItem="WVx-b2-1mu" secondAttribute="leadingMargin" id="nbZ-9c-Ih6"/>
                             <constraint firstItem="OOM-RG-odQ" firstAttribute="leading" secondItem="WVx-b2-1mu" secondAttribute="leadingMargin" id="omM-sE-6th"/>
+                            <constraint firstItem="OOM-RG-odQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Evi-Qf-Kcu" secondAttribute="bottom" priority="750" constant="20" id="ssP-2F-Jj0"/>
                             <constraint firstItem="fw7-x5-eSv" firstAttribute="top" secondItem="OOM-RG-odQ" secondAttribute="bottom" constant="20" id="zA9-y2-EFW"/>
                         </constraints>
                     </view>
@@ -804,10 +806,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-cQ-PKm">
-                                <rect key="frame" x="16" y="360" width="288" height="100"/>
+                                <rect key="frame" x="16" y="388" width="288" height="72"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="YDs-Sd-tsr"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="YDs-Sd-tsr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Let's Play">
@@ -825,6 +827,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iUY-cQ-PKm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tLA-Xz-cWs" secondAttribute="bottom" constant="20" id="BGz-Fk-dzc"/>
                             <constraint firstItem="rvT-PE-AZI" firstAttribute="top" secondItem="iUY-cQ-PKm" secondAttribute="bottom" constant="20" id="IDZ-1z-qSc"/>
                             <constraint firstItem="tLA-Xz-cWs" firstAttribute="centerY" secondItem="AX6-rq-ZbW" secondAttribute="centerY" id="Tub-mV-kc8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iUY-cQ-PKm" secondAttribute="trailing" id="f0C-xi-dB4"/>
