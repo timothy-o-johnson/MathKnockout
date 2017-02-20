@@ -24,7 +24,6 @@
 		52B40EF61DFACED2005016C3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EF41DFACED2005016C3 /* Interface.storyboard */; };
 		52B40EF81DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EF71DFACED2005016C3 /* Assets.xcassets */; };
 		52B40EFF1DFACED2005016C3 /* NoNotif WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		52B40F041DFACED2005016C3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40F031DFACED2005016C3 /* InterfaceController.swift */; };
 		52B40F061DFACED2005016C3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */; };
 		52B40F081DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40F071DFACED2005016C3 /* Assets.xcassets */; };
 		52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */; };
@@ -92,7 +91,6 @@
 		52B40EF71DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B40EF91DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NoNotif WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52B40F031DFACED2005016C3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		52B40F071DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B40F091DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 				526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */,
 				526024141DFADFFC005379C4 /* BoardInterfaceController.swift */,
 				526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */,
-				52B40F031DFACED2005016C3 /* InterfaceController.swift */,
 				52B40F071DFACED2005016C3 /* Assets.xcassets */,
 				52B40F091DFACED2005016C3 /* Info.plist */,
 			);
@@ -349,7 +346,6 @@
 				52B40F061DFACED2005016C3 /* ExtensionDelegate.swift in Sources */,
 				526024171DFAE003005379C4 /* ChooseFourInterfaceController.swift in Sources */,
 				528C49B41E3FA031004DA88E /* GameEngine.swift in Sources */,
-				52B40F041DFACED2005016C3 /* InterfaceController.swift in Sources */,
 				526024191DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift in Sources */,
 				526024151DFADFFC005379C4 /* BoardInterfaceController.swift in Sources */,
 				526024131DFADFEA005379C4 /* SplashScreenInterfaceController.swift in Sources */,
