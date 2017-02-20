@@ -129,9 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				528C49B31E3FA01B004DA88E /* Shared */,
-				52B40EDF1DFACED2005016C3 /* NoNotif */,
-				52B40EF31DFACED2005016C3 /* NoNotif WatchKit App */,
-				52B40F021DFACED2005016C3 /* NoNotif WatchKit Extension */,
+				52B40EDF1DFACED2005016C3 /* iOS App */,
+				52B40EF31DFACED2005016C3 /* WatchKit App */,
+				52B40F021DFACED2005016C3 /* WatchKit Extension */,
 				52B40EDE1DFACED2005016C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52B40EDF1DFACED2005016C3 /* NoNotif */ = {
+		52B40EDF1DFACED2005016C3 /* iOS App */ = {
 			isa = PBXGroup;
 			children = (
 				52EAA2EA1E3C25EF00233D2E /* NoNotif.entitlements */,
@@ -160,20 +160,22 @@
 				52B40EE91DFACED2005016C3 /* LaunchScreen.storyboard */,
 				52B40EEC1DFACED2005016C3 /* Info.plist */,
 			);
+			name = "iOS App";
 			path = NoNotif;
 			sourceTree = "<group>";
 		};
-		52B40EF31DFACED2005016C3 /* NoNotif WatchKit App */ = {
+		52B40EF31DFACED2005016C3 /* WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
 				52B40EF41DFACED2005016C3 /* Interface.storyboard */,
 				52B40EF71DFACED2005016C3 /* Assets.xcassets */,
 				52B40EF91DFACED2005016C3 /* Info.plist */,
 			);
+			name = "WatchKit App";
 			path = "NoNotif WatchKit App";
 			sourceTree = "<group>";
 		};
-		52B40F021DFACED2005016C3 /* NoNotif WatchKit Extension */ = {
+		52B40F021DFACED2005016C3 /* WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */,
@@ -184,6 +186,7 @@
 				52B40F071DFACED2005016C3 /* Assets.xcassets */,
 				52B40F091DFACED2005016C3 /* Info.plist */,
 			);
+			name = "WatchKit Extension";
 			path = "NoNotif WatchKit Extension";
 			sourceTree = "<group>";
 		};
