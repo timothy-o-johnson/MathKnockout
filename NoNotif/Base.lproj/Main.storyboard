@@ -774,6 +774,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ding! Ding! Ding!" id="sbN-FQ-dOO">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="x6p-Qe-fUe">
+                            <color key="tintColor" red="0.91913325471698115" green="0.012581923770738032" blue="0.050622228488152579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="didTapRestart:" destination="MsC-HW-1xd" id="rLx-af-6fp"/>
                             </connections>
