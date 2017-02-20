@@ -18,8 +18,20 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     
     @IBAction func didTapRestart(_ sender: UIBarButtonItem)
     {
-        engine.resetGame()
-        navigationController?.popToRootViewController(animated: true)
+        let ac = UIAlertController(title: "Reset Game", message: "Are you sure?", preferredStyle: .actionSheet)
+        
+        let ok = UIAlertAction(title: "OK", style: .destructive) { _ in
+            self.engine.resetGame()
+            _ = self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        ac.addAction(ok)
+        ac.addAction(cancel)
+        
+        present(ac, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad()
