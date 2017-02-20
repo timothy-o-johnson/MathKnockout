@@ -17,7 +17,7 @@
 		526024191DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */; };
 		528C49B41E3FA031004DA88E /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE21E33FCE60065E59A /* GameEngine.swift */; };
 		52B40EE11DFACED2005016C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE01DFACED2005016C3 /* AppDelegate.swift */; };
-		52B40EE31DFACED2005016C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE21DFACED2005016C3 /* ViewController.swift */; };
+		52B40EE31DFACED2005016C3 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE21DFACED2005016C3 /* SplashScreenViewController.swift */; };
 		52B40EE61DFACED2005016C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE41DFACED2005016C3 /* Main.storyboard */; };
 		52B40EE81DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE71DFACED2005016C3 /* Assets.xcassets */; };
 		52B40EEB1DFACED2005016C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE91DFACED2005016C3 /* LaunchScreen.storyboard */; };
@@ -82,7 +82,7 @@
 		526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutInterfaceController.swift; sourceTree = "<group>"; };
 		52B40EDD1DFACED2005016C3 /* NoNotif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNotif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B40EE01DFACED2005016C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52B40EE21DFACED2005016C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B40EE21DFACED2005016C3 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		52B40EE51DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B40EE71DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B40EEA1DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			children = (
 				52EAA2EA1E3C25EF00233D2E /* NoNotif.entitlements */,
 				52B40EE01DFACED2005016C3 /* AppDelegate.swift */,
-				52B40EE21DFACED2005016C3 /* ViewController.swift */,
+				52B40EE21DFACED2005016C3 /* SplashScreenViewController.swift */,
 				52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */,
 				52202EDD1E33F0490065E59A /* BoardViewController.swift */,
 				52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */,
@@ -335,7 +335,7 @@
 			files = (
 				52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */,
 				52202EE31E33FCE60065E59A /* GameEngine.swift in Sources */,
-				52B40EE31DFACED2005016C3 /* ViewController.swift in Sources */,
+				52B40EE31DFACED2005016C3 /* SplashScreenViewController.swift in Sources */,
 				52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */,
 				52B40EE11DFACED2005016C3 /* AppDelegate.swift in Sources */,
 				52202EDE1E33F0490065E59A /* BoardViewController.swift in Sources */,

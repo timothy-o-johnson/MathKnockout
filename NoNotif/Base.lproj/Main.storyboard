@@ -797,7 +797,7 @@
         <!--Math Knock Out-->
         <scene sceneID="6nK-5d-LOF">
             <objects>
-                <viewController id="N9K-2P-F0J" sceneMemberID="viewController">
+                <viewController id="N9K-2P-F0J" customClass="SplashScreenViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vDk-WN-uCM"/>
                         <viewControllerLayoutGuide type="bottom" id="rvT-PE-AZI"/>
