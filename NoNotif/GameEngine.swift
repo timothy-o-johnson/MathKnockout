@@ -12,13 +12,13 @@ import Foundation
 import UIKit.UIColor
 //import WatchKit.UIColor
 
-enum Operand : String
-{
-    case add      = "+"
-    case subtract = "-"
-    case multipy  = "*"
-    case divide   = "/"
-}
+//enum Operand : String
+//{
+//    case add      = "+"
+//    case subtract = "-"
+//    case multipy  = "*"
+//    case divide   = "/"
+//}
 
 struct Punch
 {
@@ -26,11 +26,12 @@ struct Punch
     let punchValue : Int
     var selected   = false
     
-//    init(_ num: Int, punchValue: Int) // add variable to pass through for punchValue
-//    {
-//        self.num = num
-//        self.punchValue = punchValue
-//    }
+    init(num: Int, punchValue: Int, selected : Bool = false) // add variable to pass through for punchValue
+    {
+        self.num = num
+        self.punchValue = punchValue
+        self.selected   = selected
+    }
 }
 
 struct Tile2
@@ -179,8 +180,8 @@ class GameEngine //: NSObject
 //    var entryStack = StringStack()
     
     
-    typealias Operand = Character
-    typealias Digit   = Int
+//    typealias Operand = Character
+//    typealias Digit   = Int
     
 //    private var internalProgram = [AnyObject]()
 //    private var internalProgram = [Any]()
@@ -220,7 +221,7 @@ class GameEngine //: NSObject
             delegate?.printToLabel(text: displayableProgram)
             
 //            UserDefaults.standard.set(yyy, forKey: "program_string")
-            UserDefaults.standard.set(internalProgram, forKey: "program_any")
+//            UserDefaults.standard.set(internalProgram, forKey: "program_any")
 //            UserDefaults.standard.set(internalProgram as AnyObject, forKey: "program_any_object")
 //            UserDefaults.standard.set(arr, forKey: "internalProgram-nsArray")
             
@@ -238,8 +239,9 @@ class GameEngine //: NSObject
 //            print(nsArr!)
 //            print(nsArr)
             
-            let anyArr = UserDefaults.standard.array(forKey: "program_any")
-            print(anyArr!)
+//            let anyArr = UserDefaults.standard.array(forKey: "program_any")
+//            print(anyArr!)
+            print(program)
 //            print(anyArr)
             
         }
@@ -315,9 +317,15 @@ class GameEngine //: NSObject
 //        super.init()
         
         if let punchVals = UserDefaults.standard.array(forKey: "selectedPunches") as? [Int] {
-            for (index, num) in punchVals.enumerated() {
-                punches.append(Punch(num: index, punchValue: num, selected: false))
+            for (index, num) in punchVals.enumerated()
+//            for num in punchVals
+            {
+//                punches.append(Punch(num: index, punchValue: num, selected: false))
+                punches.append(Punch(num: index, punchValue: num))
+//                punches.append(Punch(punchValue: num, selected: false))
             }
+        
+//            punches = punchVals.map { Punch(punchValue: $0) }
         }
         
 //        punches.append(Punch(num: 1, punchValue: 1, selected: false))
@@ -328,13 +336,13 @@ class GameEngine //: NSObject
 //        resetGame()
     }
     
-    func saveSelectedPuches()
-    {
-        UserDefaults.standard.set(punches[0].punchValue, forKey:"firstSelected")
-        UserDefaults.standard.set(punches[1].punchValue, forKey:"secondSelected")
-        UserDefaults.standard.set(punches[2].punchValue, forKey:"thirdSelected")
-        UserDefaults.standard.set(punches[3].punchValue, forKey:"fourthSelected")
-    }
+//    func saveSelectedPuches()
+//    {
+//        UserDefaults.standard.set(punches[0].punchValue, forKey:"firstSelected")
+//        UserDefaults.standard.set(punches[1].punchValue, forKey:"secondSelected")
+//        UserDefaults.standard.set(punches[2].punchValue, forKey:"thirdSelected")
+//        UserDefaults.standard.set(punches[3].punchValue, forKey:"fourthSelected")
+//    }
     
 //    var punch1 : Punch!
 //    var punch2 : Punch!
@@ -388,7 +396,7 @@ class GameEngine //: NSObject
 //        if evaluateString(stringToEvaluate) == knockOutTarget
         {
 //                labelGroup.setBackgroundColor(UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
-//            delegate?.setColorForLabelGroup(color: UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
+            delegate?.setColorForLabelGroup(color: UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
             
             //blinking
 //            sendTargetBackDefeated()//send to knock out board page
@@ -404,6 +412,10 @@ class GameEngine //: NSObject
             tiles[knockOutTarget - 1].operation = internalProgram // entryStack.description
             
             delegate?.sendTargetBackDefeated()
+        }
+        else
+        {
+            delegate?.setColorForLabelGroup(color: .red)
         }
 //        }
         
@@ -737,22 +749,22 @@ class GameEngine //: NSObject
     
     
     
-    func changeSelectedStatus(_ number : Int)
-    {
-        if self.punches[number - 1].selected == false
-        {
-            self.punches[number - 1].selected = true
-        }
-        else
-        {
-            self.punches[number - 1].selected = false
-        }
-    }
+//    func changeSelectedStatus(_ number : Int)
+//    {
+//        if self.punches[number - 1].selected == false
+//        {
+//            self.punches[number - 1].selected = true
+//        }
+//        else
+//        {
+//            self.punches[number - 1].selected = false
+//        }
+//    }
     
-    func hasPunchBeenSelected(_ number : Int) -> Bool
-    {
-        return punches[number].selected
-    }
+//    func hasPunchBeenSelected(_ number : Int) -> Bool
+//    {
+//        return punches[number].selected
+//    }
     
     func printButtonStatusUpdate()
     {
@@ -1025,7 +1037,7 @@ class GameEngine //: NSObject
             )
         }
         
-//        punches.
+        punches.removeAll()
         
         // create three dictionaries
 //        var dictKOed      = [String: String]()

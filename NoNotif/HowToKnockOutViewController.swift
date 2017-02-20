@@ -38,6 +38,8 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     {
         super.viewWillAppear(animated)
         
+        knockOutLabel.backgroundColor = .clear
+        
         // FIXME: Load Program
 //        let op = engine.tiles[engine.knockOutTarget - 1].operation
 //        knockOutLabel.text = op
@@ -47,14 +49,35 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //        engine.
         knockOutLabel.text = engine.displayableProgram // needed?
         
+        // sort for ui
+//        let sortedPunches = engine.punches.sorted { $0.0.punchValue < $0.1.punchValue }
+        
         for i in 0..<punches.count {
             punches[i].setTitle(String(engine.punches[i].punchValue), for: .normal)
+//            punches[i].setTitle(String(sortedPunches[i].punchValue), for: .normal)
         }
 //        punches[0].setTitle(String(engine.punches[0].punchValue), for: .normal)
 //        punches[1].setTitle(String(engine.punches[1].punchValue), for: .normal)
 //        punches[2].setTitle(String(engine.punches[2].punchValue), for: .normal)
 //        punches[3].setTitle(String(engine.punches[3].punchValue), for: .normal)
     }
+    
+    /*
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        knockOutLabel.backgroundColor = .clear
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.knockOutLabel.layer.backgroundColor = UIColor.red.cgColor
+        }) { _ in
+            UIView.animate(withDuration: 0.5) {
+                self.knockOutLabel.layer.backgroundColor = UIColor.clear.cgColor
+            }
+        }
+    }
+    */
     
 //    func hasPunchBeenSelected(_ number : Int) -> Bool
 //    {
@@ -211,7 +234,7 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     
     func didUpdatePunch(punch: Punch)
     {
-        if let matchedPunch = punches.first(where: { $0.tag == punch.num })
+        if let matchedPunch = punches.first(where: { Int($0.currentTitle!)! == punch.punchValue })
         {
             matchedPunch.isSelected = !matchedPunch.isSelected
 //            matchedPunch.isEnabled  = !matchedPunch.isSelected
@@ -226,7 +249,17 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     
     func setColorForLabelGroup(color: UIColor)
     {
-        view.backgroundColor = color // FIXME: knock out target button or display background
+//        view.backgroundColor = color // FIXME: knock out target button or display background
+        
+//        knockOutLabel.backgroundColor = .clear
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.knockOutLabel.layer.backgroundColor = color.cgColor
+        }) { _ in
+            UIView.animate(withDuration: 0.5) {
+                self.knockOutLabel.layer.backgroundColor = UIColor.clear.cgColor
+            }
+        }
     }
     
     

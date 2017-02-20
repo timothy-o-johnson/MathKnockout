@@ -146,7 +146,11 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
         
         
 //        engine.sendPunchValueToScreen(punch: punch)
+        
+        if hasPunchBeenSelected(0) == false
+        {
             engine.sendPunchValueToScreen(punch: engine.punches[0])
+        }
             //            engine.sendPunchValueToScreen(punchValue: punchValue)
             //            engine.sendPunchValueToScreen(punchValue: punchValue)
 //        }
@@ -171,7 +175,11 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
 //        )
         
 //        engine.sendPunchValueToScreen(punch: punch)
-        engine.sendPunchValueToScreen(punch: engine.punches[1])
+        
+        if hasPunchBeenSelected(1) == false
+        {
+            engine.sendPunchValueToScreen(punch: engine.punches[1])
+        }
     }
     
     @IBAction func thirdPunchTapped(){
@@ -190,7 +198,11 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
 //        )
         
 //        engine.sendPunchValueToScreen(punch: punch)
-        engine.sendPunchValueToScreen(punch: engine.punches[2])
+        
+        if hasPunchBeenSelected(2) == false
+        {
+            engine.sendPunchValueToScreen(punch: engine.punches[2])
+        }
     }
     
     @IBAction func fourthPunchTapped(){
@@ -209,7 +221,11 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
 //        )
         
 //        engine.sendPunchValueToScreen(punch: punch)
-        engine.sendPunchValueToScreen(punch: engine.punches[3])
+        
+        if hasPunchBeenSelected(3) == false
+        {
+            engine.sendPunchValueToScreen(punch: engine.punches[3])
+        }
     }
     
     @IBAction func addTapped()               { engine.sendOperationToScreen(operation: "+") }
@@ -444,7 +460,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
     
     func changeButtonColor(_ number : Int){
         let button = whichButton(number)
-        switch engine.punches[number - 1].selected
+        switch engine.punches[number].selected
         {
             case true  : button.setBackgroundColor(.lightGray)
             case false : button.setBackgroundColor(.darkGray)
@@ -454,17 +470,17 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
     
     func whichButton(_ number : Int) -> WKInterfaceButton{
         switch number{
-        case 1: return firstPunch //when are "self"s necessary?
-        case 2: return secondPunch
-        case 3: return thirdPunch
-        case 4: return fourthPunch
+        case 0: return firstPunch //when are "self"s necessary?
+        case 1: return secondPunch
+        case 2: return thirdPunch
+        case 3: return fourthPunch
         default: print("No button was picked."); return firstPunch
         }
     }
     
     func changeSelectedStatus(_ number : Int)
     {
-        engine.punches[number - 1].selected = !engine.punches[number - 1].selected
+        engine.punches[number].selected = !engine.punches[number].selected
         
 //        if engine.punches[number - 1].selected
 //        {
@@ -615,7 +631,11 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
     
     }
     
-    func resetGame(){
+    func resetGame()
+    {
+        engine.resetGame()
+        
+        /*
         print("\nFunction: resetGame()")
      //create three dictionaries
         var dictKOed = [String: String]()
@@ -645,10 +665,11 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
 //        UserDefaults.standard.set(0,forKey:"fourthSelected")
         
 //        UserDefaults.standard.synchronize()
-    
+    */
      //send to punches interface
 //        self.presentController(withName: "chooseNumbersController", context: nil)
-        popToRootController()
+//        popToRootController()
+        WKInterfaceController.reloadRootControllers(withNames: ["SplashScreenController"], contexts: nil)
 //        pop()
     }
 
@@ -679,6 +700,11 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
     
     func didUpdatePunch(punch: Punch)
     {
+        let number = punch.num
+        changeSelectedStatus(number) // has punch been selected or unselected?
+        changeButtonColor(number) //make it look like its selected or unselected
+//        updateScreen(String(value), number)
+        
 //        if let matchedPunch = punches.first(where: { $0.tag == punch.num })
 //        {
 //            matchedPunch.isSelected = !matchedPunch.isSelected

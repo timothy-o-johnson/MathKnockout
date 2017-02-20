@@ -30,7 +30,7 @@ class ChooseFourViewController: UIViewController
         
         let ps = numberButtons.filter { button in
             engine.punches.contains { punch in
-                punch.punchValue == button.tag
+                punch.punchValue == Int(button.currentTitle!)!
             }
         }
         ps.forEach(numButtonTapped)
@@ -47,13 +47,26 @@ class ChooseFourViewController: UIViewController
     
     @IBAction func nextButtonTapped(_ sender: UIButton)
     {
-        let selectedButtons = numberButtons.filter { $0.isSelected }
+        let selectedButtons = numberButtons.filter { $0.isSelected }.sorted { $0.0.tag < $0.1.tag }
 //        selectedButtons.first!.titleLabel!.text!
-        let selectedPunches = selectedButtons.map {
-            Punch(num: $0.tag, punchValue: Int($0.currentTitle!)!, selected: false)
-        }
+//        let selectedPunches = selectedButtons
+//            .map { Punch(punchValue: $0.tag) }
+//            .sorted { $0.0.punchValue < $0.1.punchValue }
         
-        engine.punches = selectedPunches
+//        engine.punches = selectedPunches
+        
+//        for i in 0...3
+//        {
+//            let newPunch = Punch(num: i, punchValue: selectedButtons[i].tag)
+//            engine.punches.append(newPunch)
+//        }
+        
+        engine.punches = [
+            Punch(num: 0, punchValue: selectedButtons[0].tag),
+            Punch(num: 1, punchValue: selectedButtons[1].tag),
+            Punch(num: 2, punchValue: selectedButtons[2].tag),
+            Punch(num: 3, punchValue: selectedButtons[3].tag),
+        ]
         
 //        engine.saveSelectedPuches()
     }

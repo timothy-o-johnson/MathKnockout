@@ -193,14 +193,20 @@ class ChooseFourInterfaceController: WKInterfaceController {
 //            let selectedButtons = numberButtons.filter { $0.isSelected }
             //        selectedButtons.first!.titleLabel!.text!
             
-            let selectedButtons = numbers.filter { $0.selected }
+            let selectedButtons = numbers.filter { $0.selected }.sorted { $0.0.num < $0.1.num }
             
-            let selectedPunches = selectedButtons.map {
-                Punch(num: $0.num, punchValue: $0.num, selected: false)
-            }
+//            let selectedPunches = selectedButtons
+//                .map { Punch(punchValue: $0.num) }
+//                .sorted { $0.0.punchValue < $0.1.punchValue }
             
-            engine.punches = selectedPunches
+//            engine.punches = selectedPunches
         
+            engine.punches = [
+                Punch(num: 0, punchValue: selectedButtons[0].num),
+                Punch(num: 1, punchValue: selectedButtons[1].num),
+                Punch(num: 2, punchValue: selectedButtons[2].num),
+                Punch(num: 3, punchValue: selectedButtons[3].num),
+            ]
             
             let selectedPunches2 = saveSelectedNumbers()
             let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches2]
