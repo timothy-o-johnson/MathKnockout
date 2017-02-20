@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Choose Four-->
+        <!--Choose Punches-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ChooseFourVC" id="BYZ-38-t0r" customClass="ChooseFourViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="ygr-St-1Pu" secondAttribute="leading" id="u42-Id-ygH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose Four" id="dhn-cz-lB8"/>
+                    <navigationItem key="navigationItem" title="Choose Punches" id="dhn-cz-lB8"/>
                     <connections>
                         <outlet property="nextButton" destination="ygr-St-1Pu" id="ztx-bv-jzb"/>
                         <outletCollection property="numberButtons" destination="GGe-J5-h1P" collectionClass="NSMutableArray" id="Ref-R1-j0L"/>
@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="972" y="37.331334332833585"/>
         </scene>
-        <!--Which One?-->
+        <!--Opponents-->
         <scene sceneID="XlI-C2-YlD">
             <objects>
                 <viewController storyboardIdentifier="WhichOneVC" id="tI2-FL-TL7" customClass="BoardViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
@@ -511,7 +511,7 @@
                             <constraint firstItem="SKH-Oi-NkJ" firstAttribute="centerY" secondItem="e8l-0r-v3J" secondAttribute="centerY" id="dJc-2U-Fk4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Which One?" id="Xa2-Pv-xNv"/>
+                    <navigationItem key="navigationItem" title="Opponents" id="Xa2-Pv-xNv"/>
                     <connections>
                         <outletCollection property="numberButtons" destination="BMH-mo-ddK" collectionClass="NSMutableArray" id="ZgJ-Pt-vgS"/>
                         <outletCollection property="numberButtons" destination="rDS-YR-LyY" collectionClass="NSMutableArray" id="6TO-ni-tIh"/>
@@ -544,7 +544,7 @@
             </objects>
             <point key="canvasLocation" x="1720.8" y="36.431784107946029"/>
         </scene>
-        <!--Knock Out-->
+        <!--Ding! Ding! Ding!-->
         <scene sceneID="IT9-Gd-FJr">
             <objects>
                 <viewController storyboardIdentifier="HowToKnockOutVC" id="MsC-HW-1xd" customClass="HowToKnockOutViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
@@ -770,7 +770,7 @@
                             <constraint firstItem="fw7-x5-eSv" firstAttribute="top" secondItem="OOM-RG-odQ" secondAttribute="bottom" constant="20" id="zA9-y2-EFW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Knock Out" id="sbN-FQ-dOO">
+                    <navigationItem key="navigationItem" title="Ding! Ding! Ding!" id="sbN-FQ-dOO">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="x6p-Qe-fUe">
                             <connections>
                                 <action selector="didTapRestart:" destination="MsC-HW-1xd" id="rLx-af-6fp"/>
@@ -791,7 +791,7 @@
             </objects>
             <point key="canvasLocation" x="2460" y="35.532233883058474"/>
         </scene>
-        <!--Math Knock Out!!!-->
+        <!--Math Knock Out-->
         <scene sceneID="6nK-5d-LOF">
             <objects>
                 <viewController id="N9K-2P-F0J" sceneMemberID="viewController">
@@ -818,15 +818,21 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="pcn-8I-Xkc"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boxing-icon" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-Xz-cWs">
+                                <rect key="frame" x="59.5" y="205.5" width="256" height="256"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rvT-PE-AZI" firstAttribute="top" secondItem="iUY-cQ-PKm" secondAttribute="bottom" constant="20" id="IDZ-1z-qSc"/>
+                            <constraint firstItem="tLA-Xz-cWs" firstAttribute="centerY" secondItem="AX6-rq-ZbW" secondAttribute="centerY" id="Tub-mV-kc8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iUY-cQ-PKm" secondAttribute="trailing" id="f0C-xi-dB4"/>
                             <constraint firstAttribute="leadingMargin" secondItem="iUY-cQ-PKm" secondAttribute="leading" id="fXz-2o-tZg"/>
+                            <constraint firstItem="tLA-Xz-cWs" firstAttribute="centerX" secondItem="AX6-rq-ZbW" secondAttribute="centerX" id="gOe-mO-rxW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Math Knock Out!!!" id="ZVP-y8-ZrC"/>
+                    <navigationItem key="navigationItem" title="Math Knock Out" id="ZVP-y8-ZrC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfQ-aM-ouh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -854,4 +860,7 @@
             <point key="canvasLocation" x="-663.20000000000005" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Boxing-icon" width="256" height="256"/>
+    </resources>
 </document>
