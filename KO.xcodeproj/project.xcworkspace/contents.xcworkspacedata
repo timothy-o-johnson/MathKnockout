@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NoNotif.xcodeproj">
+      location = "self:/Users/john/Freelancing/Pavementii/NoNotif/KO.xcodeproj">
    </FileRef>
 </Workspace>
