@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521BB6781E3FAB7C00024273 /* NoNotif WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */; };
+		521BB6781E3FAB7C00024273 /* KO WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52B40EEF1DFACED2005016C3 /* KO WatchKit App.app */; };
 		52202EDE1E33F0490065E59A /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EDD1E33F0490065E59A /* BoardViewController.swift */; };
 		52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */; };
 		52202EE31E33FCE60065E59A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE21E33FCE60065E59A /* GameEngine.swift */; };
@@ -23,7 +23,7 @@
 		52B40EEB1DFACED2005016C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EE91DFACED2005016C3 /* LaunchScreen.storyboard */; };
 		52B40EF61DFACED2005016C3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EF41DFACED2005016C3 /* Interface.storyboard */; };
 		52B40EF81DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40EF71DFACED2005016C3 /* Assets.xcassets */; };
-		52B40EFF1DFACED2005016C3 /* NoNotif WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52B40EFF1DFACED2005016C3 /* KO WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52B40EFE1DFACED2005016C3 /* KO WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52B40F061DFACED2005016C3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */; };
 		52B40F081DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40F071DFACED2005016C3 /* Assets.xcassets */; };
 		52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */; };
@@ -53,7 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				52B40EFF1DFACED2005016C3 /* NoNotif WatchKit Extension.appex in Embed App Extensions */,
+				52B40EFF1DFACED2005016C3 /* KO WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +64,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				521BB6781E3FAB7C00024273 /* NoNotif WatchKit App.app in Embed Watch Content */,
+				521BB6781E3FAB7C00024273 /* KO WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,18 +79,18 @@
 		526024141DFADFFC005379C4 /* BoardInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardInterfaceController.swift; sourceTree = "<group>"; };
 		526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFourInterfaceController.swift; sourceTree = "<group>"; };
 		526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutInterfaceController.swift; sourceTree = "<group>"; };
-		52B40EDD1DFACED2005016C3 /* NoNotif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNotif.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B40EDD1DFACED2005016C3 /* KO iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KO iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B40EE01DFACED2005016C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B40EE21DFACED2005016C3 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		52B40EE51DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B40EE71DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B40EEA1DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52B40EEC1DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoNotif WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B40EEF1DFACED2005016C3 /* KO WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KO WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B40EF51DFACED2005016C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		52B40EF71DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B40EF91DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NoNotif WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B40EFE1DFACED2005016C3 /* KO WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "KO WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		52B40F071DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B40F091DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,9 +139,9 @@
 		52B40EDE1DFACED2005016C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52B40EDD1DFACED2005016C3 /* NoNotif.app */,
-				52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */,
-				52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */,
+				52B40EDD1DFACED2005016C3 /* KO iOS.app */,
+				52B40EEF1DFACED2005016C3 /* KO WatchKit App.app */,
+				52B40EFE1DFACED2005016C3 /* KO WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,9 +190,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52B40EDC1DFACED2005016C3 /* NoNotif */ = {
+		52B40EDC1DFACED2005016C3 /* KO iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52B40F141DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif" */;
+			buildConfigurationList = 52B40F141DFACED2005016C3 /* Build configuration list for PBXNativeTarget "KO iOS" */;
 			buildPhases = (
 				52B40ED91DFACED2005016C3 /* Sources */,
 				52B40EDA1DFACED2005016C3 /* Frameworks */,
@@ -204,14 +204,14 @@
 			dependencies = (
 				521BB67A1E3FAB9400024273 /* PBXTargetDependency */,
 			);
-			name = NoNotif;
+			name = "KO iOS";
 			productName = NoNotif;
-			productReference = 52B40EDD1DFACED2005016C3 /* NoNotif.app */;
+			productReference = 52B40EDD1DFACED2005016C3 /* KO iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52B40EEE1DFACED2005016C3 /* NoNotif WatchKit App */ = {
+		52B40EEE1DFACED2005016C3 /* KO WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52B40F101DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit App" */;
+			buildConfigurationList = 52B40F101DFACED2005016C3 /* Build configuration list for PBXNativeTarget "KO WatchKit App" */;
 			buildPhases = (
 				52B40EED1DFACED2005016C3 /* Resources */,
 				52B40F0F1DFACED2005016C3 /* Embed App Extensions */,
@@ -221,14 +221,14 @@
 			dependencies = (
 				52B40F011DFACED2005016C3 /* PBXTargetDependency */,
 			);
-			name = "NoNotif WatchKit App";
+			name = "KO WatchKit App";
 			productName = "NoNotif WatchKit App";
-			productReference = 52B40EEF1DFACED2005016C3 /* NoNotif WatchKit App.app */;
+			productReference = 52B40EEF1DFACED2005016C3 /* KO WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */ = {
+		52B40EFD1DFACED2005016C3 /* KO WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52B40F0C1DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit Extension" */;
+			buildConfigurationList = 52B40F0C1DFACED2005016C3 /* Build configuration list for PBXNativeTarget "KO WatchKit Extension" */;
 			buildPhases = (
 				52B40EFA1DFACED2005016C3 /* Sources */,
 				52B40EFB1DFACED2005016C3 /* Frameworks */,
@@ -238,9 +238,9 @@
 			);
 			dependencies = (
 			);
-			name = "NoNotif WatchKit Extension";
+			name = "KO WatchKit Extension";
 			productName = "NoNotif WatchKit Extension";
-			productReference = 52B40EFE1DFACED2005016C3 /* NoNotif WatchKit Extension.appex */;
+			productReference = 52B40EFE1DFACED2005016C3 /* KO WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -288,9 +288,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52B40EDC1DFACED2005016C3 /* NoNotif */,
-				52B40EEE1DFACED2005016C3 /* NoNotif WatchKit App */,
-				52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */,
+				52B40EDC1DFACED2005016C3 /* KO iOS */,
+				52B40EEE1DFACED2005016C3 /* KO WatchKit App */,
+				52B40EFD1DFACED2005016C3 /* KO WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -357,12 +357,12 @@
 /* Begin PBXTargetDependency section */
 		521BB67A1E3FAB9400024273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52B40EEE1DFACED2005016C3 /* NoNotif WatchKit App */;
+			target = 52B40EEE1DFACED2005016C3 /* KO WatchKit App */;
 			targetProxy = 521BB6791E3FAB9400024273 /* PBXContainerItemProxy */;
 		};
 		52B40F011DFACED2005016C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52B40EFD1DFACED2005016C3 /* NoNotif WatchKit Extension */;
+			target = 52B40EFD1DFACED2005016C3 /* KO WatchKit Extension */;
 			targetProxy = 52B40F001DFACED2005016C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52B40F0C1DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit Extension" */ = {
+		52B40F0C1DFACED2005016C3 /* Build configuration list for PBXNativeTarget "KO WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52B40F0D1DFACED2005016C3 /* Debug */,
@@ -605,7 +605,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52B40F101DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif WatchKit App" */ = {
+		52B40F101DFACED2005016C3 /* Build configuration list for PBXNativeTarget "KO WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52B40F111DFACED2005016C3 /* Debug */,
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52B40F141DFACED2005016C3 /* Build configuration list for PBXNativeTarget "NoNotif" */ = {
+		52B40F141DFACED2005016C3 /* Build configuration list for PBXNativeTarget "KO iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52B40F151DFACED2005016C3 /* Debug */,
