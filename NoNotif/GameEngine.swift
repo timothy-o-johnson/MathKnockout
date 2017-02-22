@@ -7,11 +7,14 @@
 //
 
 import Foundation
-//import MathParser
 
-import UIKit.UIColor
-//import WatchKit.UIColor
-
+#if os(iOS)
+    import MathParser_iOS
+//    import UIKit.UIColor
+#elseif os(watchOS)
+    import MathParser_watchOS
+//    import WatchKit.UIColor
+#endif
 //enum Operand : String
 //{
 //    case add      = "+"
@@ -132,7 +135,8 @@ struct StringStack
 protocol GameEngineDelegate
 {
     func printToLabel(text: String)
-    func setColorForLabelGroup(color: UIColor)
+//    func setColorForLabelGroup(color: UIColor)
+    func didNotSucceed()
 //    func changeButtonColor(buttonNum: Int)
     func didUpdatePunch(punch: Punch)
     func sendTargetBackDefeated()
@@ -369,24 +373,24 @@ class GameEngine //: NSObject
 //        {
         var resultingInt : Int? //""
         
-        let mathExpression = NSExpression(format: stringToEvaluate)
+//        let mathExpression = NSExpression(format: stringToEvaluate)
         
-        if let mathValue = mathExpression.expressionValue(with: nil, context: nil) as? Int
-        {
-            print(String(mathValue) + "=" + stringToEvaluate)
-            resultingInt = mathValue
-        }
+//        if let mathValue = mathExpression.expressionValue(with: nil, context: nil) as? Int
+//        {
+//            print(String(mathValue) + "=" + stringToEvaluate)
+//            resultingInt = mathValue
+//        }
 //        else
 //        {
-//            do
-//            {
-//                let resultDouble = try stringToEvaluate.evaluate()
-//                resultingInt = Int(resultDouble)
-//            }
-//            catch
-//            {
-//                print("could not evaluate \(stringToEvaluate)")
-//            }
+            do
+            {
+                let resultDouble = try stringToEvaluate.evaluate()
+                resultingInt = Int(resultDouble)
+            }
+            catch
+            {
+                print("could not evaluate \(stringToEvaluate)")
+            }
 //        }
 
         
@@ -415,7 +419,8 @@ class GameEngine //: NSObject
         }
         else
         {
-            delegate?.setColorForLabelGroup(color: .red)
+//            delegate?.setColorForLabelGroup(color: .red)
+            delegate?.didNotSucceed()
         }
 //        }
         

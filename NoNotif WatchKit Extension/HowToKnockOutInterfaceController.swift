@@ -712,7 +712,8 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
 //        }
     }
     
-    func setColorForLabelGroup(color: UIColor)
+//    func setColorForLabelGroup(color: UIColor)
+    func didNotSucceed()
     {
 //        view.backgroundColor = color // FIXME: knock out target button or display background
     }

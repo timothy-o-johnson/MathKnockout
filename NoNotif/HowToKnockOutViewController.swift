@@ -260,7 +260,8 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
         }
     }
     
-    func setColorForLabelGroup(color: UIColor)
+//    func setColorForLabelGroup(color: UIColor)
+    func didNotSucceed()
     {
 //        view.backgroundColor = color // FIXME: knock out target button or display background
         
@@ -268,7 +269,7 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //        knockOutLabel.backgroundColor = .clear // http://stackoverflow.com/a/19261362
         
         UIView.animate(withDuration: 0.1, animations: {
-            self.knockOutLabel.layer.backgroundColor = color.cgColor
+            self.knockOutLabel.layer.backgroundColor = UIColor.red.cgColor
         }) { _ in
             UIView.animate(withDuration: 0.3) {
                 self.knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
