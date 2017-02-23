@@ -17,88 +17,28 @@ struct SelectedPunches
     var fourth : Int = 1
 }
 
-class ChooseFourInterfaceController: WKInterfaceController {
-    
+class ChooseFourInterfaceController: WKInterfaceController
+{
     let engine = GameEngine.shared
     
     func initializeBoardTargetAndTargetInfo()
     {
-        
-//        initializeDictionaries()
-        
-//        func initializeDictionaries(){
-        
         var KOeds      = [String:String]()
         var attempts   = [String:Int]()
         var operations = [String:String]()
-        
         
         (1...25).forEach {
             let key = String($0)
             KOeds[key]      = "no"
             attempts[key]   = 0
             operations[key] = ""
-            
-//            defaults.set("no", forKey: String($0))
-//            defaults.set("no", forKey: String($0))
-//            defaults.set("no", forKey: String($0))
         }
-        
-//        let dictKOed = (1...25).map { [String($0) : "no"] }
-        
-//        .set(dictKOed,forKey:"dictKOed")
-        
-//        let KOeds      = (1...25).map { [String($0) : "no"] }
-//        let attempts   = (1...25).map { [String($0) : 0] }
-//        let operations = (1...25).map { [String($0) : ""] }
         
         let defaults = UserDefaults.standard
         
         defaults.set(KOeds,      forKey:"dictKOed")
         defaults.set(attempts,   forKey:"dictAttempt")
         defaults.set(operations, forKey:"dictOperation")
-        
-//        for x in 1...25
-//        {
-//            let = indexStr = String(x)
-//            
-//            dictKOed[indexStr]      = "no"
-//            dictAttempt[indexStr]   = 0
-//            dictOperation[indexStr] = ""
-//            
-//        }
-//        }
-        
-        //        if UserDefaults.standard.object(forKey: "knockOutTarget") == nil {
-        //            UserDefaults.standard.set(knockOutTarget,forKey:"knockOutTarget")
-        //            UserDefaults.standard.synchronize()
-        //        }
-        
-        //        if UserDefaults.standard.object(forKey: "targetKOstatus") == nil {
-        //            UserDefaults.standard.set(targetKOstatus,forKey:"targetKOstatus")
-        //            UserDefaults.standard.synchronize()
-        //        }
-        
-//        if UserDefaults.standard.object(forKey: "dictKOed") == nil {
-        
-            //            UserDefaults.standard.synchronize()
-//        }
-        
-//        if UserDefaults.standard.object(forKey: "dictAttempt") == nil {
-        
-            //            UserDefaults.standard.synchronize()
-//        }
-        
-//        if UserDefaults.standard.object(forKey: "dictOperation") == nil {
-        
-            //            UserDefaults.standard.synchronize()
-//        }
-        
-        
-        /*
-         dictKOed[x] = "no"
-         dictAttempt[x] = 0
-         dictOperation[x] = nil*/
     }
 
     

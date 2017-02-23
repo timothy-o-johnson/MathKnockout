@@ -15,7 +15,7 @@ class ChooseFourViewController: UIViewController
     
     let engine = GameEngine.shared
     
-    @IBOutlet var nextButton  : UIButton! //when FourSelected = true enable
+    @IBOutlet var nextButton  : UIButton!
     
     override func viewDidLoad()
     {
@@ -48,18 +48,6 @@ class ChooseFourViewController: UIViewController
     @IBAction func nextButtonTapped(_ sender: UIButton)
     {
         let selectedButtons = numberButtons.filter { $0.isSelected }.sorted { $0.0.tag < $0.1.tag }
-//        selectedButtons.first!.titleLabel!.text!
-//        let selectedPunches = selectedButtons
-//            .map { Punch(punchValue: $0.tag) }
-//            .sorted { $0.0.punchValue < $0.1.punchValue }
-        
-//        engine.punches = selectedPunches
-        
-//        for i in 0...3
-//        {
-//            let newPunch = Punch(num: i, punchValue: selectedButtons[i].tag)
-//            engine.punches.append(newPunch)
-//        }
         
         engine.punches = [
             Punch(num: 0, punchValue: selectedButtons[0].tag),
@@ -67,19 +55,6 @@ class ChooseFourViewController: UIViewController
             Punch(num: 2, punchValue: selectedButtons[2].tag),
             Punch(num: 3, punchValue: selectedButtons[3].tag),
         ]
-        
-//        engine.saveSelectedPuches()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -9,29 +9,6 @@
 import WatchKit
 import Foundation
 
-//class Opponent : NSObject, NSCoding
-//{
-//    var knockedOut   = false
-//    var attemptCount = 0
-//    var operation    = ""
-//    
-//    required init?(coder aDecoder: NSCoder)
-//    {
-//        super.init()
-//        
-//        knockedOut   = aDecoder.decodeObject(forKey: "knockedOut")   as! Bool
-//        attemptCount = aDecoder.decodeObject(forKey: "attemptCount") as! Int
-//        operation    = aDecoder.decodeObject(forKey: "operation")    as! String
-//    }
-//    
-//    func encode(with aCoder: NSCoder)
-//    {
-//        aCoder.encode(knockedOut,   forKey: "knockedOut")
-//        aCoder.encode(attemptCount, forKey: "attemptCount")
-//        aCoder.encode(operation,    forKey: "operation")
-//    }
-//}
-
 class Tile
 {
     let number : Int
@@ -397,27 +374,12 @@ class BoardInterfaceController : WKInterfaceController
     
     func sendTargetToRing()
     {
-        print("\nFunction: sendTargetToRing()")
-        //save knockOut Target
-//        UserDefaults.standard.set(knockOutTarget,forKey:"knockOutTarget")
-        
-        
-        //save board status
+//        print("\nFunction: sendTargetToRing()")
         saveBoardStatus()
-
-        //NSUserDefaults.standardUserDefaults().setObject(board,forKey:"board")
-        
         printNSUserDefaultsForKOAndAttemptAndOperation()
-        
         print("Moving to howToKnockOut controller")
-//        self.presentController(withName: "howToKnockOut", context: nil)
-//        self.presentController(withName: "howToKnockOut", context: passThoughSelectedPunches)
-//        pushController(withName: "howToKnockOut", context: passThoughSelectedPunches)
         
-//        engine.knockOutTarget = knockOutTarget
-//        passThoughContext!["knockOutTarget"] = knockOutTarget
         WKInterfaceController.reloadRootControllers(withNames: ["howToKnockOut"], contexts: [])
-//        pushController(withName: "howToKnockOut", context: passThoughContext)
     }
     
 
@@ -608,10 +570,6 @@ class BoardInterfaceController : WKInterfaceController
             board[x-1].update_display()
         }
     }
-    
-    
-    
-    
     
     func initializeDictionaries(){
         for x in 1...25{

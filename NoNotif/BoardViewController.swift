@@ -17,19 +17,11 @@ class BoardViewController: UIViewController
     @IBAction func numButtonTapped(_ sender: UIButton)
     {
         let vc = storyboard!.instantiateViewController(withIdentifier: "HowToKnockOutVC") as! HowToKnockOutViewController
-//        let vc = HowToKnockOutViewController()
-//        present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
         
         vc.loadViewIfNeeded()
         engine.delegate = vc
         engine.knockOutTarget = sender.tag
-        
-//        for index in engine.punches.indices
-//        {
-//            engine.punches[index].selected = internalProgram.contains { $0 as? Int == engine.punches[index].punchValue }
-//            delegate?.didUpdatePunch(punch: engine.punches[index])
-//        }
     }
     
     override func viewDidLoad()
@@ -47,14 +39,4 @@ class BoardViewController: UIViewController
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
