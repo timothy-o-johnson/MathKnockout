@@ -28,7 +28,7 @@ struct Punch
     }
 }
 
-struct Tile2
+struct Tile
 {
     let number    : Int
     var KOed      : Bool
@@ -69,7 +69,7 @@ class GameEngine
         }
     }
     
-    var tiles : [Tile2]
+    var tiles : [Tile]
     {
         didSet {
             let savableTiles = tiles.map { tile -> [String:Any] in
@@ -140,7 +140,7 @@ class GameEngine
         if let savedTiles = UserDefaults.standard.array(forKey: "tiles") as? [[String:Any]]
         {
             tiles = savedTiles.map {
-                Tile2(
+                Tile(
                     number    : $0["number"]    as! Int,
                     KOed      : $0["KOed"]      as! Bool,
                     operation : $0["operation"] as! [Any],
@@ -151,7 +151,7 @@ class GameEngine
         else // generate
         {
             tiles = (1...25).map {
-                Tile2(
+                Tile(
                     number    : $0,
                     KOed      : false,
                     operation : [Any](),
@@ -296,7 +296,7 @@ class GameEngine
         internalProgram.removeAll()
         
         tiles = (1...25).map {
-            Tile2(
+            Tile(
                 number    : $0,
                 KOed      : false,
                 operation : [Any](),
