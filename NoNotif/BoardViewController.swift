@@ -16,12 +16,20 @@ class BoardViewController: UIViewController
     
     @IBAction func numButtonTapped(_ sender: UIButton)
     {
-        engine.knockOutTarget = sender.tag
-        
-        let vc = storyboard!.instantiateViewController(withIdentifier: "HowToKnockOutVC")
+        let vc = storyboard!.instantiateViewController(withIdentifier: "HowToKnockOutVC") as! HowToKnockOutViewController
 //        let vc = HowToKnockOutViewController()
 //        present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
+        
+        vc.loadViewIfNeeded()
+        engine.delegate = vc
+        engine.knockOutTarget = sender.tag
+        
+//        for index in engine.punches.indices
+//        {
+//            engine.punches[index].selected = internalProgram.contains { $0 as? Int == engine.punches[index].punchValue }
+//            delegate?.didUpdatePunch(punch: engine.punches[index])
+//        }
     }
     
     override func viewDidLoad()

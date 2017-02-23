@@ -149,7 +149,8 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
         
         if hasPunchBeenSelected(0) == false
         {
-            engine.sendPunchValueToScreen(punch: engine.punches[0])
+            engine.sendPunchValueToScreen(index: 0)
+//            engine.sendPunchValueToScreen(punch: engine.punches[0])
         }
             //            engine.sendPunchValueToScreen(punchValue: punchValue)
             //            engine.sendPunchValueToScreen(punchValue: punchValue)
@@ -178,7 +179,8 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
         
         if hasPunchBeenSelected(1) == false
         {
-            engine.sendPunchValueToScreen(punch: engine.punches[1])
+            engine.sendPunchValueToScreen(index: 1)
+//            engine.sendPunchValueToScreen(punch: engine.punches[1])
         }
     }
     
@@ -201,7 +203,8 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
         
         if hasPunchBeenSelected(2) == false
         {
-            engine.sendPunchValueToScreen(punch: engine.punches[2])
+            engine.sendPunchValueToScreen(index: 2)
+//            engine.sendPunchValueToScreen(punch: engine.punches[2])
         }
     }
     
@@ -224,7 +227,8 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
         
         if hasPunchBeenSelected(3) == false
         {
-            engine.sendPunchValueToScreen(punch: engine.punches[3])
+            engine.sendPunchValueToScreen(index: 3)
+//            engine.sendPunchValueToScreen(punch: engine.punches[3])
         }
     }
     
@@ -701,7 +705,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
     func didUpdatePunch(punch: Punch)
     {
         let number = punch.num
-        changeSelectedStatus(number) // has punch been selected or unselected?
+//        changeSelectedStatus(number) // has punch been selected or unselected?
         changeButtonColor(number) //make it look like its selected or unselected
 //        updateScreen(String(value), number)
         
@@ -712,18 +716,49 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
 //        }
     }
     
-//    func setColorForLabelGroup(color: UIColor)
     func didNotSucceed()
     {
-//        view.backgroundColor = color // FIXME: knock out target button or display background
+        let rampUpTime   = 0.25
+        let rampDownTime = 0.45
+        
+        animate(withDuration: rampUpTime)
+        {
+            self.labelGroup.setBackgroundColor(.red)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + rampUpTime)
+        {
+            self.animate(withDuration: rampDownTime)
+            {
+                self.labelGroup.setBackgroundColor(.clear)
+            }
+        }
     }
     
     
     func sendTargetBackDefeated()
     {
-//        _ = navigationController?.popViewController(animated: true)
+        let rampUpTime    = 0.25
+        let rampDownTime  = 0.45
+        let totalRampTime = rampUpTime + rampDownTime
         
-        WKInterfaceController.reloadRootControllers(withNames: ["boardController"], contexts: [])
+        animate(withDuration: rampUpTime)
+        {
+            self.labelGroup.setBackgroundColor(UIColor(red: 0/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1))
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + rampUpTime)
+        {
+            self.animate(withDuration: rampDownTime)
+            {
+                self.labelGroup.setBackgroundColor(.clear)
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + totalRampTime)
+        {
+            WKInterfaceController.reloadRootControllers(withNames: ["boardController"], contexts: [])
+        }
     }
 
 }

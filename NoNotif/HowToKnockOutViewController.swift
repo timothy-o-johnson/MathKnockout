@@ -34,17 +34,16 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
         
     }
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
+//    override func viewDidLoad()
+//    {
+//        super.viewDidLoad()
         
-        engine.delegate = self
+//        engine.delegate = self
 //        engine.knockOutTarget = 1
 //        knockOutTargetButton.titleLabel?.text = String(engine.knockOutTarget)
-        knockOutTargetButton.setTitle(String(engine.knockOutTarget), for: .normal)
         
-        navigationItem.hidesBackButton = true
-    }
+    
+//    }
     
     override func viewWillAppear(_ animated: Bool)
     {
@@ -52,6 +51,10 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
         
         knockOutLabel.backgroundColor = .clear // http://stackoverflow.com/a/19261362
         knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
+        
+        knockOutTargetButton.setTitle(String(engine.knockOutTarget), for: .normal)
+        
+        navigationItem.hidesBackButton = true
         
         // FIXME: Load Program
 //        let op = engine.tiles[engine.knockOutTarget - 1].operation
@@ -66,8 +69,11 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //        let sortedPunches = engine.punches.sorted { $0.0.punchValue < $0.1.punchValue }
         
         for i in 0..<punches.count {
+            print("will set puch button to \(engine.punches[i].selected)")
+            punches[i].isSelected = engine.punches[i].selected
             punches[i].setTitle(String(engine.punches[i].punchValue), for: .normal)
 //            punches[i].setTitle(String(sortedPunches[i].punchValue), for: .normal)
+            punches[i].layer.backgroundColor = punches[i].isSelected ? UIColor.lightGray.cgColor : UIColor.darkGray.cgColor
         }
 //        punches[0].setTitle(String(engine.punches[0].punchValue), for: .normal)
 //        punches[1].setTitle(String(engine.punches[1].punchValue), for: .normal)
@@ -75,22 +81,20 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //        punches[3].setTitle(String(engine.punches[3].punchValue), for: .normal)
     }
     
-    /*
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
-        knockOutLabel.backgroundColor = .clear
+//        knockOutLabel.backgroundColor = .clear
         
-        UIView.animate(withDuration: 0.2, animations: {
-            self.knockOutLabel.layer.backgroundColor = UIColor.red.cgColor
-        }) { _ in
-            UIView.animate(withDuration: 0.5) {
-                self.knockOutLabel.layer.backgroundColor = UIColor.clear.cgColor
-            }
-        }
+//        UIView.animate(withDuration: 0.2, animations: {
+//            self.knockOutLabel.layer.backgroundColor = UIColor.red.cgColor
+//        }) { _ in
+//            UIView.animate(withDuration: 0.5) {
+//                self.knockOutLabel.layer.backgroundColor = UIColor.clear.cgColor
+//            }
+//        }
     }
-    */
     
 //    func hasPunchBeenSelected(_ number : Int) -> Bool
 //    {
@@ -118,7 +122,9 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
 //            )
             
 //            engine.sendPunchValueToScreen(punch: punch)
-            engine.sendPunchValueToScreen(punch: engine.punches[sender.tag - 1])
+            engine.sendPunchValueToScreen(index: sender.tag - 1)
+//            engine.sendPunchValueToScreen(punch: engine.punches[sender.tag - 1])
+            
 //            engine.sendPunchValueToScreen(punch: engine.punches[Int(sender.currentTitle!)!]) //- 1])
 //            engine.sendPunchValueToScreen(punchValue: punchValue)
 //            engine.sendPunchValueToScreen(punchValue: punchValue)
@@ -249,9 +255,9 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     {
         if let matchedPunch = punches.first(where: { Int($0.currentTitle!)! == punch.punchValue })
         {
-            matchedPunch.isSelected = !matchedPunch.isSelected
+            matchedPunch.isSelected = punch.selected // !matchedPunch.isSelected
 //            matchedPunch.isEnabled  = !matchedPunch.isSelected
-            matchedPunch.layer.backgroundColor = matchedPunch.isSelected ? UIColor.lightGray.cgColor : UIColor.darkGray.cgColor
+            matchedPunch.layer.backgroundColor = punch.selected ? UIColor.lightGray.cgColor : UIColor.darkGray.cgColor
             
 //            matchedPunch.isHidden = punch.selected
 //            matchedPunch.isSelected = punch.selected

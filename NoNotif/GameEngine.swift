@@ -248,6 +248,18 @@ class GameEngine //: NSObject
             print(program)
 //            print(anyArr)
             
+            
+            // fix buttons:
+            
+//            punches
+            
+            for index in punches.indices {
+                punches[index].selected = internalProgram.contains { $0 as? Int == punches[index].punchValue }
+                print("will update puch at index: \(index)")
+                delegate?.didUpdatePunch(punch: punches[index])
+            }
+            
+            print(punches.map { $0.selected })
         }
     }
     
@@ -544,30 +556,20 @@ class GameEngine //: NSObject
 //        
 //        return characters
 //    }
-    
-    
-    func isSameTypeAsLastEntry(latest : Any) -> Bool
+
+    typealias Operation = String
+    typealias Operand   = Int
+
+    func isSameTypeAsLastEntry(latest incoming : Any) -> Bool
     {
-        guard internalProgram.count >= 1 else { return false }
-        
-        if let lastest = latest as? String
+        guard let previous = internalProgram.last else { return false }
+
+        switch (incoming, previous)
         {
-            if lastest != "(" || lastest != ")"
-            {
-                return false
-            }
+            case (is Operand, is Operand)                                                                                : print("Operand, Operand")     ; return true
+            case (let op1 as Operation, let op2 as Operation) where op1 != "(" && op1 != ")" && op2 != "(" && op2 != ")" : print("Operation, Operation") ; return true
+            default                                                                                                      : print("Different types")      ; return false
         }
-        
-        if let last = internalProgram.last as? String
-        {
-            if last != "(" || last != ")"
-            {
-                return false
-            }
-        }
-        
-//        if internalProgram.last! != "(" || != ")"
-        return type(of: latest) == type(of: internalProgram.last!)
     }
     
 //    func willTwoConsecutiveNumbersHaveBeenEntered(nextChar : Character) -> Bool
@@ -783,6 +785,20 @@ class GameEngine //: NSObject
         }
     }
     
+    func sendPunchValueToScreen(index: Int)
+    {
+        if isSameTypeAsLastEntry(latest: punches[index].punchValue) { return }
+        
+        internalProgram.append(punches[index].punchValue)
+        
+        delegate?.printToLabel(text: displayableProgram)
+        
+        punches[index].selected = true // !punches[index].selected
+        
+        delegate?.didUpdatePunch(punch: punches[index])
+    }
+    
+    
 //    func sendPunchValueToScreen(punchValue: String)
 //    func sendPunchValueToScreen(punchValue: Character)
     func sendPunchValueToScreen(punch: Punch)
@@ -798,6 +814,7 @@ class GameEngine //: NSObject
 //        let arr = Array(new.characters)
 //        if willTwoConsecutiveNumbersHaveBeenEntered(Array(labelText.characters)) == false
         
+//        if isLastEntryAlsoOperand() { return }
         if isSameTypeAsLastEntry(latest: punch.punchValue) { return }
         
 //        let res1 = isSameTypeAsLastEntry(latest: valChar) onlyAddToStackIfNotOfSameTypeAsLastOne(toTest: valChar)
@@ -825,6 +842,9 @@ class GameEngine //: NSObject
         delegate?.printToLabel(text: displayableProgram)
 //        delegate?.didUpdatePunch(punch: modifiedPunch)
 //            delegate?.didUpdatePunch(punch: matchingPunch)
+        
+//        punch.selected = !punch.selected
+        
         delegate?.didUpdatePunch(punch: punch)
 //        }
         
@@ -858,6 +878,7 @@ class GameEngine //: NSObject
 
 //        if operation != "(" || operation != ")"
 //        {
+//        if isLastEntryAlsoOperation() { return }
         if isSameTypeAsLastEntry(latest: operation) { return }
 //        }
         
