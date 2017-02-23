@@ -57,7 +57,7 @@ class GameEngine
     var knockOutTarget = UserDefaults.standard.integer(forKey: "knockOutTarget") {
         didSet {
             UserDefaults.standard.set(knockOutTarget, forKey: "knockOutTarget")
-            internalProgram = tiles[knockOutTarget - 1].operation
+            program = tiles[knockOutTarget - 1].operation
         }
     }
     
@@ -84,40 +84,28 @@ class GameEngine
         }
     }
     
-    var internalProgram = [Any]()
+    var program = [Any]()
     {
         didSet
         {
             delegate?.printToLabel(text: displayableProgram)
             
-            print(program)
+            print("current program: \(program)")
             
             for index in punches.indices
             {
-                punches[index].selected = internalProgram.contains { $0 as? Int == punches[index].punchValue }
-                print("will update puch at index: \(index)")
+                punches[index].selected = program.contains { $0 as? Int == punches[index].punchValue }
+//                print("will update puch at index: \(index)")
                 delegate?.didUpdatePunch(punch: punches[index])
             }
             
-            print(punches.map { $0.selected })
+//            print(punches.map { $0.selected })
         }
     }
     
     var displayableProgram : String {
         get {
-            return internalProgram.reduce("") { $0 + String(describing: $1) } // concatenates
-        }
-    }
-    
-    var program : [Any]
-    {
-        get
-        {
-            return internalProgram // as GameEngine.PropertyList
-        }
-        set
-        {
-            internalProgram = program
+            return program.reduce("") { $0 + String(describing: $1) } // concatenates into String
         }
     }
     
@@ -175,7 +163,7 @@ class GameEngine
         
         print("You have tried \(attemptCount) times to knock out \(knockOutTarget).")
 
-        if internalProgram.isEmpty { return }
+        if program.isEmpty { return }
 
         let stringToEvaluate = convertStringForEvaluation(displayableProgram)
         
@@ -197,7 +185,7 @@ class GameEngine
         {
             tiles[knockOutTarget - 1].KOed = true
             tiles[knockOutTarget - 1].attempts = attemptCount
-            tiles[knockOutTarget - 1].operation = internalProgram
+            tiles[knockOutTarget - 1].operation = program
             
             delegate?.sendTargetBackDefeated()
         }
@@ -211,7 +199,7 @@ class GameEngine
     
     func delete()
     {
-        if let removed = internalProgram.popLast() as? Int
+        if let removed = program.popLast() as? Int
         {
             if var matchingPunch = punches.first(where: { $0.punchValue == removed })
             {
@@ -232,7 +220,7 @@ class GameEngine
 
     func isSameTypeAsLastEntry(latest incoming : Any) -> Bool
     {
-        guard let previous = internalProgram.last else { return false }
+        guard let previous = program.last else { return false }
 
         switch (incoming, previous)
         {
@@ -247,7 +235,7 @@ class GameEngine
     {
         if isSameTypeAsLastEntry(latest: punches[index].punchValue) { return }
         
-        internalProgram.append(punches[index].punchValue)
+        program.append(punches[index].punchValue)
         
         delegate?.printToLabel(text: displayableProgram)
         
@@ -265,7 +253,7 @@ class GameEngine
 
         if isSameTypeAsLastEntry(latest: operation) { return }
 
-        internalProgram.append(operation)
+        program.append(operation)
 
         delegate?.printToLabel(text: displayableProgram)
     }
@@ -293,7 +281,7 @@ class GameEngine
     
     func resetGame()
     {
-        internalProgram.removeAll()
+        program.removeAll()
         
         tiles = (1...25).map {
             Tile(
