@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
+//        engine.resetGameToBeKOedAllButOne()
+        
 //        UserDefaults.standard.set(NSArray(array: [1,2,3]), forKey: "nsArray-Int")
 //        UserDefaults.standard.set(NSArray(array: ["1","2","3"]), forKey: "nsArray-Str")
 //        UserDefaults.standard.set(NSArray(array: ["1",2,"3"]), forKey: "nsArray-Mix")

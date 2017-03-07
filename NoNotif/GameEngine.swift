@@ -310,6 +310,29 @@ class GameEngine
         punches.removeAll()
     }
     
+    func resetGameToBeKOedAllButOne()
+    {
+        program.removeAll()
+        
+        tiles = (1...25).map {
+            Tile(
+                number    : $0,
+                KOed      : true,
+                operation : [Any](),
+                attempts  : 0
+            )
+        }
+        
+        tiles[0] = Tile(
+            number    : 1,
+            KOed      : false,
+            operation : [Any](),
+            attempts  : 0
+        )
+        
+        punches.removeAll()
+    }
+    
     
     func printButtonStatusUpdate()
     {
