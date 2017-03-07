@@ -36,6 +36,7 @@ class BoardViewController: UIViewController
         for (index, tile) in engine.tiles.enumerated()
         {
             numberButtons[index].setTitle(tile.display, for: .normal)
+            numberButtons[index].isEnabled = !tile.KOed
         }
     }
     

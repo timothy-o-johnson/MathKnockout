@@ -21,6 +21,7 @@ class BoardInterfaceController : WKInterfaceController
         {
             let button = whichButton(tile.number)
             button.setTitle(tile.display)
+            button.setEnabled(!tile.KOed)
         }
     }
     
