@@ -40,4 +40,21 @@ class BoardViewController: UIViewController
         }
     }
     
+    @IBAction func didTapRestart(_ sender: UIBarButtonItem)
+    {
+        let ac = UIAlertController(title: "Reset Game", message: "Are you sure?", preferredStyle: .actionSheet)
+        
+        let ok = UIAlertAction(title: "Start Over", style: .destructive) { _ in
+            self.engine.resetGame()
+            _ = self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        let cancel = UIAlertAction(title: "Nevermind", style: .cancel, handler: nil)
+        
+        ac.addAction(ok)
+        ac.addAction(cancel)
+        
+        present(ac, animated: true, completion: nil)
+    }
+    
 }

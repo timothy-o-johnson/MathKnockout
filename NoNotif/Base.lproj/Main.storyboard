@@ -14,7 +14,7 @@
         <!--Choose Punches-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ChooseFourVC" id="BYZ-38-t0r" customClass="ChooseFourViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseFourVC" id="BYZ-38-t0r" customClass="ChooseFourViewController" customModule="KO_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -190,7 +190,7 @@
         <!--Opponents-->
         <scene sceneID="XlI-C2-YlD">
             <objects>
-                <viewController storyboardIdentifier="WhichOneVC" id="tI2-FL-TL7" customClass="BoardViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhichOneVC" id="tI2-FL-TL7" customClass="BoardViewController" customModule="KO_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ACl-Ie-6WU"/>
                         <viewControllerLayoutGuide type="bottom" id="i9l-AQ-FRr"/>
@@ -512,7 +512,14 @@
                             <constraint firstItem="SKH-Oi-NkJ" firstAttribute="centerY" secondItem="e8l-0r-v3J" secondAttribute="centerY" id="dJc-2U-Fk4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Opponents" id="Xa2-Pv-xNv"/>
+                    <navigationItem key="navigationItem" title="Opponents" id="Xa2-Pv-xNv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="JBx-6X-gmd">
+                            <color key="tintColor" red="0.91913325471698115" green="0.012581923770738032" blue="0.050622228488152579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTapRestart:" destination="tI2-FL-TL7" id="Ii9-Ie-Ujs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outletCollection property="numberButtons" destination="BMH-mo-ddK" collectionClass="NSMutableArray" id="ZgJ-Pt-vgS"/>
                         <outletCollection property="numberButtons" destination="rDS-YR-LyY" collectionClass="NSMutableArray" id="6TO-ni-tIh"/>
@@ -548,7 +555,7 @@
         <!--Ding! Ding! Ding!-->
         <scene sceneID="IT9-Gd-FJr">
             <objects>
-                <viewController storyboardIdentifier="HowToKnockOutVC" id="MsC-HW-1xd" customClass="HowToKnockOutViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HowToKnockOutVC" id="MsC-HW-1xd" customClass="HowToKnockOutViewController" customModule="KO_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QrH-ye-vBV"/>
                         <viewControllerLayoutGuide type="bottom" id="fw7-x5-eSv"/>
@@ -772,14 +779,7 @@
                             <constraint firstItem="fw7-x5-eSv" firstAttribute="top" secondItem="OOM-RG-odQ" secondAttribute="bottom" constant="20" id="zA9-y2-EFW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ding! Ding! Ding!" id="sbN-FQ-dOO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="x6p-Qe-fUe">
-                            <color key="tintColor" red="0.91913325471698115" green="0.012581923770738032" blue="0.050622228488152579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="didTapRestart:" destination="MsC-HW-1xd" id="rLx-af-6fp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Ding! Ding! Ding!" id="sbN-FQ-dOO"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="knockOutLabel" destination="648-Hn-TUi" id="skJ-7B-55c"/>
@@ -797,7 +797,7 @@
         <!--Math Knock Out-->
         <scene sceneID="6nK-5d-LOF">
             <objects>
-                <viewController id="N9K-2P-F0J" customClass="SplashScreenViewController" customModule="NoNotif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="N9K-2P-F0J" customClass="SplashScreenViewController" customModule="KO_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vDk-WN-uCM"/>
                         <viewControllerLayoutGuide type="bottom" id="rvT-PE-AZI"/>
