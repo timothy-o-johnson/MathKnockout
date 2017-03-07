@@ -209,7 +209,7 @@ class BoardInterfaceController : WKInterfaceController
     func sendTargetToRing()
     {
         print("Moving to howToKnockOut controller")
-        WKInterfaceController.reloadRootControllers(withNames: ["howToKnockOut"], contexts: [])
+        pushController(withName: "howToKnockOut", context: [])
     }
     
     

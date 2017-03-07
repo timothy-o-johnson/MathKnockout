@@ -42,7 +42,6 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
         
         knockOutTargetButton.setTitle(String(engine.knockOutTarget), for: .normal)
         
-        navigationItem.hidesBackButton = true
 
         knockOutLabel.text = "=" + engine.displayableProgram // needed?
         

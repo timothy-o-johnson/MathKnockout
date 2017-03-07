@@ -270,7 +270,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
         
         DispatchQueue.main.asyncAfter(deadline: .now() + totalRampTime)
         {
-            WKInterfaceController.reloadRootControllers(withNames: ["boardController"], contexts: [])
+            self.pop()
         }
     }
 
