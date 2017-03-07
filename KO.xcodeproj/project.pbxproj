@@ -17,6 +17,7 @@
 		526024151DFADFFC005379C4 /* BoardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024141DFADFFC005379C4 /* BoardInterfaceController.swift */; };
 		526024171DFAE003005379C4 /* ChooseFourInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */; };
 		526024191DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */; };
+		526B08AD1E6ED56400D26232 /* WonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B08AC1E6ED56400D26232 /* WonViewController.swift */; };
 		528C49B41E3FA031004DA88E /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE21E33FCE60065E59A /* GameEngine.swift */; };
 		52B40EE11DFACED2005016C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE01DFACED2005016C3 /* AppDelegate.swift */; };
 		52B40EE31DFACED2005016C3 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40EE21DFACED2005016C3 /* SplashScreenViewController.swift */; };
@@ -146,6 +147,7 @@
 		526024141DFADFFC005379C4 /* BoardInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardInterfaceController.swift; sourceTree = "<group>"; };
 		526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFourInterfaceController.swift; sourceTree = "<group>"; };
 		526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutInterfaceController.swift; sourceTree = "<group>"; };
+		526B08AC1E6ED56400D26232 /* WonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonViewController.swift; sourceTree = "<group>"; };
 		529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DDMathParser.xcodeproj; path = DDMathParser/DDMathParser.xcodeproj; sourceTree = "<group>"; };
 		52B40EDD1DFACED2005016C3 /* KO iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KO iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B40EE01DFACED2005016C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */,
 				52202EDD1E33F0490065E59A /* BoardViewController.swift */,
 				52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */,
+				526B08AC1E6ED56400D26232 /* WonViewController.swift */,
 				52B40EE41DFACED2005016C3 /* Main.storyboard */,
 				52B40EE71DFACED2005016C3 /* Assets.xcassets */,
 				52B40EE91DFACED2005016C3 /* LaunchScreen.storyboard */,
@@ -458,6 +461,7 @@
 			files = (
 				52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */,
 				52202EE31E33FCE60065E59A /* GameEngine.swift in Sources */,
+				526B08AD1E6ED56400D26232 /* WonViewController.swift in Sources */,
 				52B40EE31DFACED2005016C3 /* SplashScreenViewController.swift in Sources */,
 				52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */,
 				52B40EE11DFACED2005016C3 /* AppDelegate.swift in Sources */,

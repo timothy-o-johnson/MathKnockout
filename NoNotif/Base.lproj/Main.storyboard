@@ -863,6 +863,75 @@
             </objects>
             <point key="canvasLocation" x="-663.20000000000005" y="36.431784107946029"/>
         </scene>
+        <!--Congrats!-->
+        <scene sceneID="3j5-Kz-sig">
+            <objects>
+                <viewController storyboardIdentifier="WonVC" id="6O7-lb-ZAp" customClass="WonViewController" customModule="KO_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aah-17-GZB"/>
+                        <viewControllerLayoutGuide type="bottom" id="q4l-el-B0Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hOz-Y8-YJO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MR-VA-Utg">
+                                <rect key="frame" x="16" y="388" width="288" height="72"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="100" id="EK2-Eu-PCF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRestart:" destination="6O7-lb-ZAp" eventType="touchUpInside" id="Txx-BW-14n"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're the Knock Out Champion!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb2-aj-6Ti">
+                                <rect key="frame" x="16" y="72" width="288" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dsW-oB-03W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Quote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0K-Lk-jOA">
+                                <rect key="frame" x="16" y="180" width="288" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="R6s-wS-5d4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bb2-aj-6Ti" firstAttribute="trailing" secondItem="hOz-Y8-YJO" secondAttribute="trailingMargin" id="1r8-3i-UQr"/>
+                            <constraint firstItem="bb2-aj-6Ti" firstAttribute="top" secondItem="Aah-17-GZB" secondAttribute="bottom" constant="8" id="89E-IV-2Ct"/>
+                            <constraint firstItem="y0K-Lk-jOA" firstAttribute="trailing" secondItem="hOz-Y8-YJO" secondAttribute="trailingMargin" id="BSE-ig-qOI"/>
+                            <constraint firstItem="q4l-el-B0Z" firstAttribute="top" secondItem="4MR-VA-Utg" secondAttribute="bottom" constant="20" id="BYo-Gc-j9J"/>
+                            <constraint firstItem="4MR-VA-Utg" firstAttribute="leading" secondItem="hOz-Y8-YJO" secondAttribute="leadingMargin" id="KOd-gy-aRD"/>
+                            <constraint firstItem="y0K-Lk-jOA" firstAttribute="top" secondItem="bb2-aj-6Ti" secondAttribute="bottom" constant="8" id="TYM-JQ-3jf"/>
+                            <constraint firstItem="4MR-VA-Utg" firstAttribute="trailing" secondItem="hOz-Y8-YJO" secondAttribute="trailingMargin" id="cL0-qx-a6U"/>
+                            <constraint firstItem="4MR-VA-Utg" firstAttribute="top" secondItem="y0K-Lk-jOA" secondAttribute="bottom" priority="200" constant="8" id="jB1-2m-dPn"/>
+                            <constraint firstItem="bb2-aj-6Ti" firstAttribute="leading" secondItem="hOz-Y8-YJO" secondAttribute="leadingMargin" id="rbg-JN-yie"/>
+                            <constraint firstItem="y0K-Lk-jOA" firstAttribute="leading" secondItem="hOz-Y8-YJO" secondAttribute="leadingMargin" id="x1u-nq-I3L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Congrats!" id="03G-B9-kbH"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="quoteLabel" destination="y0K-Lk-jOA" id="1FY-tb-33h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JS1-74-O94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3161.25" y="35"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Boxing-icon" width="256" height="256"/>

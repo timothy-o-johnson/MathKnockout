@@ -40,6 +40,17 @@ class BoardViewController: UIViewController
         }
     }
     
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        if engine.gameIsWon
+        {
+            let vc = storyboard!.instantiateViewController(withIdentifier: "WonVC") as! WonViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     @IBAction func didTapRestart(_ sender: UIBarButtonItem)
     {
         let ac = UIAlertController(title: "Reset Game", message: "Are you sure?", preferredStyle: .actionSheet)

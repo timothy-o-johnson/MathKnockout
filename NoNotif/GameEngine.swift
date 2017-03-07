@@ -84,6 +84,21 @@ class GameEngine
         }
     }
     
+    var gameIsWon : Bool {
+        get
+        {
+            for tile in tiles
+            {
+                if tile.KOed == false
+                {
+                    return false
+                }
+            }
+            
+            return true
+        }
+    }
+    
     var program = [Any]()
     {
         didSet
@@ -302,6 +317,26 @@ class GameEngine
         {
             print("Punch #\(x + 1), Value \(punches[x].punchValue), Selected: \(punches[x].selected)")
         }
+    }
+    
+    let inspirationalQuotes = [
+        "Inspirational Quote 0",
+        "Inspirational Quote 1",
+        "Inspirational Quote 2",
+        "Inspirational Quote 3",
+        "Inspirational Quote 4",
+        "Inspirational Quote 5",
+        "Inspirational Quote 6",
+        "Inspirational Quote 7",
+        "Inspirational Quote 8",
+        "Inspirational Quote 9"
+    ]
+    
+    func randomInspirationalQuote() -> String
+    {
+        let randomInt = Int(arc4random_uniform(UInt32(inspirationalQuotes.count)))
+        return inspirationalQuotes[randomInt]
+        
     }
     
 }
