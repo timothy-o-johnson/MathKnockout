@@ -356,6 +356,16 @@
                             </items>
                         </group>
                     </items>
+                    <menu key="menu" id="rKd-FH-E60">
+                        <items>
+                            <menuItem title="Start Over" icon="resume" id="Dbv-gx-23k">
+                                <connections>
+                                    <action selector="startOver" destination="3S9-sq-8Yw" id="JFM-aZ-nbJ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Nevermind" icon="decline" id="re5-xG-Lgi" userLabel="Resume"/>
+                        </items>
+                    </menu>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="eight" destination="hgl-aM-TyO" id="Y7c-3Q-KVp"/>

@@ -246,4 +246,12 @@ class BoardInterfaceController : WKInterfaceController
         }
     }
     
+    
+    @IBAction func startOver()
+    {
+        engine.resetGame()
+        
+        WKInterfaceController.reloadRootControllers(withNames: ["SplashScreenController"], contexts: nil)
+    }
+    
 }
