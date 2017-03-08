@@ -561,5 +561,31 @@
             </objects>
             <point key="canvasLocation" x="428" y="-660"/>
         </scene>
+        <!--Congrats-->
+        <scene sceneID="gkD-je-hN0">
+            <objects>
+                <controller identifier="WonIC" title="Congrats" id="mDs-5P-i7K" customClass="WonInterfaceController" customModule="KO_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Congrats! You're the" textAlignment="center" minimumScaleFactor="0.69999999999999996" id="Waz-S5-s4e"/>
+                        <label alignment="left" text="Knock Out Champion!" minimumScaleFactor="0.80000000000000004" id="EYq-aA-hne"/>
+                        <label width="136" alignment="left" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="mXs-ru-wul">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label alignment="left" id="JYX-PI-P1E"/>
+                        <label width="136" height="54" alignment="left" text="some quote?" minimumScaleFactor="0.80000000000000004" id="coa-5s-0YZ"/>
+                        <button width="1" alignment="left" title="Play Again" id="hdy-jm-Ecb">
+                            <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTapRestart" destination="mDs-5P-i7K" id="sPR-Xb-MSj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="quoteLabel" destination="coa-5s-0YZ" id="luJ-MR-Dk7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="429" y="-341"/>
+        </scene>
     </scenes>
 </document>

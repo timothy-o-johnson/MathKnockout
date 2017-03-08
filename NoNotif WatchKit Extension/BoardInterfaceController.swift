@@ -23,6 +23,11 @@ class BoardInterfaceController : WKInterfaceController
             button.setTitle(tile.display)
             button.setEnabled(!tile.KOed)
         }
+        
+        if engine.gameIsWon
+        {
+            WKInterfaceController.reloadRootControllers(withNames: ["WonIC"], contexts: nil)
+        }
     }
     
     @IBOutlet var one: WKInterfaceButton!
