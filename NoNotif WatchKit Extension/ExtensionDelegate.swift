@@ -10,11 +10,15 @@ import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate
 {
+    let engine = GameEngine.shared
+    
     func applicationDidFinishLaunching()
     {
         print("watch did finish launching")
 //        print(#function)
         // Perform any final initialization of your application.
+        
+//        engine.resetGameToBeKOedAllButOne()
     }
 
     func applicationDidBecomeActive() {
