@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZMu-GX-oey">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MOa-6G-2gt">
-                                <rect key="frame" x="16" y="112" width="288" height="256"/>
+                                <rect key="frame" x="16" y="156" width="288" height="256"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-WP-JgL">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="72"/>
@@ -142,7 +142,7 @@
                                 </subviews>
                             </stackView>
                             <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-St-1Pu">
-                                <rect key="frame" x="16" y="388" width="288" height="72"/>
+                                <rect key="frame" x="16" y="476" width="288" height="72"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="h7m-38-7cI"/>
@@ -195,11 +195,11 @@
                         <viewControllerLayoutGuide type="bottom" id="i9l-AQ-FRr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e8l-0r-v3J">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-Oi-NkJ">
-                                <rect key="frame" x="16" y="100" width="288" height="280"/>
+                                <rect key="frame" x="16" y="144" width="288" height="280"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="11p-lu-ToB">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
@@ -560,11 +560,11 @@
                         <viewControllerLayoutGuide type="bottom" id="fw7-x5-eSv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WVx-b2-1mu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-Qf-Kcu">
-                                <rect key="frame" x="16" y="70" width="288" height="340"/>
+                                <rect key="frame" x="16" y="114" width="288" height="340"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vvc-Fd-GXR">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
@@ -744,7 +744,7 @@
                                 </constraints>
                             </stackView>
                             <button tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOM-RG-odQ">
-                                <rect key="frame" x="16" y="388" width="288" height="72"/>
+                                <rect key="frame" x="16" y="476" width="288" height="72"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="100" id="nuf-eT-nWh"/>
@@ -793,11 +793,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rvT-PE-AZI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AX6-rq-ZbW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-cQ-PKm">
-                                <rect key="frame" x="16" y="388" width="288" height="72"/>
+                                <rect key="frame" x="16" y="476" width="288" height="72"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="YDs-Sd-tsr"/>
@@ -812,7 +812,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boxing-icon" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-Xz-cWs">
-                                <rect key="frame" x="32" y="112" width="256" height="256"/>
+                                <rect key="frame" x="32" y="156" width="256" height="256"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
@@ -862,11 +862,11 @@
                         <viewControllerLayoutGuide type="bottom" id="q4l-el-B0Z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hOz-Y8-YJO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MR-VA-Utg">
-                                <rect key="frame" x="16" y="388" width="288" height="72"/>
+                                <rect key="frame" x="16" y="476" width="288" height="72"/>
                                 <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="100" id="EK2-Eu-PCF"/>
