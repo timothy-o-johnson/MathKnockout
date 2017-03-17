@@ -16,6 +16,13 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     @IBOutlet weak var knockOutLabel: UILabel!
     @IBOutlet var punches: [UIButton]!
     
+    override func viewDidLoad()
+    {
+        knockOutTargetButton.layoutIfNeeded()
+        knockOutTargetButton.titleLabel?.minimumScaleFactor = 0.5
+        knockOutTargetButton.titleLabel?.numberOfLines = 1
+        knockOutTargetButton.titleLabel?.adjustsFontSizeToFitWidth = true
+    }
     
     override func viewWillAppear(_ animated: Bool)
     {
