@@ -54,15 +54,8 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 52F8D57D1E5DC6D500C8F404;
+			remoteGlobalIDString = 527559F71EAA087D0048251D;
 			remoteInfo = MathParser_watchOS;
-		};
-		529BF64C1E5DBF1600C0E429 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 559B3EF91B74063600000108;
-			remoteInfo = MathParser;
 		};
 		529BF64E1E5DBF1600C0E429 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -202,7 +195,6 @@
 		529BF6481E5DBF1600C0E429 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				529BF64D1E5DBF1600C0E429 /* MathParser_original.framework */,
 				529BF64F1E5DBF1600C0E429 /* MathParserTests.xctest */,
 				52F8D5B21E5DC71600C8F404 /* MathParser_iOS.framework */,
 				52F8D5B41E5DC71600C8F404 /* MathParser_watchOS.framework */,
@@ -394,13 +386,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		529BF64D1E5DBF1600C0E429 /* MathParser_original.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MathParser_original.framework;
-			remoteRef = 529BF64C1E5DBF1600C0E429 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		529BF64F1E5DBF1600C0E429 /* MathParserTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -577,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -621,7 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -642,6 +627,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -658,6 +644,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -675,6 +662,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -692,6 +680,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -701,7 +690,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				INFOPLIST_FILE = NoNotif/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -715,7 +704,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				INFOPLIST_FILE = NoNotif/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
