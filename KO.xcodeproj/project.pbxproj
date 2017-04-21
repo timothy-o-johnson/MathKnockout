@@ -33,6 +33,8 @@
 		52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */; };
 		52F8D5B51E5DCC8600C8F404 /* MathParser_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F8D5B41E5DC71600C8F404 /* MathParser_watchOS.framework */; };
 		52F8D5B61E5DCD4300C8F404 /* MathParser_watchOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52F8D5B41E5DC71600C8F404 /* MathParser_watchOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52FAD4AE1EAAC4F3003B60BE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAD4AC1EAAC4F3003B60BE /* Fabric.framework */; };
+		52FAD4AF1EAAC4F3003B60BE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAD4AD1EAAC4F3003B60BE /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +163,8 @@
 		52B40F091DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EAA2EA1E3C25EF00233D2E /* NoNotif.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoNotif.entitlements; sourceTree = "<group>"; };
 		52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFourViewController.swift; sourceTree = "<group>"; };
+		52FAD4AC1EAAC4F3003B60BE /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		52FAD4AD1EAAC4F3003B60BE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5227BBBE1E5F0FF200A40306 /* MathParser_iOS.framework in Frameworks */,
+				52FAD4AF1EAAC4F3003B60BE /* Crashlytics.framework in Frameworks */,
+				52FAD4AE1EAAC4F3003B60BE /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +211,8 @@
 		52B40ED41DFACED2005016C3 = {
 			isa = PBXGroup;
 			children = (
+				52FAD4AC1EAAC4F3003B60BE /* Fabric.framework */,
+				52FAD4AD1EAAC4F3003B60BE /* Crashlytics.framework */,
 				529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */,
 				528C49B31E3FA01B004DA88E /* Shared */,
 				52B40EDF1DFACED2005016C3 /* iOS App */,
@@ -282,6 +290,7 @@
 				52B40EDB1DFACED2005016C3 /* Resources */,
 				52B40F131DFACED2005016C3 /* Embed Watch Content */,
 				5227BBBF1E5F100300A40306 /* CopyFiles */,
+				52FAD4AB1EAAC453003B60BE /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -438,6 +447,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52FAD4AB1EAAC453003B60BE /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run cdbb98e958652b93b9f3dfdbb34476ef7f659421 3c8993d059873b329b87e8e59ff36b3a92057569b78a2f7a9502e0c2e8f236e9";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52B40ED91DFACED2005016C3 /* Sources */ = {
@@ -689,6 +715,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WEALMB79XU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NoNotif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -703,6 +733,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WEALMB79XU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NoNotif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
