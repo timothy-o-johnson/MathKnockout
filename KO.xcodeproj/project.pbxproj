@@ -211,9 +211,7 @@
 		52B40ED41DFACED2005016C3 = {
 			isa = PBXGroup;
 			children = (
-				52FAD4AC1EAAC4F3003B60BE /* Fabric.framework */,
-				52FAD4AD1EAAC4F3003B60BE /* Crashlytics.framework */,
-				529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */,
+				52FAD4B01EAAC61B003B60BE /* dependencies */,
 				528C49B31E3FA01B004DA88E /* Shared */,
 				52B40EDF1DFACED2005016C3 /* iOS App */,
 				52B40EF31DFACED2005016C3 /* WatchKit App */,
@@ -276,6 +274,16 @@
 			);
 			name = "WatchKit Extension";
 			path = "NoNotif WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		52FAD4B01EAAC61B003B60BE /* dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */,
+				52FAD4AC1EAAC4F3003B60BE /* Fabric.framework */,
+				52FAD4AD1EAAC4F3003B60BE /* Crashlytics.framework */,
+			);
+			name = dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
