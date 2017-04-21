@@ -350,7 +350,6 @@
 				TargetAttributes = {
 					52B40EDC1DFACED2005016C3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L77Z4VF5RZ;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -360,12 +359,10 @@
 					};
 					52B40EEE1DFACED2005016C3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L77Z4VF5RZ;
 						ProvisioningStyle = Automatic;
 					};
 					52B40EFD1DFACED2005016C3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L77Z4VF5RZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -636,10 +633,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = "";
-				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -652,10 +649,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = "";
-				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -669,10 +666,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -686,10 +683,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -702,11 +699,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				INFOPLIST_FILE = NoNotif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -716,11 +713,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L77Z4VF5RZ;
+				DEVELOPMENT_TEAM = LNDEZ34JQG;
 				INFOPLIST_FILE = NoNotif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.johngroenlund.NoNotif;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartcaveworks.mathknockoutapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
