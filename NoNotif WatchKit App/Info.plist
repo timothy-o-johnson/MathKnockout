@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.heartcaveworks.mathknockoutapp</string>
+	<string>com.HeartCaveWorks.MathKnockout</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
