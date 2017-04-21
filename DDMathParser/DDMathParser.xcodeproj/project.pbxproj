@@ -103,8 +103,6 @@
 		52755A271EAA087D0048251D /* MathParser_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MathParser_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52755A281EAA087D0048251D /* MathParser_iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MathParser_iOS copy-Info.plist"; path = "/Users/john/Freelancing/Pavementii/KO-iOS+Watch/DDMathParser/MathParser_iOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		52F8D57B1E5DC6D300C8F404 /* MathParser_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MathParser_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52F8D57C1E5DC6D300C8F404 /* MathParser copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MathParser copy2-Info.plist"; path = "/Users/john/Freelancing/Pavementii/KO v3/DDMathParser/MathParser copy2-Info.plist"; sourceTree = "<absolute>"; };
-		52F8D5AE1E5DC6D500C8F404 /* MathParser copy copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MathParser copy copy-Info.plist"; path = "/Users/john/Freelancing/Pavementii/KO v3/DDMathParser/MathParser copy copy-Info.plist"; sourceTree = "<absolute>"; };
 		5514B1731B7BDF57007431D0 /* RawToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawToken.swift; sourceTree = "<group>"; };
 		5514B1751B7C22D6007431D0 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		5514B1771B7CFD1A007431D0 /* ResolverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolverTests.swift; sourceTree = "<group>"; };
@@ -190,8 +188,6 @@
 				559B3F061B74063600000108 /* MathParserTests */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
-				52F8D57C1E5DC6D300C8F404 /* MathParser copy2-Info.plist */,
-				52F8D5AE1E5DC6D500C8F404 /* MathParser copy copy-Info.plist */,
 				52755A281EAA087D0048251D /* MathParser_iOS copy-Info.plist */,
 			);
 			name = DDMathParser;
