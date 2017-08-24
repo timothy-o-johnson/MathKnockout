@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52B40EEE1DFACED2005016C3"
-               BuildableName = "KO WatchKit App.app"
-               BlueprintName = "KO WatchKit App"
+               BuildableName = "KO Watch App.app"
+               BlueprintName = "KO Watch App"
                ReferencedContainer = "container:KO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B40EEE1DFACED2005016C3"
-            BuildableName = "KO WatchKit App.app"
-            BlueprintName = "KO WatchKit App"
+            BuildableName = "KO Watch App.app"
+            BlueprintName = "KO Watch App"
             ReferencedContainer = "container:KO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B40EEE1DFACED2005016C3"
-            BuildableName = "KO WatchKit App.app"
-            BlueprintName = "KO WatchKit App"
+            BuildableName = "KO Watch App.app"
+            BlueprintName = "KO Watch App"
             ReferencedContainer = "container:KO.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -81,8 +81,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B40EEE1DFACED2005016C3"
-            BuildableName = "KO WatchKit App.app"
-            BlueprintName = "KO WatchKit App"
+            BuildableName = "KO Watch App.app"
+            BlueprintName = "KO Watch App"
             ReferencedContainer = "container:KO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -102,8 +102,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B40EEE1DFACED2005016C3"
-            BuildableName = "KO WatchKit App.app"
-            BlueprintName = "KO WatchKit App"
+            BuildableName = "KO Watch App.app"
+            BlueprintName = "KO Watch App"
             ReferencedContainer = "container:KO.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -111,8 +111,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52B40EEE1DFACED2005016C3"
-            BuildableName = "KO WatchKit App.app"
-            BlueprintName = "KO WatchKit App"
+            BuildableName = "KO Watch App.app"
+            BlueprintName = "KO Watch App"
             ReferencedContainer = "container:KO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
