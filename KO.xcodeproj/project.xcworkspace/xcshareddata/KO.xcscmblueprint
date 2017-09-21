@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "927C1B88E857064A069F625F67397082997CE1ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "927C1B88E857064A069F625F67397082997CE1ED" : 9223372036854775807,
+    "0E8C5882B3625751205CFF7BE651A0DAD3F1A0AB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2CBD8092-C2D4-4F4A-B639-92D240586814",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "927C1B88E857064A069F625F67397082997CE1ED" : "KO-iOS+Watch\/",
+    "0E8C5882B3625751205CFF7BE651A0DAD3F1A0AB" : "KO-iOS+Watch\/Vendor\/DDMathParser\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "KO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "KO.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/davedelong\/DDMathParser.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E8C5882B3625751205CFF7BE651A0DAD3F1A0AB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/bitbucket.org\/johngronlund\/knock-out-math-game.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "927C1B88E857064A069F625F67397082997CE1ED"
+    }
+  ]
+}
