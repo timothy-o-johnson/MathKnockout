@@ -8,12 +8,6 @@
 
 import Foundation
 
-#if os(iOS)
-    import MathParser_iOS
-#elseif os(watchOS)
-    import MathParser_watchOS
-#endif
-
 struct Punch
 {
     let num        : Int
