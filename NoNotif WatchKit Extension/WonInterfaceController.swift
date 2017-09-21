@@ -26,7 +26,7 @@ class WonInterfaceController: WKInterfaceController
     @IBAction func didTapRestart()
     {
         engine.resetGame()
-        
-        WKInterfaceController.reloadRootControllers(withNames: ["SplashScreenController"], contexts: nil)
+
+        WKInterfaceController.reloadRootPageControllers(withNames: ["SplashScreenController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
 }

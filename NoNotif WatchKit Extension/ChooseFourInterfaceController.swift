@@ -150,7 +150,7 @@ class ChooseFourInterfaceController: WKInterfaceController
             
             let selectedPunches2 = saveSelectedNumbers()
             let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches2]
-            WKInterfaceController.reloadRootControllers(withNames: ["boardController"], contexts: [passThruContext])
+            WKInterfaceController.reloadRootPageControllers(withNames: ["boardController"], contexts: [passThruContext], orientation: .horizontal, pageIndex: 0)
         }
     }
     

@@ -26,7 +26,7 @@ class BoardInterfaceController : WKInterfaceController
         
         if engine.gameIsWon
         {
-            WKInterfaceController.reloadRootControllers(withNames: ["WonIC"], contexts: nil)
+            WKInterfaceController.reloadRootPageControllers(withNames: ["WonIC"], contexts: nil, orientation: .horizontal, pageIndex: 0)
         }
     }
     
@@ -255,8 +255,8 @@ class BoardInterfaceController : WKInterfaceController
     @IBAction func startOver()
     {
         engine.resetGame()
-        
-        WKInterfaceController.reloadRootControllers(withNames: ["SplashScreenController"], contexts: nil)
+
+        WKInterfaceController.reloadRootPageControllers(withNames: ["SplashScreenController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
     
 }
