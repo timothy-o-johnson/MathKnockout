@@ -11,8 +11,6 @@
 		52202EDE1E33F0490065E59A /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EDD1E33F0490065E59A /* BoardViewController.swift */; };
 		52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */; };
 		52202EE31E33FCE60065E59A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE21E33FCE60065E59A /* GameEngine.swift */; };
-		5227BBBE1E5F0FF200A40306 /* MathParser_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F8D5B21E5DC71600C8F404 /* MathParser_iOS.framework */; };
-		5227BBC01E5F100C00A40306 /* MathParser_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52F8D5B21E5DC71600C8F404 /* MathParser_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		526024131DFADFEA005379C4 /* SplashScreenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024121DFADFEA005379C4 /* SplashScreenInterfaceController.swift */; };
 		526024151DFADFFC005379C4 /* BoardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024141DFADFFC005379C4 /* BoardInterfaceController.swift */; };
 		526024171DFAE003005379C4 /* ChooseFourInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526024161DFAE003005379C4 /* ChooseFourInterfaceController.swift */; };
@@ -31,40 +29,31 @@
 		52B40F061DFACED2005016C3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */; };
 		52B40F081DFACED2005016C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B40F071DFACED2005016C3 /* Assets.xcassets */; };
 		52EBE9771E33B35C008F19A7 /* ChooseFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */; };
-		52F8D5B51E5DCC8600C8F404 /* MathParser_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F8D5B41E5DC71600C8F404 /* MathParser_watchOS.framework */; };
-		52F8D5B61E5DCD4300C8F404 /* MathParser_watchOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52F8D5B41E5DC71600C8F404 /* MathParser_watchOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52FAD4AE1EAAC4F3003B60BE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAD4AC1EAAC4F3003B60BE /* Fabric.framework */; };
 		52FAD4AF1EAAC4F3003B60BE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAD4AD1EAAC4F3003B60BE /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		521BB6791E3FAB9400024273 /* PBXContainerItemProxy */ = {
+		52ACFEA01F740E2400B634FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52B40ED51DFACED2005016C3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52B40EEE1DFACED2005016C3;
-			remoteInfo = "NoNotif WatchKit App";
-		};
-		5227BBB81E5F0FDF00A40306 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 52F8D54B1E5DC6D300C8F404;
-			remoteInfo = MathParser_iOS;
-		};
-		52958A401E5F4A38001F1E4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 527559F71EAA087D0048251D;
-			remoteInfo = MathParser_watchOS;
-		};
-		529BF64E1E5DBF1600C0E429 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
+			containerPortal = 52ACFE971F740E2400B634FE /* DDMathParser.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 559B3F021B74063600000108;
 			remoteInfo = MathParserTests;
+		};
+		52ACFEA21F740E2400B634FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ACFE971F740E2400B634FE /* DDMathParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52ACFE621F740A1B00B634FE;
+			remoteInfo = MathParser_iOS;
+		};
+		52ACFEA41F740E2400B634FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52ACFE971F740E2400B634FE /* DDMathParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52ACFE941F740A6800B634FE;
+			remoteInfo = MathParser_watchOS;
 		};
 		52B40F001DFACED2005016C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -73,19 +62,12 @@
 			remoteGlobalIDString = 52B40EFD1DFACED2005016C3;
 			remoteInfo = "NoNotif WatchKit Extension";
 		};
-		52F8D5B11E5DC71600C8F404 /* PBXContainerItemProxy */ = {
+		52CE22441F74118C008E2F0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 52F8D57B1E5DC6D300C8F404;
-			remoteInfo = MathParser_iOS;
-		};
-		52F8D5B31E5DC71600C8F404 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 52F8D5AD1E5DC6D500C8F404;
-			remoteInfo = MathParser_watchOS;
+			containerPortal = 52B40ED51DFACED2005016C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B40EEE1DFACED2005016C3;
+			remoteInfo = "KO Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -96,7 +78,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5227BBC01E5F100C00A40306 /* MathParser_iOS.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +109,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				52F8D5B61E5DCD4300C8F404 /* MathParser_watchOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,7 +125,7 @@
 		526024181DFAE29B005379C4 /* HowToKnockOutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutInterfaceController.swift; sourceTree = "<group>"; };
 		526B08AC1E6ED56400D26232 /* WonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonViewController.swift; sourceTree = "<group>"; };
 		529B5CF71E70646400AEE4F4 /* WonInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonInterfaceController.swift; sourceTree = "<group>"; };
-		529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DDMathParser.xcodeproj; path = DDMathParser/DDMathParser.xcodeproj; sourceTree = "<group>"; };
+		52ACFE971F740E2400B634FE /* DDMathParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DDMathParser.xcodeproj; path = Vendor/DDMathParser/DDMathParser.xcodeproj; sourceTree = "<group>"; };
 		52B40EDD1DFACED2005016C3 /* KO iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KO iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B40EE01DFACED2005016C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B40EE21DFACED2005016C3 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -172,7 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5227BBBE1E5F0FF200A40306 /* MathParser_iOS.framework in Frameworks */,
 				52FAD4AF1EAAC4F3003B60BE /* Crashlytics.framework in Frameworks */,
 				52FAD4AE1EAAC4F3003B60BE /* Fabric.framework in Frameworks */,
 			);
@@ -182,7 +161,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F8D5B51E5DCC8600C8F404 /* MathParser_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,12 +176,12 @@
 			path = NoNotif;
 			sourceTree = "<group>";
 		};
-		529BF6481E5DBF1600C0E429 /* Products */ = {
+		52ACFE981F740E2400B634FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				529BF64F1E5DBF1600C0E429 /* MathParserTests.xctest */,
-				52F8D5B21E5DC71600C8F404 /* MathParser_iOS.framework */,
-				52F8D5B41E5DC71600C8F404 /* MathParser_watchOS.framework */,
+				52ACFEA11F740E2400B634FE /* MathParserTests.xctest */,
+				52ACFEA31F740E2400B634FE /* MathParser_iOS.framework */,
+				52ACFEA51F740E2400B634FE /* MathParser_watchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,7 +257,7 @@
 		52FAD4B01EAAC61B003B60BE /* dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */,
+				52ACFE971F740E2400B634FE /* DDMathParser.xcodeproj */,
 				52FAD4AC1EAAC4F3003B60BE /* Fabric.framework */,
 				52FAD4AD1EAAC4F3003B60BE /* Crashlytics.framework */,
 			);
@@ -303,8 +281,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5227BBB91E5F0FDF00A40306 /* PBXTargetDependency */,
-				521BB67A1E3FAB9400024273 /* PBXTargetDependency */,
+				52CE22451F74118C008E2F0B /* PBXTargetDependency */,
 			);
 			name = "KO iOS";
 			productName = NoNotif;
@@ -340,7 +317,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				52958A411E5F4A38001F1E4F /* PBXTargetDependency */,
 			);
 			name = "KO WatchKit Extension";
 			productName = "NoNotif WatchKit Extension";
@@ -389,8 +365,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 529BF6481E5DBF1600C0E429 /* Products */;
-					ProjectRef = 529BF6471E5DBF1600C0E429 /* DDMathParser.xcodeproj */;
+					ProductGroup = 52ACFE981F740E2400B634FE /* Products */;
+					ProjectRef = 52ACFE971F740E2400B634FE /* DDMathParser.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -403,25 +379,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		529BF64F1E5DBF1600C0E429 /* MathParserTests.xctest */ = {
+		52ACFEA11F740E2400B634FE /* MathParserTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = MathParserTests.xctest;
-			remoteRef = 529BF64E1E5DBF1600C0E429 /* PBXContainerItemProxy */;
+			remoteRef = 52ACFEA01F740E2400B634FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52F8D5B21E5DC71600C8F404 /* MathParser_iOS.framework */ = {
+		52ACFEA31F740E2400B634FE /* MathParser_iOS.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MathParser_iOS.framework;
-			remoteRef = 52F8D5B11E5DC71600C8F404 /* PBXContainerItemProxy */;
+			remoteRef = 52ACFEA21F740E2400B634FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52F8D5B41E5DC71600C8F404 /* MathParser_watchOS.framework */ = {
+		52ACFEA51F740E2400B634FE /* MathParser_watchOS.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MathParser_watchOS.framework;
-			remoteRef = 52F8D5B31E5DC71600C8F404 /* PBXContainerItemProxy */;
+			remoteRef = 52ACFEA41F740E2400B634FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -505,25 +481,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		521BB67A1E3FAB9400024273 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52B40EEE1DFACED2005016C3 /* KO Watch App */;
-			targetProxy = 521BB6791E3FAB9400024273 /* PBXContainerItemProxy */;
-		};
-		5227BBB91E5F0FDF00A40306 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MathParser_iOS;
-			targetProxy = 5227BBB81E5F0FDF00A40306 /* PBXContainerItemProxy */;
-		};
-		52958A411E5F4A38001F1E4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MathParser_watchOS;
-			targetProxy = 52958A401E5F4A38001F1E4F /* PBXContainerItemProxy */;
-		};
 		52B40F011DFACED2005016C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 52B40EFD1DFACED2005016C3 /* KO WatchKit Extension */;
 			targetProxy = 52B40F001DFACED2005016C3 /* PBXContainerItemProxy */;
+		};
+		52CE22451F74118C008E2F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B40EEE1DFACED2005016C3 /* KO Watch App */;
+			targetProxy = 52CE22441F74118C008E2F0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
