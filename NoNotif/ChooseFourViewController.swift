@@ -47,6 +47,8 @@ class ChooseFourViewController: UIViewController
     
     @IBAction func nextButtonTapped(_ sender: UIButton)
     {
+        engine.resetGame() // workaround since sometimes it would continue a game from here
+
         let selectedButtons = numberButtons.filter { $0.isSelected }.sorted { $0.tag < $1.tag }
         
         engine.punches = [

@@ -140,6 +140,8 @@ class ChooseFourInterfaceController: WKInterfaceController
 //                .sorted { $0.0.punchValue < $0.1.punchValue }
             
 //            engine.punches = selectedPunches
+
+            engine.resetGame() // workaround since sometimes it would continue a game from here
         
             engine.punches = [
                 Punch(num: 0, punchValue: selectedButtons[0].num),
