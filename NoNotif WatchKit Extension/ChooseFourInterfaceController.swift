@@ -133,7 +133,7 @@ class ChooseFourInterfaceController: WKInterfaceController
 //            let selectedButtons = numberButtons.filter { $0.isSelected }
             //        selectedButtons.first!.titleLabel!.text!
             
-            let selectedButtons = numbers.filter { $0.selected }.sorted { $0.0.num < $0.1.num }
+            let selectedButtons = numbers.filter { $0.selected }.sorted { $0.num < $1.num }
             
 //            let selectedPunches = selectedButtons
 //                .map { Punch(punchValue: $0.num) }
@@ -362,7 +362,7 @@ class ChooseFourInterfaceController: WKInterfaceController
     func changeNextButtonFontandBackgroundColor()
     {
         let attString = NSMutableAttributedString(string: "Next")
-        attString.setAttributes([NSForegroundColorAttributeName: UIColor.white], range: NSMakeRange(0, attString.length))
+        attString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], range: NSMakeRange(0, attString.length))
         self.next.setAttributedTitle(attString)
         self.next.setBackgroundColor(UIColor.darkGray)
     }
@@ -385,7 +385,7 @@ class ChooseFourInterfaceController: WKInterfaceController
     func restoreNextButtonToDefault()
     {
         let attString = NSMutableAttributedString(string: "Next")
-        attString.setAttributes([NSForegroundColorAttributeName: UIColor.black], range: NSMakeRange(0, attString.length))
+        attString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.black], range: NSMakeRange(0, attString.length))
         self.next.setAttributedTitle(attString)
     }
     

@@ -47,7 +47,7 @@ class ChooseFourViewController: UIViewController
     
     @IBAction func nextButtonTapped(_ sender: UIButton)
     {
-        let selectedButtons = numberButtons.filter { $0.isSelected }.sorted { $0.0.tag < $0.1.tag }
+        let selectedButtons = numberButtons.filter { $0.isSelected }.sorted { $0.tag < $1.tag }
         
         engine.punches = [
             Punch(num: 0, punchValue: selectedButtons[0].tag),
