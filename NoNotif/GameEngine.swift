@@ -291,7 +291,7 @@ class GameEngine
     func resetGame()
     {
         program.removeAll()
-        
+
         tiles = (1...25).map {
             Tile(
                 number    : $0,
@@ -300,10 +300,17 @@ class GameEngine
                 attempts  : 0
             )
         }
-        
+//
+//        tiles[0] = Tile(
+//            number    : 1,
+//            KOed      : false,
+//            operation : [Any](),
+//            attempts  : 0
+//        )
+
         punches.removeAll()
     }
-    
+
     func resetGameToBeKOedAllButOne()
     {
         program.removeAll()
@@ -337,16 +344,35 @@ class GameEngine
     }
     
     let inspirationalQuotes = [
-        "Inspirational Quote 0",
-        "Inspirational Quote 1",
-        "Inspirational Quote 2",
-        "Inspirational Quote 3",
-        "Inspirational Quote 4",
-        "Inspirational Quote 5",
-        "Inspirational Quote 6",
-        "Inspirational Quote 7",
-        "Inspirational Quote 8",
-        "Inspirational Quote 9"
+        "\"It's not what you say out of your mouth that determines your life, it's what you whisper to yourself that has the most power.\" -- Robert T. Kiwosaki",
+        "\"Train your mind to see the good in everything.\"",
+        "\"When you make a mistake, it's not a enough to just correct it. You must correct it to the point that the party that has been wronged is happy that you made the mistake.\" -- Tim's Mom",
+        "\"Rather than grind yourself into the ground, learn to pace yourself properly, so you have the staying power to get everything done.\"",
+        "\"Yesterday I realized that the biggest thing standing between me and my dreams was waiting for other people to join me. Sorry, I'm not waiting anymore.\"",
+        "\"The secret of getting things done is to act, not ask.\"",
+        "\"Every accomplishment starts with the decision to try.\"",
+        "\"Analysis Paralysis: With enough reflection, even the most straight forward problem can be turned into an unsolvable conundrum.\"",
+        "\"If it is important to you, you will find a way.  If not, you'll find an excuse.\"",
+        "\"If I had six hours to chop down a tree. I'd spend the first four hours sharpening the axe.\" -- Abe Lincoln",
+        "\"The greater danger for most of us lies not in setting our aim too high and falling short; but in setting our aim too low, and achieving our mark.\" -- Michaelangelo",
+        "\"Messy bun and getting stuff done.\"",
+        "\"The difference between try and triumph is a little umph.\" ― Marvin Phillips",
+        "\"It's not what you say out of your mouth that determines your life, it's what you whisper to yourself that has the most power.\" -- Robert T. Kiwosaki",
+        "\"Judging yourself, is not the same as being honest with yourself.\"",
+        "\"You have to be at your strongest when you're feeling at your weakest.\"",
+        "\"Growth is painful.  Change is painful.  But nothing is as painful as staying stuck somewhere you don't belong.\"",
+        "\"Don't wait until your reach your goal to be proud of yourself.  Be proud of each step you take toward reaching that goal.\"",
+        "\"Sometimes we don't need advice.  We just need someone to listen.\"",
+        "\"If you don't love yourself, you cannot love others. You will not be able to love others. If you have no compassion for yourself then you are not capable of developing compassion for others.\" -Dalai Lama",
+        "\"Anyone can be cool, but awesome takes practice.\" - Lorraine Peterson",
+        "\"No, this is not the beginning of a new chapter in my life; this is the beginning of a new book! That first book is already closed, ended, and tossed into the seas; this new book is newly opened, has just begun! Look, it is the first page! And it is a beautiful one!\" ― C. JoyBell C.",
+        "\"No one succeeds without effort... Those who succeed owe their success to perseverance.\" Ramana Maharshi",
+        "\"Communication is a skill that you can learn. It's like riding a bicycle or typing. If you're willing to work at it, you can rapidly improve the quality of every part of your life.\" Brian Tracy",
+        "\"A well-organized life finds time for everything.  Always settle in advance that which you have set for yourself.\"",
+        "\"Either you run the day or the day runs you.\" Jim Rohn",
+        "\"Good habits are as addictive as bad habits, but much more rewarding.\"",
+        "\"I AM: two of the most powerful words, for what you put after them shapes your reality.\""
+        
     ]
     
     func randomInspirationalQuote() -> String
