@@ -361,7 +361,7 @@ class GameEngine
         "\"Judging yourself, is not the same as being honest with yourself.\"",
         "\"You have to be at your strongest when you're feeling at your weakest.\"",
         "\"Growth is painful.  Change is painful.  But nothing is as painful as staying stuck somewhere you don't belong.\"",
-        "\"Don't wait until your reach your goal to be proud of yourself.  Be proud of each step you take toward reaching that goal.\"",
+        "\"Don't wait until you reach your goal to be proud of yourself.  Be proud of each step you take toward reaching that goal.\"",
         "\"Sometimes we don't need advice.  We just need someone to listen.\"",
         "\"If you don't love yourself, you cannot love others. You will not be able to love others. If you have no compassion for yourself then you are not capable of developing compassion for others.\" -Dalai Lama",
         "\"Anyone can be cool, but awesome takes practice.\" - Lorraine Peterson",
