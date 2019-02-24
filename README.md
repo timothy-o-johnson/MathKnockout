@@ -1,5 +1,2 @@
-[project](https://www.freelancer.com/projects/Objective-C/Finalize-Watch-App/) created for Tim ([Pavementii](https://www.freelancer.com/u/Pavementii.html))
-
-$275 for watch app.
-
-$100 extra for iOS app and help uploading.
+Simple Math Puzzle game designed for Apple Watch (iOS portion was an Apple requirement)
+Can you knockout numbers 1-25 using only four numbers (1-9) and basic arithmethic?
