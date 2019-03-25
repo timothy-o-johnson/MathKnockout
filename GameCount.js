@@ -52,29 +52,17 @@ function gameComboDoesNotExist (gameCombo, games) {
 }
 
 function containsNoDuplicates (gameCombo) {
-  var firstPosition = gameCombo[0]
-  var secondPosition = gameCombo[1]
-  var thirdPosition = gameCombo[2]
-  var fourthPosition = gameCombo[3]
+  var comboMap = {}
 
-  firstPosition
-  secondPosition
-  thirdPosition
-  fourthPosition
-
-  if (firstPosition === secondPosition || firstPosition === thirdPosition || firstPosition === fourthPosition) {
-    return false
+  for (var i = 0; i < gameCombo.length; i++) {
+    var value = gameCombo[i]
+    if (comboMap[value]) {
+      return true
+    } else {
+      comboMap[value] = 1
+    }
   }
-
-  if (secondPosition === thirdPosition || secondPosition === fourthPosition) {
-    return false
-  }
-
-  if (thirdPosition === fourthPosition) {
-    return false
-  }
-
-  return true
+  return false
 }
 
 gameCombo = [1, 2, 3, 4]
