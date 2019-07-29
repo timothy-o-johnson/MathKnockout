@@ -24,13 +24,14 @@ function getGameCombos (games) {
     }
   }
   console.log(`gameCount = ${gameCount}`)
+  return games
 }
 
-getGameCombos(games)
+console.log(JSON.stringify(getGameCombos(games)))
 
 console.log(games)
 
-function prepForTest (a, b, c, d) {
+function sortAndJoin (a, b, c, d) {
   var gameCombo = [a, b, c, d]
 
   gameCombo.sort((a, b) => {
@@ -57,12 +58,12 @@ function containsNoDuplicates (gameCombo) {
   for (var i = 0; i < gameCombo.length; i++) {
     var value = gameCombo[i]
     if (comboMap[value]) {
-      return true
+      return false
     } else {
       comboMap[value] = 1
     }
   }
-  return false
+  return true
 }
 
 gameCombo = [1, 2, 3, 4]
