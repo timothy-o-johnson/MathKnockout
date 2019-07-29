@@ -1,3 +1,6 @@
+// Javascript file used to calculate all the possible game combinations
+
+
 var games = ['1234']
 
 var gameCombo = ''
@@ -70,4 +73,3 @@ gameCombo = [1, 2, 3, 4]
 
 var hasDuplicate = containsNoDuplicates(gameCombo)
 
-hasDuplicate
