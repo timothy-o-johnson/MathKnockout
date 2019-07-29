@@ -59,87 +59,73 @@ class ChooseFourInterfaceController: WKInterfaceController
     
     @IBAction func oneTapped() {
         let numberTapped = 1
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
         narrateTapping(numberTapped)
     }
     
     
     @IBAction func twoTapped() {
         let numberTapped = 2
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
        narrateTapping(numberTapped)
     }
     
     @IBAction func threeTapped() {
         let numberTapped = 3
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
        narrateTapping(numberTapped)
     }
 
     @IBAction func fourTapped() {
         let numberTapped = 4
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
        narrateTapping(numberTapped)
     }
     
     @IBAction func fiveTapped() {
         let numberTapped = 5
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
        narrateTapping(numberTapped)
     }
     
     @IBAction func sixTapped() {
         let numberTapped = 6
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
         narrateTapping(numberTapped)
     }
     
     @IBAction func sevenTapped() {
         let numberTapped = 7
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
         narrateTapping(numberTapped)
     }
     
     @IBAction func eightTapped() {
         let numberTapped = 8
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
         narrateTapping(numberTapped)
     }
     
     @IBAction func nineTapped() {
         let numberTapped = 9
-        changeSelectedStatus(numberTapped) //is number selected or unselected?
-        changeButtonColor(numberTapped) //make it look like its selected or unselected
+        changeSelectedStatus(numberTapped) // is number selected or unselected?
+        changeButtonColor(numberTapped) // make it look like its selected or unselected
         narrateTapping(numberTapped)
     }
     
     @IBAction func nextButton() {
         if fourSelected(){
             print("Next button tapped.  Four numbers have been selected.")
-//            self.saveSelectedNumbers()
-//            self.printSelectedNumbers()
-//            let selectedPunches = saveSelectedNumbers()
-//            self.presentController(withName: "boardController", context: selectedPunches)
-//            self.presentController(withName: "boardController", context: nil)
-            
-//            let selectedButtons = numberButtons.filter { $0.isSelected }
-            //        selectedButtons.first!.titleLabel!.text!
             
             let selectedButtons = numbers.filter { $0.selected }.sorted { $0.num < $1.num }
-            
-//            let selectedPunches = selectedButtons
-//                .map { Punch(punchValue: $0.num) }
-//                .sorted { $0.0.punchValue < $0.1.punchValue }
-            
-//            engine.punches = selectedPunches
 
             engine.resetGame() // workaround since sometimes it would continue a game from here
         
@@ -286,16 +272,13 @@ class ChooseFourInterfaceController: WKInterfaceController
     }
     
     
-//    func saveSelectedNumbers()
     func saveSelectedNumbers() -> SelectedPunches
     {
         var tempNumber = 0
         var count = 0
-        
-//        var nums = [String : Int]()
         var selected = SelectedPunches()
         
-        for x in 0..<numbers.count // no need to do: (numbers.count - 1) is us use ..< instead of ...
+        for x in 0..<numbers.count
         {
             if numbers[x].selected == true
             {
@@ -304,18 +287,13 @@ class ChooseFourInterfaceController: WKInterfaceController
                 
                 switch count
                 {
-//                    case 1  : nums["1stSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"firstSelected")
-//                    case 2  : nums["2ndSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"secondSelected")
-//                    case 3  : nums["3rdSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"thirdSelected")
-//                    case 4  : nums["4thSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"fourthSelected
-                    case 1  : selected.first  = tempNumber // nums["firstSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"firstSelected")
-                    case 2  : selected.second = tempNumber // nums["secondSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"secondSelected")
-                    case 3  : selected.third  = tempNumber // nums["thirdSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"thirdSelected")
-                    case 4  : selected.fourth = tempNumber // nums["fourthSelected"] = tempNumber // UserDefaults.standard.set(tempNumber,forKey:"fourthSelected")
+                    case 1  : selected.first  = tempNumber
+                    case 2  : selected.second = tempNumber
+                    case 3  : selected.third  = tempNumber
+                    case 4  : selected.fourth = tempNumber
                     default : fatalError("Something's happening in saveSelectedNumbers()!") // crash immediately
                 }
 
-//                UserDefaults.standard.synchronize()
             }
         }
         return selected
@@ -381,7 +359,6 @@ class ChooseFourInterfaceController: WKInterfaceController
         UserDefaults.standard.set(1,forKey:"secondSelected")
         UserDefaults.standard.set(1,forKey:"thirdSelected")
         UserDefaults.standard.set(1,forKey:"fourthSelected")
-//        UserDefaults.standard.synchronize()
     }
     
     func restoreNextButtonToDefault()

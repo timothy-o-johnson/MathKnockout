@@ -49,7 +49,6 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
         print("Your Knock Out Target is \(engine.knockOutTarget).")
         printSelectedNumbers()
         engine.printButtonStatusUpdate()
-//        printNSUserDefaultsForKOAndAttemptAndOperation()
         
         knockOutTargetButton.setTitle(String(engine.knockOutTarget))
         
