@@ -36,6 +36,14 @@ struct Tile
     }
 }
 
+struct GameCombo : Codable
+{
+    let gameNumber: Int
+    let gameCombo : String
+    var won : Bool
+    var dateWon: String
+}
+
 protocol GameEngineDelegate
 {
     func printToLabel(text: String)
@@ -47,6 +55,9 @@ protocol GameEngineDelegate
 class GameEngine
 {
     static let shared = GameEngine()
+    
+    let gameCombinations = ["1234","1235","1236","1237","1238","1239","1245","1246","1247","1248","1249","1256","1257","1258","1259","1267","1268","1269","1278","1279","1289","1345","1346","1347","1348","1349","1356","1357","1358","1359","1367","1368","1369","1378","1379","1389","1456","1457","1458","1459","1467","1468","1469","1478","1479","1489","1567","1568","1569","1578","1579","1589","1678","1679","1689","1789","2345","2346","2347","2348","2349","2356","2357","2358","2359","2367","2368","2369","2378","2379","2389","2456","2457","2458","2459","2467","2468","2469","2478","2479","2489","2567","2568","2569","2578","2579","2589","2678","2679","2689","2789","3456","3457","3458","3459","3467","3468","3469","3478","3479","3489","3567","3568","3569","3578","3579","3589","3678","3679","3689","3789","4567","4568","4569","4578","4579","4589","4678","4679","4689","4789","5678","5679","5689","5789","6789"]
+
     
     var knockOutTarget = UserDefaults.standard.integer(forKey: "knockOutTarget") {
         didSet {
@@ -168,6 +179,8 @@ class GameEngine
 
     func knockOut()
     {
+        storeGameCombinationToMemory()
+        
         attemptCount += 1
         
         print("You have tried \(attemptCount) times to knock out \(knockOutTarget).")
@@ -382,4 +395,31 @@ class GameEngine
         
     }
     
+    func storeGameCombinationToMemory()
+    {
+        let games = (0...125).map {
+            GameCombo(
+                gameNumber : $0+1,
+                gameCombo: gameCombinations[$0],
+                won : false,
+                dateWon  : ""
+            )
+        }
+    
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let data  = try? encoder.encode(games)
+        // print(String(data: data!, encoding: .utf8)!)
+        UserDefaults.standard.set(data, forKey:"gameCombinations")
+        
+        let gamesDecoded = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
+        
+//        print("Now printing.... gamesDecoded")
+//        print(String(data: gamesDecoded, encoding: .utf8)!)
+        
+        let decoder = JSONDecoder()
+        let products = try? decoder.decode([GameCombo].self, from: gamesDecoded)
+        //// UserDefaults.standard.dictionaryRepresentation().map{print("'\($0.key)': '\($0.value)',")}
+        
+    }
 }
