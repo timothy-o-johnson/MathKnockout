@@ -395,11 +395,12 @@ class GameEngine
         
     }
     
+    // initialize
     func storeGameCombinationToMemory()
     {
-        let games = (0...125).map {
+        let games = (0..<gameCombinations.count).map {
             GameCombo(
-                gameNumber : $0+1,
+                gameNumber : $0,
                 gameCombo: gameCombinations[$0],
                 won : false,
                 dateWon  : ""
@@ -409,17 +410,53 @@ class GameEngine
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         let data  = try? encoder.encode(games)
-        // print(String(data: data!, encoding: .utf8)!)
+
         UserDefaults.standard.set(data, forKey:"gameCombinations")
-        
-        let gamesDecoded = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
-        
-//        print("Now printing.... gamesDecoded")
-//        print(String(data: gamesDecoded, encoding: .utf8)!)
-        
-        let decoder = JSONDecoder()
-        let products = try? decoder.decode([GameCombo].self, from: gamesDecoded)
+//
+//        let gamesDecoded = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
+//
+//        let decoder = JSONDecoder()
+//        let products = try? decoder.decode([GameCombo].self, from: gamesDecoded)
         //// UserDefaults.standard.dictionaryRepresentation().map{print("'\($0.key)': '\($0.value)',")}
         
+        getCurrentGameCombination()
+        
+    }
+    
+    func getCurrentGameCombination(){
+        var currentGameCombo = ""
+        let punches = UserDefaults.standard.array(forKey: "selectedPunches") as! [Int]
+        
+        // determine gameCombo
+        for punch in punches {
+            currentGameCombo += String(punch)
+        }
+        
+        setGameCombinationToWin(currentGameCombo)
+    }
+    
+    func setGameCombinationToWin(_ String: currentGameCombo){
+        // pull back gameCombos
+        let gamesCombos = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
+        
+        // decode the data
+        let decoder = JSONDecoder()
+        let gameCombosDecoded = try? decoder.decode([GameCombo].self, from: gamesCombos)
+        
+        // turn data into an array
+        
+        // set the currentGameCombo to win
+        for gameCombo in gameCombosDecoded {
+            if(gameCombo.gameComb == current){
+                gameCombo.won = true
+            }
+        }
+        
+        // save the the back into userDefaults
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let data  = try? encoder.encode(games)
+        
+        UserDefaults.standard.set(data, forKey:"gameCombinations")
     }
 }
