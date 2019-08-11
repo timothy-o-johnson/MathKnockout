@@ -435,27 +435,28 @@ class GameEngine
         setGameCombinationToWin(currentGameCombo)
     }
     
-    func setGameCombinationToWin(_ String: currentGameCombo){
+    func setGameCombinationToWin(_ currentGameCombo: String){
         // pull back gameCombos
         let gamesCombos = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
         
         // decode the data
         let decoder = JSONDecoder()
-        let gameCombosDecoded = try? decoder.decode([GameCombo].self, from: gamesCombos)
+        var gameCombosDecoded = (try? decoder.decode([GameCombo].self, from: gamesCombos))!
         
         // turn data into an array
         
-        // set the currentGameCombo to win
-        for gameCombo in gameCombosDecoded {
-            if(gameCombo.gameComb == current){
-                gameCombo.won = true
+        // update the appropriate gameCombo won status to true
+        for (index, gameCombo) in gameCombosDecoded.enumerated() {
+            if(gameCombo.gameCombo == currentGameCombo){
+               //
+                gameCombosDecoded[index].won = true
             }
         }
         
         // save the the back into userDefaults
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
-        let data  = try? encoder.encode(games)
+        let data  = try? encoder.encode(gameCombosDecoded)
         
         UserDefaults.standard.set(data, forKey:"gameCombinations")
     }
