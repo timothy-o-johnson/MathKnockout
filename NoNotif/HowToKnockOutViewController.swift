@@ -2,8 +2,8 @@
 //  HowToKnockOutViewController.swift
 //  NoNotif
 //
-//  Created by John Grönlund on 21/01/2017.
-//  Copyright © 2017 John Groenlund. All rights reserved.
+//  Created by Tim Johnson on 21/01/2017.
+//  Copyright © 2017 Tim Johnson. All rights reserved.
 //
 
 import UIKit

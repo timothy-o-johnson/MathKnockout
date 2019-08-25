@@ -2,8 +2,8 @@
 //  WonInterfaceController.swift
 //  KO
 //
-//  Created by John Grönlund on 08/03/2017.
-//  Copyright © 2017 John Groenlund. All rights reserved.
+//  Created by Tim Johnson on 08/03/2017.
+//  Copyright © 2017 Tim Johnson. All rights reserved.
 //
 
 import WatchKit
@@ -19,7 +19,7 @@ class WonInterfaceController: WKInterfaceController
     override func awake(withContext context: Any?)
     {
         super.awake(withContext: context)
-        
+        // update UserDefaults with won game
         quoteLabel.setText(engine.randomInspirationalQuote())
     }
     
@@ -28,5 +28,12 @@ class WonInterfaceController: WKInterfaceController
         engine.resetGame()
 
         WKInterfaceController.reloadRootPageControllers(withNames: ["SplashScreenController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
+    }
+    
+    @IBAction func didTapPlayNextGameInSequence()
+    {
+        // engine.resetGame()
+        
+        // WKInterfaceController.reloadRootPageControllers(withNames: ["SplashScreenController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
 }
