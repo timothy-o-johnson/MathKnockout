@@ -32,7 +32,7 @@ class WonInterfaceController: WKInterfaceController
     
     @IBAction func didTapPlayNextGameInSequence()
     {
-        // engine.resetGame()
+        // engine.resetGameWithSmallestIncompleteGame()
         
         // WKInterfaceController.reloadRootPageControllers(withNames: ["SplashScreenController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }

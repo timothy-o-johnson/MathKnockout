@@ -436,14 +436,8 @@ class GameEngine
     }
     
     func setGameCombinationToWin(_ currentGameCombo: String){
-        // pull back gameCombos
-        let gamesCombos = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
-        
-        // decode the data
-        let decoder = JSONDecoder()
-        var gameCombosDecoded = (try? decoder.decode([GameCombo].self, from: gamesCombos))!
-        
-        // turn data into an array
+     
+        var gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
         
         // update the appropriate gameCombo won status to true
         for (index, gameCombo) in gameCombosDecoded.enumerated() {
@@ -459,5 +453,37 @@ class GameEngine
         let data  = try? encoder.encode(gameCombosDecoded)
         
         UserDefaults.standard.set(data, forKey:"gameCombinations")
+    }
+    
+    func resetGameWithSmallestIncompleteGame(){
+        // get array of smallest incomplete game from UserDefaults
+        var gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
+        var nextGameCombo = [Int]()
+        
+        // get array of smallest incomplete game from UserDefaults
+        for (index, gameCombo) in gameCombosDecoded.enumerated() {
+            if(gameCombosDecoded[index].won == false){
+                for char in gameCombosDecoded[index]{
+                nextGameCombo = gameCombosDecoded[index].gameCombo.components(separatedBy: "")
+                break
+                }
+            }
+        }
+        
+        nextGame
+        // reset game
+        // set current punches to match array
+        // send to screen with punches filled out
+    }
+    
+    func getArrayOfGamesPlayedFromUserDefaults() -> [GameCombo]{
+        // get gameCombos from UserDefaults
+        let gamesCombos = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
+        
+        // decode the data
+        let decoder = JSONDecoder()
+        var gameCombosDecoded = (try? decoder.decode([GameCombo].self, from: gamesCombos))!
+     
+        return gameCombosDecoded
     }
 }
