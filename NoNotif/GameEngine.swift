@@ -453,26 +453,27 @@ class GameEngine
         let data  = try? encoder.encode(gameCombosDecoded)
         
         UserDefaults.standard.set(data, forKey:"gameCombinations")
+        resetGameWithSmallestIncompleteGame()
     }
     
     func resetGameWithSmallestIncompleteGame(){
-        // get array of smallest incomplete game from UserDefaults
-        var gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
+        let gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
         var nextGameCombo = [Int]()
         
-        // get array of smallest incomplete game from UserDefaults
-        for (index, gameCombo) in gameCombosDecoded.enumerated() {
+        // get an array of smallest incomplete game from UserDefaults
+        for (index, _) in gameCombosDecoded.enumerated() {
             if(gameCombosDecoded[index].won == false){
-                for char in gameCombosDecoded[index]{
-                nextGameCombo = gameCombosDecoded[index].gameCombo.components(separatedBy: "")
+//           for char in gameCombosDecoded[index]{
+                nextGameCombo = gameCombosDecoded[index].gameCombo.map{ $0.wholeNumberValue! }
                 break
-                }
+//                }
             }
         }
         
-        nextGame
+       
         // reset game
-        // set current punches to match array
+        // set current punches to match nextGameCombo
+        updateCurrentPunches(punchVals: nextGameCombo)
         // send to screen with punches filled out
     }
     
@@ -482,8 +483,13 @@ class GameEngine
         
         // decode the data
         let decoder = JSONDecoder()
-        var gameCombosDecoded = (try? decoder.decode([GameCombo].self, from: gamesCombos))!
+        let gameCombosDecoded = (try? decoder.decode([GameCombo].self, from: gamesCombos))!
      
         return gameCombosDecoded
     }
+    
+    func updateCurrentPunches( punchVals: [Int]){
+        UserDefaults.standard.set(punchVals, forKey:"selectedPunches")
+    }
+    
 }
