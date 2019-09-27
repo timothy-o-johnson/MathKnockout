@@ -9,16 +9,21 @@
 import WatchKit
 import Foundation
 
-struct SelectedPunches
-{
-    var first  : Int = 1
-    var second : Int = 1
-    var third  : Int = 1
-    var fourth : Int = 1
-}
+//struct SelectedPunches
+//{
+//    var first  : Int = 1
+//    var second : Int = 1
+//    var third  : Int = 1
+//    var fourth : Int = 1
+//}
 
 class ChooseFourInterfaceController: WKInterfaceController
 {
+   /**
+      storing data to UserDefaults and Moving to next screen take place in @IBAction func nextButton() {
+     */
+    
+   
     let engine = GameEngine.shared
     
     func initializeBoardTargetAndTargetInfo()
@@ -36,6 +41,7 @@ class ChooseFourInterfaceController: WKInterfaceController
         
         let defaults = UserDefaults.standard
         
+        // Store KOeds, attempts, and operations as three seperate dictionaries in UserDefaults
         defaults.set(KOeds,      forKey:"dictKOed")
         defaults.set(attempts,   forKey:"dictAttempt")
         defaults.set(operations, forKey:"dictOperation")
@@ -121,9 +127,9 @@ class ChooseFourInterfaceController: WKInterfaceController
         narrateTapping(numberTapped)
     }
     
-    @IBAction func nextButton() {
+    @IBAction func nextButtonTapped() {
         if fourSelected(){
-            print("Next button tapped.  Four numbers have been selected.")
+            print("Next button tapped. Four numbers have been selected.")
             
             let selectedButtons = numbers.filter { $0.selected }.sorted { $0.num < $1.num }
 
@@ -136,8 +142,9 @@ class ChooseFourInterfaceController: WKInterfaceController
                 Punch(num: 3, punchValue: selectedButtons[3].num),
             ]
             
-            let selectedPunches2 = saveSelectedNumbers()
-            let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches2]
+            let selectedPunches = storeSelectedPunchesInAStruct()
+            let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches]
+            
             WKInterfaceController.reloadRootPageControllers(withNames: ["boardController"], contexts: [passThruContext], orientation: .horizontal, pageIndex: 0)
         }
     }
@@ -147,7 +154,7 @@ class ChooseFourInterfaceController: WKInterfaceController
         print(#function)
         print(segueIdentifier)
         
-        let selectedPunches = saveSelectedNumbers()
+        let selectedPunches = storeSelectedPunchesInAStruct()
         let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches]
 //        knockOutTarget
         return passThruContext
@@ -167,7 +174,7 @@ class ChooseFourInterfaceController: WKInterfaceController
         initializeBoardTargetAndTargetInfo()
         
         numbers = createNumbersList()
-        initializeNumbers()
+        initializeNumbersInUserDefaults()
         self.synchronizeButtonsWithCurrentStatus()
         self.printSelectedNumbers()
         super.willActivate()
@@ -272,7 +279,7 @@ class ChooseFourInterfaceController: WKInterfaceController
     }
     
     
-    func saveSelectedNumbers() -> SelectedPunches
+    func storeSelectedPunchesInAStruct() -> SelectedPunches
     {
         var tempNumber = 0
         var count = 0
@@ -353,7 +360,7 @@ class ChooseFourInterfaceController: WKInterfaceController
         print("Button \(self.numbers[numberTapped-1].num) tapped. Its current selected status is \(self.numbers[numberTapped-1].selected).")
     }
     
-    func initializeNumbers()
+    func initializeNumbersInUserDefaults()
     {
         UserDefaults.standard.set(1,forKey:"firstSelected")
         UserDefaults.standard.set(1,forKey:"secondSelected")

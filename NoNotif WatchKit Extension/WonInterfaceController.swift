@@ -32,8 +32,15 @@ class WonInterfaceController: WKInterfaceController
     
     @IBAction func didTapPlayNextGameInSequence()
     {
-        // engine.resetGameWithSmallestIncompleteGame()
+        engine.resetGame()
         
+        let currentGameCombo = engine.getCurrentGameCombination()
+        engine.setGameCombinationToWin(currentGameCombo)
+        let selectedPunches = engine.getPunchesForNextIncompleteGame()
+        
+        let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches]
+               
+    WKInterfaceController.reloadRootPageControllers(withNames: ["boardController"], contexts: [passThruContext], orientation: .horizontal, pageIndex: 0)
         // WKInterfaceController.reloadRootPageControllers(withNames: ["SplashScreenController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
 }

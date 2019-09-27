@@ -22,6 +22,14 @@ struct Punch
     }
 }
 
+struct SelectedPunches
+{
+    var first  : Int = 1
+    var second : Int = 1
+    var third  : Int = 1
+    var fourth : Int = 1
+}
+
 struct Tile
 {
     let number    : Int
@@ -423,7 +431,7 @@ class GameEngine
         
     }
     
-    func getCurrentGameCombination(){
+    func getCurrentGameCombination() -> String{
         var currentGameCombo = ""
         let punches = UserDefaults.standard.array(forKey: "selectedPunches") as! [Int]
         
@@ -433,6 +441,7 @@ class GameEngine
         }
         
         setGameCombinationToWin(currentGameCombo)
+        return currentGameCombo
     }
     
     func setGameCombinationToWin(_ currentGameCombo: String){
@@ -453,10 +462,10 @@ class GameEngine
         let data  = try? encoder.encode(gameCombosDecoded)
         
         UserDefaults.standard.set(data, forKey:"gameCombinations")
-        resetGameWithSmallestIncompleteGame()
+        getPunchesForNextIncompleteGame()
     }
     
-    func resetGameWithSmallestIncompleteGame(){
+    func getPunchesForNextIncompleteGame() -> SelectedPunches {
         let gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
         var nextGameCombo = [Int]()
         
@@ -471,11 +480,29 @@ class GameEngine
         }
         
        
-        // reset game
+        // reset game, based off of ChooseFourInterfaceController-> nextButtonTapped()
+        resetGame()
+        punches = [
+            Punch(num: 0, punchValue: nextGameCombo[0]),
+            Punch(num: 1, punchValue: nextGameCombo[1]),
+            Punch(num: 2, punchValue: nextGameCombo[2]),
+            Punch(num: 3, punchValue: nextGameCombo[3]),
+        ]
+        
+        var selectedPunches = SelectedPunches()
+        
+        selectedPunches.first = nextGameCombo[0]
+        selectedPunches.second = nextGameCombo[1]
+        selectedPunches.third = nextGameCombo[2]
+        selectedPunches.fourth = nextGameCombo[3]
+        
         // set current punches to match nextGameCombo
         updateCurrentPunches(punchVals: nextGameCombo)
         // send to screen with punches filled out
+        
+        return selectedPunches
     }
+    
     
     func getArrayOfGamesPlayedFromUserDefaults() -> [GameCombo]{
         // get gameCombos from UserDefaults
