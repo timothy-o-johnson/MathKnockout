@@ -57,7 +57,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
          thirdPunch.setTitle(String(third))
         fourthPunch.setTitle(String(fourth))
         
-        howToKnockOutLabel.setText(engine.displayableProgram) // needed?
+        howToKnockOutLabel.setText(engine.evalStackDisplay) // needed?
     }
     
     
@@ -220,7 +220,7 @@ class HowToKnockOutInterfaceController: WKInterfaceController, GameEngineDelegat
     
     func printToLabel(text: String)
     {
-        howToKnockOutLabel.setText(engine.displayableProgram)
+        howToKnockOutLabel.setText(engine.evalStackDisplay)
     }
     
     func didUpdatePunch(punch: Punch)

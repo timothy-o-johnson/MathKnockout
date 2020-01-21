@@ -70,7 +70,7 @@ class GameEngine
     var knockOutTarget = UserDefaults.standard.integer(forKey: "knockOutTarget") {
         didSet {
             UserDefaults.standard.set(knockOutTarget, forKey: "knockOutTarget")
-            program = tiles[knockOutTarget - 1].operation
+            evalStack = tiles[knockOutTarget - 1].operation
         }
     }
     
@@ -112,18 +112,19 @@ class GameEngine
         }
     }
     
-    var program = [Any]()
+    // what is this? is this the stack for evaluation
+    var evalStack = [Any]()
     {
         didSet
         {
-            delegate?.printToLabel(text: displayableProgram)
+            delegate?.printToLabel(text: evalStackDisplay)
             
-            print("current program: \(program)")
-            
+            print("current evalStack: \(evalStack)")
+           // after setting this array, determine if the array contains ones of the punches
             for index in punches.indices
             {
-                punches[index].selected = program.contains { $0 as? Int == punches[index].punchValue }
-//                print("will update puch at index: \(index)")
+                punches[index].selected = evalStack.contains { $0 as? Int == punches[index].punchValue }
+//                print("will update punch at index: \(index)")
                 delegate?.didUpdatePunch(punch: punches[index])
             }
             
@@ -131,9 +132,9 @@ class GameEngine
         }
     }
     
-    var displayableProgram : String {
+    var evalStackDisplay : String {
         get {
-            return program.reduce("") { $0 + String(describing: $1) } // concatenates into String
+            return evalStack.reduce("") { $0 + String(describing: $1) } // concatenates into String
         }
     }
     
@@ -193,9 +194,9 @@ class GameEngine
         
         print("You have tried \(attemptCount) times to knock out \(knockOutTarget).")
 
-        if program.isEmpty { return }
+        // if program.isEmpty { return }
 
-        let stringToEvaluate = convertStringForEvaluation(displayableProgram)
+        let stringToEvaluate = convertStringForEvaluation(evalStackDisplay)
         
         var resultingInt : Int?
 
@@ -215,7 +216,7 @@ class GameEngine
         {
             tiles[knockOutTarget - 1].KOed = true
             tiles[knockOutTarget - 1].attempts = attemptCount
-            tiles[knockOutTarget - 1].operation = program
+            tiles[knockOutTarget - 1].operation = evalStack
             
             delegate?.sendTargetBackDefeated()
         }
@@ -229,12 +230,12 @@ class GameEngine
     
     func delete()
     {
-        if let removed = program.popLast() as? Int
+        if let removed = evalStack.popLast() as? Int
         {
             if var matchingPunch = punches.first(where: { $0.punchValue == removed })
             {
                 matchingPunch.selected = false
-                delegate?.printToLabel(text: displayableProgram)
+                delegate?.printToLabel(text: evalStackDisplay)
                 delegate?.didUpdatePunch(punch: matchingPunch)
             }
         }
@@ -242,7 +243,7 @@ class GameEngine
     
     func updateScreen()
     {
-        delegate?.printToLabel(text: displayableProgram)
+        delegate?.printToLabel(text: evalStackDisplay)
     }
 
     typealias Operation = String
@@ -250,7 +251,7 @@ class GameEngine
 
     func isSameTypeAsLastEntry(latest incoming : Any) -> Bool
     {
-        guard let previous = program.last else { return false }
+        guard let previous = evalStack.last else { return false }
 
         switch (incoming, previous)
         {
@@ -265,9 +266,9 @@ class GameEngine
     {
         if isSameTypeAsLastEntry(latest: punches[index].punchValue) { return }
         
-        program.append(punches[index].punchValue)
+        evalStack.append(punches[index].punchValue)
         
-        delegate?.printToLabel(text: displayableProgram)
+        delegate?.printToLabel(text: evalStackDisplay)
         
         punches[index].selected = true // !punches[index].selected
         
@@ -283,9 +284,9 @@ class GameEngine
 
         if isSameTypeAsLastEntry(latest: operation) { return }
 
-        program.append(operation)
+        evalStack.append(operation)
 
-        delegate?.printToLabel(text: displayableProgram)
+        delegate?.printToLabel(text: evalStackDisplay)
     }
     
     
@@ -311,7 +312,7 @@ class GameEngine
     
     func resetGame()
     {
-        program.removeAll()
+        evalStack.removeAll()
 
         tiles = (1...25).map {
             Tile(
@@ -334,7 +335,7 @@ class GameEngine
 
     func resetGameToBeKOedAllButOne()
     {
-        program.removeAll()
+        evalStack.removeAll()
         
         tiles = (1...25).map {
             Tile(
@@ -462,46 +463,63 @@ class GameEngine
         let data  = try? encoder.encode(gameCombosDecoded)
         
         UserDefaults.standard.set(data, forKey:"gameCombinations")
+        gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
         getPunchesForNextIncompleteGame()
     }
     
-    func getPunchesForNextIncompleteGame() -> SelectedPunches {
-        let gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
-        var nextGameCombo = [Int]()
-        
-        // get an array of smallest incomplete game from UserDefaults
-        for (index, _) in gameCombosDecoded.enumerated() {
-            if(gameCombosDecoded[index].won == false){
-//           for char in gameCombosDecoded[index]{
-                nextGameCombo = gameCombosDecoded[index].gameCombo.map{ $0.wholeNumberValue! }
-                break
-//                }
+  func getPunchesForNextIncompleteGame() -> SelectedPunches {
+            let gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
+            var nextGameCombo = [Int]()
+            var selectedPunches = SelectedPunches(
+                first : 1,
+                second : 2,
+                third : 3,
+                fourth : 4)
+            
+            // get an array of smallest incomplete game from UserDefaults
+            for (index, _) in gameCombosDecoded.enumerated() {
+                    if(gameCombosDecoded[index].won == false){
+                        nextGameCombo = gameCombosDecoded[index].gameCombo.map{ $0.wholeNumberValue! }
+                        print(nextGameCombo)
+                        break
+                    }
             }
+        
+          // convert nextGameCombo to selectedPunches
+        if(nextGameCombo.count != 0){
+            print("nextGameCombo.count is not empty")
+            selectedPunches.first = nextGameCombo[0]
+            selectedPunches.second = nextGameCombo[1]
+            selectedPunches.third = nextGameCombo[2]
+            selectedPunches.fourth = nextGameCombo[3]
         }
-        
-       
-        // reset game, based off of ChooseFourInterfaceController-> nextButtonTapped()
-        resetGame()
-        punches = [
-            Punch(num: 0, punchValue: nextGameCombo[0]),
-            Punch(num: 1, punchValue: nextGameCombo[1]),
-            Punch(num: 2, punchValue: nextGameCombo[2]),
-            Punch(num: 3, punchValue: nextGameCombo[3]),
-        ]
-        
-        var selectedPunches = SelectedPunches()
-        
-        selectedPunches.first = nextGameCombo[0]
-        selectedPunches.second = nextGameCombo[1]
-        selectedPunches.third = nextGameCombo[2]
-        selectedPunches.fourth = nextGameCombo[3]
-        
-        // set current punches to match nextGameCombo
-        updateCurrentPunches(punchVals: nextGameCombo)
-        // send to screen with punches filled out
-        
+      
         return selectedPunches
     }
+        
+       
+//        // reset game, based off of ChooseFourInterfaceController-> nextButtonTapped()
+//        resetGame()
+//        punches = [
+//            Punch(num: 0, punchValue: nextGameCombo[0]),
+//            Punch(num: 1, punchValue: nextGameCombo[1]),
+//            Punch(num: 2, punchValue: nextGameCombo[2]),
+//            Punch(num: 3, punchValue: nextGameCombo[3]),
+//        ]
+//
+//        var selectedPunches = SelectedPunches()
+//
+//        selectedPunches.first = nextGameCombo[0]
+//        selectedPunches.second = nextGameCombo[1]
+//        selectedPunches.third = nextGameCombo[2]
+//        selectedPunches.fourth = nextGameCombo[3]
+//
+//        // set current punches to match nextGameCombo
+//        updateCurrentPunches(punchVals: nextGameCombo)
+//        // send to screen with punches filled out
+//
+//        return selectedPunches
+//    }
     
     
     func getArrayOfGamesPlayedFromUserDefaults() -> [GameCombo]{

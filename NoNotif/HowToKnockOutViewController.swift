@@ -34,7 +34,7 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
         knockOutTargetButton.setTitle(String(engine.knockOutTarget), for: .normal)
         
 
-        knockOutLabel.text = "=" + engine.displayableProgram // needed?
+        knockOutLabel.text = "=" + engine.evalStackDisplay // needed?
         
         for i in 0..<punches.count
         {
@@ -83,7 +83,7 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     
     func printToLabel(text: String)
     {
-        knockOutLabel.text = "=" + engine.displayableProgram
+        knockOutLabel.text = "=" + engine.evalStackDisplay
     }
     
     func didUpdatePunch(punch: Punch)
