@@ -75,28 +75,28 @@ class ChooseFourInterfaceController: WKInterfaceController
         let numberTapped = 2
         changeSelectedStatus(numberTapped) // is number selected or unselected?
         changeButtonColor(numberTapped) // make it look like its selected or unselected
-       narrateTapping(numberTapped)
+        narrateTapping(numberTapped)
     }
     
     @IBAction func threeTapped() {
         let numberTapped = 3
         changeSelectedStatus(numberTapped) // is number selected or unselected?
         changeButtonColor(numberTapped) // make it look like its selected or unselected
-       narrateTapping(numberTapped)
+        narrateTapping(numberTapped)
     }
 
     @IBAction func fourTapped() {
         let numberTapped = 4
         changeSelectedStatus(numberTapped) // is number selected or unselected?
         changeButtonColor(numberTapped) // make it look like its selected or unselected
-       narrateTapping(numberTapped)
+        narrateTapping(numberTapped)
     }
     
     @IBAction func fiveTapped() {
         let numberTapped = 5
         changeSelectedStatus(numberTapped) // is number selected or unselected?
         changeButtonColor(numberTapped) // make it look like its selected or unselected
-       narrateTapping(numberTapped)
+        narrateTapping(numberTapped)
     }
     
     @IBAction func sixTapped() {
@@ -142,10 +142,14 @@ class ChooseFourInterfaceController: WKInterfaceController
                 Punch(num: 3, punchValue: selectedButtons[3].num),
             ]
             
+            engine.resetGameToBeKOedAllButOne()
+            
             let selectedPunches = storeSelectedPunchesInAStruct()
             let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches]
             
             WKInterfaceController.reloadRootPageControllers(withNames: ["boardController"], contexts: [passThruContext], orientation: .horizontal, pageIndex: 0)
+        } else {
+             print("Next button tapped.")
         }
     }
     
@@ -171,25 +175,27 @@ class ChooseFourInterfaceController: WKInterfaceController
     override func willActivate() { // This method is called when watch view controller is about to be visible to user
         print("\n\nCurrent Interface: Choose Four")
         
-        initializeBoardTargetAndTargetInfo()
+        initializeBoardTargetAndTargetInfo() // seems like a waste since it's not stored in engine and is not passed to userDefaults or the next screen
         
         numbers = createNumbersList()
-        initializeNumbersInUserDefaults()
+        // if no numbers in userDefaults initialize them
+        let userDefaultNumbersExist = UserDefaults.standard.object(forKey: "firstSelected") != nil
+        
+        if !userDefaultNumbersExist {
+            engine.initializeNumbersInUserDefaults()
+        }
+        // else updateNumbersInUserDefaults with selectedPunches ie do nothing because this is done in in WonInterfaceController
+        
         self.synchronizeButtonsWithCurrentStatus()
         self.printSelectedNumbers()
         super.willActivate()
         
-//        super.didDeactivate() // ????
-        
-        restoreNextButtonToDefault()
-        
-        
+        updateNextButton()
     }
 
     override func didDeactivate() {// This method is called when watch view controller is no longer visible
        
     }
-
     
     class number {
         let num : Int
@@ -234,7 +240,7 @@ class ChooseFourInterfaceController: WKInterfaceController
 
     func whichButton(_ number : Int) -> WKInterfaceButton{
         switch number{
-        case 1: return numberOne //when are "self"s necessary?
+        case 1: return numberOne
         case 2: return numberTwo
         case 3: return numberThree
         case 4: return numberFour
@@ -255,11 +261,7 @@ class ChooseFourInterfaceController: WKInterfaceController
            numbers[number - 1].selected = false
         }
         
-        if fourSelected() {
-            next.setBackgroundColor(UIColor.darkGray)
-        } else {
-            next.setBackgroundColor(UIColor.clear)
-        }
+        updateNextButton()
     }
     
     func fourSelected() -> Bool{
@@ -270,10 +272,10 @@ class ChooseFourInterfaceController: WKInterfaceController
             }
         }
         if count == 4 {
-            changeNextButtonFontandBackgroundColor()
+            makeNextButtonVisible()
             return true
         } else {
-            print("Next button tapped. \(String(count)) numbers chosen.")
+             print("\(String(count)) numbers chosen.")
             return false
         }
     }
@@ -346,7 +348,7 @@ class ChooseFourInterfaceController: WKInterfaceController
         }
     }
     
-    func changeNextButtonFontandBackgroundColor()
+    func makeNextButtonVisible()
     {
         let attString = NSMutableAttributedString(string: "Next")
         attString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], range: NSMakeRange(0, attString.length))
@@ -360,19 +362,20 @@ class ChooseFourInterfaceController: WKInterfaceController
         print("Button \(self.numbers[numberTapped-1].num) tapped. Its current selected status is \(self.numbers[numberTapped-1].selected).")
     }
     
-    func initializeNumbersInUserDefaults()
-    {
-        UserDefaults.standard.set(1,forKey:"firstSelected")
-        UserDefaults.standard.set(1,forKey:"secondSelected")
-        UserDefaults.standard.set(1,forKey:"thirdSelected")
-        UserDefaults.standard.set(1,forKey:"fourthSelected")
-    }
-    
-    func restoreNextButtonToDefault()
+    func hideNextButton()
     {
         let attString = NSMutableAttributedString(string: "Next")
-        attString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.black], range: NSMakeRange(0, attString.length))
+        attString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], range: NSMakeRange(0, attString.length))
         self.next.setAttributedTitle(attString)
+        self.next.setBackgroundColor(UIColor.clear)
     }
+    
+    func updateNextButton(){
+        if fourSelected() {
+            makeNextButtonVisible()
+          } else {
+              hideNextButton()
+          }
+        }
     
 }

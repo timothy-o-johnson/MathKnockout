@@ -46,6 +46,7 @@ class BoardViewController: UIViewController
         
         if engine.gameIsWon
         {
+            engine.gameWonSequence()
             let vc = storyboard!.instantiateViewController(withIdentifier: "WonVC") as! WonViewController
             navigationController?.pushViewController(vc, animated: true)
         }

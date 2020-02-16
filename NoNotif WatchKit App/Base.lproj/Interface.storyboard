@@ -357,7 +357,7 @@
                         <items>
                             <menuItem title="Start Over" icon="resume" id="Dbv-gx-23k">
                                 <connections>
-                                    <action selector="startOver" destination="3S9-sq-8Yw" id="JFM-aZ-nbJ"/>
+                                    <action selector="startOver" destination="3S9-sq-8Yw" id="hjU-T7-RCY"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Nevermind" icon="decline" id="re5-xG-Lgi" userLabel="Resume"/>
@@ -569,14 +569,14 @@
                             <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                         </label>
                         <label alignment="left" id="JYX-PI-P1E"/>
-                        <label width="1" alignment="left" text="some quote?" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="coa-5s-0YZ"/>
+                        <label width="0.90000000000000002" alignment="center" text="some quote?" textAlignment="left" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="coa-5s-0YZ"/>
                         <button width="1" alignment="left" title="Play Again" id="hdy-jm-Ecb">
                             <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="didTapRestart" destination="mDs-5P-i7K" id="sPR-Xb-MSj"/>
+                                <action selector="didTapPlayAgain" destination="mDs-5P-i7K" id="3rD-4I-fzl"/>
                             </connections>
                         </button>
-                        <button width="134" height="42" alignment="left" title="Play Next Game:  #25 of 126" id="qJA-cm-MGT" userLabel="Play Next Game in Sequence">
+                        <button width="1" alignment="left" title="Play Next Game:  #25 of 126" id="qJA-cm-MGT" userLabel="Play Next Game in Sequence">
                             <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="didTapPlayNextGameInSequence" destination="mDs-5P-i7K" id="AYP-I3-Zql"/>
@@ -584,6 +584,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="playNextGame" destination="qJA-cm-MGT" id="cmg-bT-azu"/>
                         <outlet property="quoteLabel" destination="coa-5s-0YZ" id="luJ-MR-Dk7"/>
                     </connections>
                 </controller>
