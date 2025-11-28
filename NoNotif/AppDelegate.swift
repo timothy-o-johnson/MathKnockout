@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Fabric
-import Crashlytics
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,20 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let engine = GameEngine.shared
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
-    {
-        Fabric.with([Crashlytics.self])
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Fabric/Crashlytics removed; initialize engine or UI here if needed
+
 //        engine.resetGameToBeKOedAllButOne()
-        
 //        engine.punches = [
 //            Punch(num: 1, punchValue: 2, selected: false),
 //            Punch(num: 2, punchValue: 4, selected: false),
 //            Punch(num: 3, punchValue: 6, selected: false),
 //            Punch(num: 4, punchValue: 8, selected: false)
 //        ]
-        
+
         return true
     }
 }
-
