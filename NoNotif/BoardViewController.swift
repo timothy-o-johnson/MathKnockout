@@ -1,6 +1,6 @@
 //
 //  BoardViewController.swift
-//  NoNotif
+//  MathKnockout
 //
 //  Created by Tim Johnson on 21/01/2017.
 //  Copyright © 2017 Tim Johnson. All rights reserved.

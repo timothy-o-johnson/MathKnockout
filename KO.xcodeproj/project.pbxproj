@@ -127,7 +127,7 @@
 		52B40F051DFACED2005016C3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		52B40F071DFACED2005016C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B40F091DFACED2005016C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52EAA2EA1E3C25EF00233D2E /* NoNotif.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoNotif.entitlements; sourceTree = "<group>"; };
+		52EAA2EA1E3C25EF00233D2E /* MathKnockout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MathKnockout.entitlements; sourceTree = "<group>"; };
 		52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,7 +194,7 @@
 		52B40EDF1DFACED2005016C3 /* iOS App */ = {
 			isa = PBXGroup;
 			children = (
-				52EAA2EA1E3C25EF00233D2E /* NoNotif.entitlements */,
+				52EAA2EA1E3C25EF00233D2E /* MathKnockout.entitlements */,
 				52B40EE01DFACED2005016C3 /* AppDelegate.swift */,
 				52B40EE21DFACED2005016C3 /* SplashScreenViewController.swift */,
 				52EBE9761E33B35C008F19A7 /* ChooseFourViewController.swift */,
@@ -264,7 +264,7 @@
 				34B55FBD2EDA6D1D00A9BD51 /* PBXTargetDependency */,
 			);
 			name = "KO iOS";
-			productName = NoNotif;
+			productName = MathKnockout;
 			productReference = 52B40EDD1DFACED2005016C3 /* KO iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -281,7 +281,7 @@
 				52B40F011DFACED2005016C3 /* PBXTargetDependency */,
 			);
 			name = "KO Watch App";
-			productName = "NoNotif WatchKit App";
+			productName = "MathKnockout Watch App";
 			productReference = 52B40EEF1DFACED2005016C3 /* KO Watch App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
@@ -299,7 +299,7 @@
 			dependencies = (
 			);
 			name = "KO WatchKit Extension";
-			productName = "NoNotif WatchKit Extension";
+			productName = "MathKnockout Watch Extension";
 			productReference = 52B40EFE1DFACED2005016C3 /* KO WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
@@ -669,6 +669,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = NoNotif/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,6 +692,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = NoNotif/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

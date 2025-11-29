@@ -1,6 +1,6 @@
 //
 //  WonViewController.swift
-//  KO
+//  MathKnockout
 //
 //  Created by Tim Johnson on 07/03/2017.
 //  Copyright © 2017 Tim Johnson. All rights reserved.
