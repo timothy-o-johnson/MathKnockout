@@ -475,14 +475,21 @@ class GameEngine {
   }
 
   func getArrayOfGamesPlayedFromUserDefaults() -> [GameCombo] {
-    // get gameCombos from UserDefaults
-    let gamesCombos = UserDefaults.standard.object(forKey: "gameCombinations") as! Data
+    // Try to read from UserDefaults; if missing/corrupt, initialize defaults.
+    if let gamesCombos = UserDefaults.standard.data(forKey: "gameCombinations"),
+       let decoded = try? JSONDecoder().decode([GameCombo].self, from: gamesCombos) {
+      return decoded
+    }
 
-    // decode the data
-    let decoder = JSONDecoder()
-    let gameCombosDecoded = (try? decoder.decode([GameCombo].self, from: gamesCombos))!
+    initializeGameCombinationsInUserDefaults()
 
-    return gameCombosDecoded
+    if let gamesCombos = UserDefaults.standard.data(forKey: "gameCombinations"),
+       let decoded = try? JSONDecoder().decode([GameCombo].self, from: gamesCombos) {
+      return decoded
+    }
+
+    // Fallback to empty to avoid crashes
+    return []
   }
 
   func updateCurrentPunchesInUserDefaults(punchVals: [Int]) {
