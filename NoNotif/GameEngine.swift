@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MathParser
 
 struct Punch {
   let num: Int

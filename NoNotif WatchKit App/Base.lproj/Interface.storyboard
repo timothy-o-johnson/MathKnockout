@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u3m-Re-Ijo">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="24412" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u3m-Re-Ijo">
     <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="24401"/>
     </dependencies>
     <scenes>
         <!--SplashScreenController-->
@@ -27,7 +26,7 @@
             <objects>
                 <controller identifier="chooseNumbersController" title="         Punches" id="AgC-eL-Hgc" customClass="ChooseFourInterfaceController" customModule="KO_WatchKit_Extension">
                     <items>
-                        <label width="1" height="0.10000000000000001" alignment="left" text="Choose Four" textAlignment="center" id="9Az-sC-KHt">
+                        <label width="1" height="0.10000000000000001" alignment="left" text="Choose Four Punches" textAlignment="center" id="9Az-sC-KHt">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" type="system" pointSize="14"/>
                         </label>
@@ -128,9 +127,9 @@
             <objects>
                 <controller identifier="boardController" title="        Opponents" id="3S9-sq-8Yw" customClass="BoardInterfaceController" customModule="KO_WatchKit_Extension">
                     <items>
-                        <label width="1" height="0.10000000000000001" alignment="left" text="Which One?" textAlignment="center" baselineAdjustment="alignCenters" id="Xvk-cO-qWU">
+                        <label width="1" height="28" alignment="left" text="Choose an Opponent" textAlignment="center" baselineAdjustment="alignCenters" id="Xvk-cO-qWU">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="font" type="system" weight="medium" pointSize="11"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="14"/>
                         </label>
                         <group width="1" height="0.17999999999999999" alignment="center" id="W0H-jg-M2G" userLabel="Row1">
                             <items>
@@ -393,7 +392,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="428" y="-980"/>
+            <point key="canvasLocation" x="428" y="-975.5"/>
         </scene>
         <!--  Ding! Ding! Ding!        -->
         <scene sceneID="K3s-sk-53m">
