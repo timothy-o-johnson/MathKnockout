@@ -45,6 +45,10 @@ struct GameCombo: Codable {
   let gameCombo: String
   var won: Bool
   var dateWon: String
+  var score: Int? = nil
+  var durationSeconds: Double? = nil
+  var winOperation: String? = nil
+  var winOperationTokenCount: Int? = nil
 }
 
 protocol GameEngineDelegate {
@@ -74,6 +78,7 @@ class GameEngine {
   var knockOutTarget = UserDefaults.standard.integer(forKey: "knockOutTarget") {
     didSet {
       UserDefaults.standard.set(knockOutTarget, forKey: "knockOutTarget")
+      knockoutStartTime = Date()
       evalStack = tiles[knockOutTarget - 1].operation
     }
   }
@@ -134,6 +139,7 @@ class GameEngine {
   }
 
   var attemptCount = 0
+  private var knockoutStartTime = Date()
 
   var punches = [Punch]()
   {
@@ -199,6 +205,26 @@ class GameEngine {
       tiles[knockOutTarget - 1].KOed = true
       tiles[knockOutTarget - 1].attempts = attemptCount
       tiles[knockOutTarget - 1].operation = evalStack
+
+      let duration = Date().timeIntervalSince(knockoutStartTime)
+      let tokenCount = evalStack.count
+      let score = max(0, 1000 - Int(duration * 10) - tokenCount * 50)
+      let currentCombo = currentSelectedComboString()
+      let winOp = evalStackDisplay
+
+      print("""
+      
+       KO \(currentCombo): 
+        score: \(score), 
+        duration: \(String(format: "%.2f", duration))s, 
+        tokens: \(tokenCount), 
+        attempts: \(attemptCount), 
+        expr: \(winOp)
+
+      """)
+
+      setGameCombinationToWin(currentCombo, score: score, duration: duration, winOperation: winOp, winOperationTokenCount: tokenCount)
+      knockoutStartTime = Date()
 
       delegate?.sendTargetBackDefeated()
     } else {
@@ -300,6 +326,7 @@ class GameEngine {
 
     // clear selected punches
     punches.removeAll()
+    knockoutStartTime = Date()
   }
 
   func resetGameToBeKOedAllButOne() {
@@ -420,19 +447,22 @@ class GameEngine {
     return currentGameCombo
   }
 
-  func setGameCombinationToWin(_ currentGameCombo: String) {
+  func setGameCombinationToWin(_ currentGameCombo: String, score: Int? = nil, duration: TimeInterval? = nil, winOperation: String? = nil, winOperationTokenCount: Int? = nil) {
 
     var gameCombosDecoded = getArrayOfGamesPlayedFromUserDefaults()
 
-    // update the appropriate gameCombo won status to true
+    // update the appropriate gameCombo won status to true and track stats
     for (index, gameCombo) in gameCombosDecoded.enumerated() {
       if gameCombo.gameCombo == currentGameCombo {
-        //
         gameCombosDecoded[index].won = true
+        if let score = score { gameCombosDecoded[index].score = score }
+        if let duration = duration { gameCombosDecoded[index].durationSeconds = duration }
+        if let winOperation = winOperation { gameCombosDecoded[index].winOperation = winOperation }
+        if let winOperationTokenCount = winOperationTokenCount { gameCombosDecoded[index].winOperationTokenCount = winOperationTokenCount }
       }
     }
 
-    // save the the back into userDefaults
+    // save back into userDefaults
     let encoder = JSONEncoder()
     encoder.outputFormatting = .prettyPrinted
     let data = try? encoder.encode(gameCombosDecoded)
@@ -511,4 +541,10 @@ class GameEngine {
            UserDefaults.standard.set(1,forKey:"fourthSelected")
        }
     
+  private func currentSelectedComboString() -> String {
+    let stored = UserDefaults.standard.array(forKey: "selectedPunches") as? [Int]
+    let combo = stored ?? punches.map { $0.punchValue }
+    return combo.sorted().map { String($0) }.joined()
+  }
+
 }
