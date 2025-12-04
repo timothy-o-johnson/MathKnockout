@@ -34,6 +34,20 @@
                ReferencedContainer = "container:KO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "52B40EFD1DFACED2005016C3"
+               BuildableName = "KO WatchKit Extension.appex"
+               BlueprintName = "KO WatchKit Extension"
+               ReferencedContainer = "container:KO.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

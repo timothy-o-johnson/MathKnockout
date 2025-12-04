@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		34B55FB42EDA5DEF00A9BD51 /* MathParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34B55FB32EDA5DEF00A9BD51 /* MathParser */; };
 		34B55FBB2EDA654E00A9BD51 /* MathParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34B55FBA2EDA654E00A9BD51 /* MathParser */; };
+		34B55FC12EDC9FAB00A9BD51 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 34B55FC02EDC9FAB00A9BD51 /* PrivacyInfo.xcprivacy */; };
+		34B55FC32EDC9FD000A9BD51 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 34B55FC22EDC9FD000A9BD51 /* PrivacyInfo.xcprivacy */; };
+		34B55FC52EDCA02000A9BD51 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 34B55FC42EDCA02000A9BD51 /* PrivacyInfo.xcprivacy */; };
 		521BB6781E3FAB7C00024273 /* KO Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52B40EEF1DFACED2005016C3 /* KO Watch App.app */; };
 		52202EDE1E33F0490065E59A /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EDD1E33F0490065E59A /* BoardViewController.swift */; };
 		52202EE11E33F2150065E59A /* HowToKnockOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */; };
@@ -102,7 +105,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		34B55FB82EDA610400A9BD51 /* DDMathParser */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DDMathParser; path = "/Users/timjohnson/Library/Developer/Xcode/DerivedData/KO-eevlupsdmxzjhueanshurzhljdid/SourcePackages/checkouts/DDMathParser"; sourceTree = "<absolute>"; };
+		34B55FC02EDC9FAB00A9BD51 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = NoNotif/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		34B55FC22EDC9FD000A9BD51 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "NoNotif WatchKit App/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		34B55FC42EDCA02000A9BD51 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "NoNotif WatchKit Extension/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
 		52202EDD1E33F0490065E59A /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		52202EE01E33F2150065E59A /* HowToKnockOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToKnockOutViewController.swift; sourceTree = "<group>"; };
 		52202EE21E33FCE60065E59A /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
@@ -154,7 +159,6 @@
 		34B55FB72EDA610400A9BD51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				34B55FB82EDA610400A9BD51 /* DDMathParser */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +175,9 @@
 		52B40ED41DFACED2005016C3 = {
 			isa = PBXGroup;
 			children = (
+				34B55FC02EDC9FAB00A9BD51 /* PrivacyInfo.xcprivacy */,
+				34B55FC22EDC9FD000A9BD51 /* PrivacyInfo.xcprivacy */,
+				34B55FC42EDCA02000A9BD51 /* PrivacyInfo.xcprivacy */,
 				52FAD4B01EAAC61B003B60BE /* dependencies */,
 				528C49B31E3FA01B004DA88E /* Shared */,
 				52B40EDF1DFACED2005016C3 /* iOS App */,
@@ -316,7 +323,6 @@
 					52B40EDC1DFACED2005016C3 = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -331,7 +337,6 @@
 					52B40EFD1DFACED2005016C3 = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -363,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B55FC12EDC9FAB00A9BD51 /* PrivacyInfo.xcprivacy in Resources */,
 				52B40EEB1DFACED2005016C3 /* LaunchScreen.storyboard in Resources */,
 				52B40EE81DFACED2005016C3 /* Assets.xcassets in Resources */,
 				52B40EE61DFACED2005016C3 /* Main.storyboard in Resources */,
@@ -373,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B55FC32EDC9FD000A9BD51 /* PrivacyInfo.xcprivacy in Resources */,
 				52B40EF81DFACED2005016C3 /* Assets.xcassets in Resources */,
 				52B40EF61DFACED2005016C3 /* Interface.storyboard in Resources */,
 			);
@@ -382,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B55FC52EDCA02000A9BD51 /* PrivacyInfo.xcprivacy in Resources */,
 				52B40F081DFACED2005016C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +525,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -569,6 +578,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -581,6 +591,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WEALMB79XU;
 				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
@@ -589,8 +601,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchapp.watchextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -603,6 +616,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WEALMB79XU;
 				INFOPLIST_FILE = "NoNotif WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,8 +625,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchapp.watchextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -629,7 +645,7 @@
 				DEVELOPMENT_TEAM = WEALMB79XU;
 				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -647,7 +663,7 @@
 				DEVELOPMENT_TEAM = WEALMB79XU;
 				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -661,8 +677,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = LNDEZ34JQG;
+				DEVELOPMENT_TEAM = WEALMB79XU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,8 +692,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -685,7 +704,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LNDEZ34JQG;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WEALMB79XU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -697,8 +718,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
