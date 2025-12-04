@@ -142,7 +142,7 @@ class ChooseFourInterfaceController: WKInterfaceController
                 Punch(num: 3, punchValue: selectedButtons[3].num),
             ]
             
-            engine.resetGameToBeKOedAllButOne()
+//            engine.resetGameToBeKOedAllButOne()
             
             let selectedPunches = storeSelectedPunchesInAStruct()
             let passThruContext : [String : Any] = ["selectedPunches" : selectedPunches]

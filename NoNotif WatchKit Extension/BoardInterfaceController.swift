@@ -254,7 +254,7 @@ class BoardInterfaceController : WKInterfaceController
     
     @IBAction func startOver()
     {
-        engine.resetGameToBeKOedAllButOne()
+//        engine.resetGameToBeKOedAllButOne()
 
         WKInterfaceController.reloadRootPageControllers(withNames: ["SplashScreenController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
