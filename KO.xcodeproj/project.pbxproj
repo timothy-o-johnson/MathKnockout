@@ -525,7 +525,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -578,7 +578,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -601,7 +601,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -625,7 +625,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -645,7 +645,7 @@
 				DEVELOPMENT_TEAM = WEALMB79XU;
 				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -663,7 +663,7 @@
 				DEVELOPMENT_TEAM = WEALMB79XU;
 				IBSC_MODULE = KO_WatchKit_Extension;
 				INFOPLIST_FILE = "NoNotif WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -692,7 +692,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -718,7 +718,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveNetworks.MathKnockout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HeartCaveWorks.MathKnockout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
