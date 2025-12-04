@@ -406,7 +406,7 @@ class GameEngine {
     let currentGameCombo = getCurrentGameCombination()
 
     setGameCombinationToWin(currentGameCombo)
-    let punchesForNextGame = getPunchesForNextIncompleteGame()
+    _ = getPunchesForNextIncompleteGame()
     // return tuple {PunchesForNextGame, gameNumber}
 
   }
