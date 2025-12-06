@@ -568,7 +568,7 @@
                             <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                         </label>
                         <label alignment="left" id="JYX-PI-P1E"/>
-                        <label width="0.90000000000000002" alignment="center" text="some quote?" textAlignment="left" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="coa-5s-0YZ"/>
+                        <label width="0.90000000000000002" alignment="center" text="some quote?" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="coa-5s-0YZ"/>
                         <button width="1" alignment="left" title="Play Again" id="hdy-jm-Ecb">
                             <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>

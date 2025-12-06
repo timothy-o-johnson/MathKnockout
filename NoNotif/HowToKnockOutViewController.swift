@@ -18,10 +18,20 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
     
     override func viewDidLoad()
     {
+        super.viewDidLoad()
+        
         knockOutTargetButton.layoutIfNeeded()
         knockOutTargetButton.titleLabel?.minimumScaleFactor = 0.5
         knockOutTargetButton.titleLabel?.numberOfLines = 1
         knockOutTargetButton.titleLabel?.adjustsFontSizeToFitWidth = true
+    }
+
+    override func viewDidLayoutSubviews()
+    {
+        super.viewDidLayoutSubviews()
+        
+        knockOutTargetButton.applyRoundedStyle(radius: 12)
+        punches.forEach { $0.applyRoundedStyle(radius: 10) }
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -29,7 +39,7 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
         super.viewWillAppear(animated)
         
         knockOutLabel.backgroundColor = .clear // http://stackoverflow.com/a/19261362
-        knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
+        knockOutLabel.layer.backgroundColor = UIColor.black.cgColor
         
         knockOutTargetButton.setTitle(String(engine.knockOutTarget), for: .normal)
         
@@ -101,7 +111,7 @@ class HowToKnockOutViewController: UIViewController, GameEngineDelegate
             self.knockOutLabel.layer.backgroundColor = UIColor.red.cgColor
         }) { _ in
             UIView.animate(withDuration: 0.3) {
-                self.knockOutLabel.layer.backgroundColor = UIColor.white.cgColor
+                self.knockOutLabel.layer.backgroundColor = UIColor.black.cgColor
             }
         }
     }

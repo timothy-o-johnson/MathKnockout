@@ -23,6 +23,14 @@ class ChooseFourViewController: UIViewController
         
         navigationItem.hidesBackButton = true
     }
+
+    override func viewDidLayoutSubviews()
+    {
+        super.viewDidLayoutSubviews()
+        
+        numberButtons.forEach { $0.applyRoundedStyle(radius: 10) }
+        nextButton.applyRoundedStyle(radius: 10)
+    }
     
     override func viewWillAppear(_ animated: Bool)
     {

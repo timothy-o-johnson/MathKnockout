@@ -30,6 +30,13 @@ class BoardViewController: UIViewController
         
         navigationItem.hidesBackButton = true
     }
+
+    override func viewDidLayoutSubviews()
+    {
+        super.viewDidLayoutSubviews()
+        
+        numberButtons.forEach { $0.applyRoundedStyle(radius: 10) }
+    }
     
     override func viewWillAppear(_ animated: Bool)
     {
@@ -69,4 +76,12 @@ class BoardViewController: UIViewController
         present(ac, animated: true, completion: nil)
     }
     
+}
+
+// Shared button rounding helper (kept in a compiled file so it’s available app-wide).
+extension UIButton {
+    func applyRoundedStyle(radius: CGFloat = 8) {
+        layer.cornerRadius = radius
+        clipsToBounds = true
+    }
 }
